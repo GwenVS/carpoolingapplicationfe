@@ -1,6 +1,6 @@
 {
   "/server": {
-    "target": "http://localhost:9090",
+    "target": "https://carpoolingapplication.herokuapp.com",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug",
