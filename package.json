@@ -1,6 +1,7 @@
 {
   "name": "carpoolingapplicationfe",
   "version": "0.0.0",
+  "license": "KdG",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
