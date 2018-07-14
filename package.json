@@ -4,7 +4,7 @@
   "license": "KdG",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -13,6 +13,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "~0.6.8",
     "@angular/animations": "^6.0.3",
     "@angular/cli": "^6.0.8",
     "@angular/common": "^6.0.3",
