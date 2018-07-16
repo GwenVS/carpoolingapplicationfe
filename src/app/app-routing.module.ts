@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import {Routes, RouterModule, ExtraOptions} from '@angular/router';
-import {MainComponent} from './components/main/main.component';
 import {
   NbAuthComponent, NbLoginComponent, NbLogoutComponent, NbRegisterComponent, NbRequestPasswordComponent,
   NbResetPasswordComponent
