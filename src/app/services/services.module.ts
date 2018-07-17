@@ -6,6 +6,7 @@ import { ElectricityService } from './electricity.service';
 import { StateService } from './state.service';
 import { SmartTableService } from './smart-table.service';
 import { PlayerService } from './player.service';
+import {CarpoolerService} from './carpooler.service';
 
 const SERVICES = [
   UserService,
@@ -13,6 +14,7 @@ const SERVICES = [
   StateService,
   SmartTableService,
   PlayerService,
+  CarpoolerService
 ];
 
 @NgModule({
@@ -23,10 +25,10 @@ const SERVICES = [
     ...SERVICES,
   ],
 })
-export class DataModule {
+export class ServicesModule {
   static forRoot(): ModuleWithProviders {
     return <ModuleWithProviders>{
-      ngModule: DataModule,
+      ngModule: ServicesModule,
       providers: [
         ...SERVICES,
       ],

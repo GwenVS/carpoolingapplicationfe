@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { NbMenuService, NbSidebarService } from '@nebular/theme';
-import { UserService } from '../../../@core/data/users.service';
+import { UserService } from '../../../services/users.service';
 import { AnalyticsService } from '../../../@core/utils/analytics.service';
 
 @Component({
-  selector: 'ngx-header',
+  selector: 'app-header',
   styleUrls: ['./header.component.scss'],
   templateUrl: './header.component.html',
 })

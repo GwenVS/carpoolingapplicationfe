@@ -4,7 +4,7 @@ import { Location } from '../entity/Location';
 import {} from 'googlemaps';
 
 @Component({
-  selector: 'ngx-search',
+  selector: 'app-search',
   templateUrl: './search.component.html',
 })
 export class SearchComponent implements OnInit {

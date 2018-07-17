@@ -1,8 +1,8 @@
 import { Component, HostBinding, Input, OnDestroy } from '@angular/core';
-import { PlayerService, Track } from '../../../../@core/data/player.service';
+import { PlayerService, Track } from '../../../../services/player.service';
 
 @Component({
-  selector: 'ngx-player',
+  selector: 'app-player',
   styleUrls: ['./player.component.scss'],
   templateUrl: './player.component.html',
 })

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 
-import { SmartTableService } from '../../../@core/data/smart-table.service';
+import { SmartTableService } from '../../../services/smart-table.service';
 
 @Component({
-  selector: 'ngx-smart-table',
+  selector: 'app-smart-table',
   templateUrl: './smart-table.component.html',
   styles: [`
     nb-card {

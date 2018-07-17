@@ -13,8 +13,8 @@ import { TabsComponent, Tab1Component, Tab2Component } from './tabs/tabs.compone
 import { SearchComponent } from './search-fields/search-fields.component';
 import { PopoversComponent } from './popovers/popovers.component';
 import {
-  NgxPopoverCardComponent, NgxPopoverFormComponent,
-  NgxPopoverTabsComponent,
+  PopoverCardComponent, PopoverFormComponent,
+  PopoverTabsComponent,
 } from './popovers/popover-examples.component';
 
 const components = [
@@ -29,9 +29,9 @@ const components = [
   Tab2Component,
   SearchComponent,
   PopoversComponent,
-  NgxPopoverCardComponent,
-  NgxPopoverFormComponent,
-  NgxPopoverTabsComponent,
+  PopoverCardComponent,
+  PopoverFormComponent,
+  PopoverTabsComponent,
 ];
 
 @NgModule({
@@ -45,9 +45,9 @@ const components = [
   ],
   entryComponents: [
     ModalComponent,
-    NgxPopoverCardComponent,
-    NgxPopoverFormComponent,
-    NgxPopoverTabsComponent,
+    PopoverCardComponent,
+    PopoverFormComponent,
+    PopoverTabsComponent,
   ],
 })
 export class UiFeaturesModule { }

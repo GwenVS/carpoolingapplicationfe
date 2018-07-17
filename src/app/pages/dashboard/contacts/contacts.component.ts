@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NbThemeService, NbMediaBreakpoint, NbMediaBreakpointsService } from '@nebular/theme';
 
-import { UserService } from '../../../@core/data/users.service';
+import { UserService } from '../../../services/users.service';
 
 @Component({
-  selector: 'ngx-contacts',
+  selector: 'app-contacts',
   styleUrls: ['./contacts.component.scss'],
   templateUrl: './contacts.component.html',
 })

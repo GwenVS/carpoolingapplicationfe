@@ -2,7 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 
 @Component({
-  selector: 'ngx-temperature',
+  selector: 'app-temperature',
   styleUrls: ['./temperature.component.scss'],
   templateUrl: './temperature.component.html',
 })

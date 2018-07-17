@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import {
-  NgxPopoverCardComponent, NgxPopoverFormComponent,
-  NgxPopoverTabsComponent,
+  PopoverCardComponent, PopoverFormComponent,
+  PopoverTabsComponent,
 } from './popover-examples.component';
 
 @Component({
-  selector: 'ngx-popovers',
+  selector: 'app-popovers',
   styleUrls: ['./popovers.component.scss'],
   templateUrl: './popovers.component.html',
 })
 export class PopoversComponent {
-  tabsComponent = NgxPopoverTabsComponent;
-  cardComponent = NgxPopoverCardComponent;
-  formComponent = NgxPopoverFormComponent;
+  tabsComponent = PopoverTabsComponent;
+  cardComponent = PopoverCardComponent;
+  formComponent = PopoverFormComponent;
 }

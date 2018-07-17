@@ -5,7 +5,7 @@ import {
 const VIEW_BOX_SIZE = 300;
 
 @Component({
-  selector: 'ngx-temperature-dragger',
+  selector: 'app-temperature-dragger',
   templateUrl: './temperature-dragger.component.html',
   styleUrls: ['./temperature-dragger.component.scss'],
 })
@@ -32,22 +32,6 @@ export class TemperatureDraggerComponent implements AfterViewInit, OnChanges {
   @Input() step = 0.1;
 
   @Output() power = new EventEmitter<boolean>();
-
-  @HostListener('window:mouseup', ['$event'])
-  onMouseUp(event) {
-    this.recalculateValue(event);
-    this.isMouseDown = false;
-  }
-
-  @HostListener('window:mousemove', ['$event'])
-  onMouseMove(event: MouseEvent) {
-    this.recalculateValue(event);
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    this.invalidate();
-  }
 
   off = false;
   oldValue: number;
@@ -77,6 +61,26 @@ export class TemperatureDraggerComponent implements AfterViewInit, OnChanges {
 
   constructor() {
     this.oldValue = this.value;
+  }
+
+  private static toRad(angle) {
+    return Math.PI * angle / 180;
+  }
+
+  @HostListener('window:mouseup', ['$event'])
+  onMouseUp(event) {
+    this.recalculateValue(event);
+    this.isMouseDown = false;
+  }
+
+  @HostListener('window:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    this.recalculateValue(event);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.invalidate();
   }
 
   ngAfterViewInit(): void {
@@ -125,7 +129,7 @@ export class TemperatureDraggerComponent implements AfterViewInit, OnChanges {
     // TODO: review set data to styles object
     setTimeout(() => {
       this.invalidateGradientArcs();
-    })
+    });
   }
 
   private calculateVars() {
@@ -350,9 +354,5 @@ export class TemperatureDraggerComponent implements AfterViewInit, OnChanges {
 
   private toValueNumber(factor) {
     return Math.round(factor * (this.max - this.min) / this.step) * this.step + this.min;
-  }
-
-  private static toRad(angle) {
-    return Math.PI * angle / 180;
   }
 }

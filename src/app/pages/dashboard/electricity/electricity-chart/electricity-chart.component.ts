@@ -5,7 +5,7 @@ import { NbThemeService } from '@nebular/theme';
 declare const echarts: any;
 
 @Component({
-  selector: 'ngx-electricity-chart',
+  selector: 'app-electricity-chart',
   styleUrls: ['./electricity-chart.component.scss'],
   template: `
     <div echarts [options]="option" class="echart"></div>

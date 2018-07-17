@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ngx-shape-buttons',
+  selector: 'app-shape-buttons',
   styleUrls: ['./shape-buttons.component.scss'],
   templateUrl: './shape-buttons.component.html',
 })

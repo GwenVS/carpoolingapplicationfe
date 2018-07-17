@@ -6,7 +6,7 @@ import { NgxEchartsService } from 'ngx-echarts';
 import { NbThemeService } from '@nebular/theme';
 
 @Component({
-  selector: 'ngx-bubble-map',
+  selector: 'app-bubble-map',
   styleUrls: ['./bubble-map.component.scss'],
   template: `
     <nb-card>

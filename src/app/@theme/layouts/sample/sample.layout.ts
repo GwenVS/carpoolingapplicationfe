@@ -9,16 +9,16 @@ import {
   NbThemeService,
 } from '@nebular/theme';
 
-import { StateService } from '../../../@core/data/state.service';
+import { StateService } from '../../../services/state.service';
 
 // TODO: move layouts into the framework
 @Component({
-  selector: 'ngx-sample-layout',
+  selector: 'app-sample-layout',
   styleUrls: ['./sample.layout.scss'],
   template: `
     <nb-layout [center]="layout.id === 'center-column'" windowMode>
       <nb-layout-header fixed>
-        <ngx-header [position]="sidebar.id === 'start' ? 'normal': 'inverse'"></ngx-header>
+        <app-header [position]="sidebar.id === 'start' ? 'normal': 'inverse'"></app-header>
       </nb-layout-header>
 
       <nb-sidebar class="menu-sidebar"
@@ -46,7 +46,7 @@ import { StateService } from '../../../@core/data/state.service';
       </nb-layout-column>
 
       <nb-layout-footer fixed>
-        <ngx-footer></ngx-footer>
+        <app-footer></app-footer>
       </nb-layout-footer>
 
       <nb-sidebar class="settings-sidebar"
@@ -54,7 +54,7 @@ import { StateService } from '../../../@core/data/state.service';
                    state="collapsed"
                    fixed
                    [end]="sidebar.id !== 'end'">
-        <ngx-theme-settings></ngx-theme-settings>
+        <app-theme-settings></app-theme-settings>
       </nb-sidebar>
     </nb-layout>
   `,
