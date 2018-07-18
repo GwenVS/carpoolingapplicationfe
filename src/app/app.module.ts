@@ -9,12 +9,10 @@ import {CoreModule} from './@core/core.module';
 import {ThemeModule} from './@theme/theme.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {APP_BASE_HREF} from '@angular/common';
-import { CarpoolerComponent } from './components/carpooler/carpooler.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CarpoolerComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
