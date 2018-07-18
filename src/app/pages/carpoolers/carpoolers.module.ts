@@ -3,8 +3,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import {CarpoolerService} from '../../services/carpooler.service';
-import {CarpoolersRoutingModule} from './carpoolers-routing.module';
-import {routedComponents} from '../tables/tables-routing.module';
+import {CarpoolersRoutingModule, routedComponents} from './carpoolers-routing.module';
 
 @NgModule({
   imports: [

@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 
 import {CarpoolerService} from '../../../services/carpooler.service';
 import {LocalDataSource} from 'ng2-smart-table';
-import {SmartTableService} from '../../../services/smart-table.service';
 
 @Component({
   selector: 'app-table',
@@ -55,7 +54,12 @@ export class TableComponent implements OnInit {
     },
   };
 
+  source: LocalDataSource = new LocalDataSource();
+
   constructor(private carpoolerService: CarpoolerService) {
+    this.getCarpoolers();
+    const data = this.carpoolers;
+    this.source.load(data);
   }
 
   onDeleteConfirm(event): void {
@@ -66,16 +70,14 @@ export class TableComponent implements OnInit {
     }
   }
 
-
   ngOnInit() {
-    this.getCarpoolers();
   }
 
   getCarpoolers() {
     this.carpoolerService.getCarpoolers().subscribe(
       data => (this.carpoolers = data),
-      err => console.error(err), //todo: logging
-      () => console.log('carpoolers loaded') //todo: logging
+      err => console.error(err), // todo: logging
+      () => console.log('carpoolers loaded') // todo: logging
     );
   }
 }
