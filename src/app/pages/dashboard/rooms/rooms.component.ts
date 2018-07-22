@@ -8,7 +8,6 @@ import { NbThemeService, NbMediaBreakpoint, NbMediaBreakpointsService } from '@n
     <nb-card [size]="breakpoint.width >= breakpoints.sm ? 'large' : 'medium'">
       <i (click)="collapse()" class="nb-arrow-down collapse" [hidden]="isCollapsed()"></i>
       <app-room-selector (select)="select($event)"></app-room-selector>
-      <app-player [collapsed]="isCollapsed() && breakpoint.width <= breakpoints.md"></app-player>
     </nb-card>
   `,
 })

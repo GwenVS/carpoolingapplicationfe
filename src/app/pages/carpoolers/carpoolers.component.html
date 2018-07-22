@@ -4,7 +4,27 @@
   </nb-card-header>
 
   <nb-card-body>
-    <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
-    </ng2-smart-table>
+    <table class="table table-bordered table-inverse">
+      <tr>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Smoker</th>
+        <th class="text-right">Gender</th>
+      </tr>
+      <tr *ngFor="let carpooler of carpoolers">
+        <td>
+          <a [routerLink]="['/pages/view', carpooler.carpoolerId]">{{carpooler.firstName}} {{carpooler.lastName}}</a>
+        </td>
+        <td>
+          {{carpooler.userName}}
+        </td>
+        <td>
+          {{carpooler.isSmoker}}
+        </td>
+        <td class="text-right">
+          {{carpooler.gender}}
+        </td>
+      </tr>
+    </table>
   </nb-card-body>
 </nb-card>

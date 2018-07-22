@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
+import {CarpoolersComponent} from './carpoolers/carpoolers.component';
 
 const routes: Routes = [{
   path: '',
@@ -34,7 +35,7 @@ const routes: Routes = [{
     loadChildren: './tables/tables.module#TablesModule',
   }, {
     path: 'carpoolers',
-    loadChildren: './carpoolers/carpoolers.module#CarpoolersModule',
+    component: CarpoolersComponent
     }, {
     path: 'miscellaneous',
     loadChildren: './miscellaneous/miscellaneous.module#MiscellaneousModule',

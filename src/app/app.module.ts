@@ -9,10 +9,12 @@ import {CoreModule} from './@core/core.module';
 import {ThemeModule} from './@theme/theme.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {APP_BASE_HREF} from '@angular/common';
+import {CallbackComponent} from './pages/callback/callback.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,7 @@ import {APP_BASE_HREF} from '@angular/common';
     CoreModule.forRoot(),
   ],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '/' },
+    { provide: APP_BASE_HREF, useValue: '/' }
   ],
   bootstrap: [AppComponent]
 })
