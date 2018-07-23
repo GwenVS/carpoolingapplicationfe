@@ -4,7 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. 
+The app will automatically reload if you change any of the source files.
+Backend carpoolingapplication needs to be running on `http://localhost:9090/`.
+Locally the `proxy-conf.json` file is used to make connection.
 
 ## Code scaffolding
 
@@ -22,6 +25,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Deployment
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+App is deployed on `https://carpoolingapplicationfe.herokuapp.com/`
+Backend is deployed on `https://carpoolingapplication.herokuapp.com/`
+Deployed the `server.js` file is used to make connection.

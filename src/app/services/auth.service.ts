@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import * as auth0 from 'auth0-js';
+import {frontendUrl, serverUrl} from '../../globals';
 
 @Injectable()
 export class AuthService {
@@ -9,8 +10,8 @@ export class AuthService {
     clientID: 'qtI0xZsb4N3I6eKbHjnFPWkmoCTeu1Me',
     domain: 'carpoolingapplication.eu.auth0.com',
     responseType: 'token id_token',
-    audience: 'https://carpoolingapplication.herokuapp.com',
-    redirectUri: 'https://carpoolingapplicationfe.herokuapp.com/callback',
+    audience: serverUrl,
+    redirectUri: frontendUrl + '/callback',
     scope: 'openid view:carpoolers view:dashboard'
   });
 
