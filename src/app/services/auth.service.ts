@@ -11,7 +11,7 @@ export class AuthService {
     responseType: 'token id_token',
     audience: 'https://carpoolingapplication.herokuapp.com',
     redirectUri: 'https://carpoolingapplicationfe.herokuapp.com/callback',
-    scope: 'openid view:carpoolers'
+    scope: 'openid view:carpoolers view:dashboard'
   });
 
   constructor(public router: Router) {}
