@@ -4,10 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. 
+Run `ng serve --proxy-config proxy.conf.json` for a dev server. Navigate to `http://localhost:4200/`. 
 The app will automatically reload if you change any of the source files.
 Backend carpoolingapplication needs to be running on `http://localhost:9090/`.
-Locally the `proxy-conf.json` file is used to make connection.
+Locally the `proxy-conf.json` file is used to make connection via a proxy.
 
 ## Code scaffolding
 

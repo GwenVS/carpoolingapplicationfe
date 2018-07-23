@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.static(__dirname + '/dist/carpoolingapplicationfe'));
 
 // Set our api routes proxy to point to spring boot server
-app.use('/server', proxy(serverUrl));
+app.use('/server', proxy('https://carpoolingapplication.herokuapp.com'));
 
 app.get('/*', function(req,res) {
   res.sendFile(path.join(__dirname+'/dist/carpoolingapplicationfe/index.html'));
