@@ -52534,11 +52534,11 @@ function validateCommands(commands) {
  * If you use dynamic values to generate the link, you can pass an array of path
  * segments, followed by the params for each segment.
  *
- * For instance `['/team', teamId, 'user', userName, {details: true}]`
+ * For instance `['/team', teamId, 'user', username, {details: true}]`
  * means that we want to generate a link to `/team/11/user/bob;details=true`.
  *
  * Multiple static segments can be merged into one
- * (e.g., `['/team/11/user', userName, {details: true}]`).
+ * (e.g., `['/team/11/user', username, {details: true}]`).
  *
  * The first segment name can be prepended with `/`, `./`, or `../`:
  * * If the first segment begins with `/`, the router will look up the route from the root of the

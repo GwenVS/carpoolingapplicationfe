@@ -1,24 +1,18 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule, ExtraOptions} from '@angular/router';
 import {CallbackComponent} from './pages/callback/callback.component';
-import {AuthGuard} from './services/auth.guard';
+import {CarpoolersComponent} from './pages/carpoolers/carpoolers.component';
 
 const routes: Routes = [{
-  path: 'pages',
-  loadChildren: 'app/pages/pages.module#PagesModule',
-  canActivate: [AuthGuard]
-}, {
+  path: 'carpoolers',
+  component: CarpoolersComponent
+},  {
   path: 'callback',
   component: CallbackComponent
 }, {
   path: '',
-  redirectTo: 'pages/dashboard',
-  canActivate: [AuthGuard],
+  redirectTo: 'auth/dashboard',
   pathMatch: 'full'
-}, {
-  path: '**',
-  redirectTo: 'pages/dashboard',
-  canActivate: [AuthGuard],
 }
 ];
 

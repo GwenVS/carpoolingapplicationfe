@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import * as auth0 from 'auth0-js';
-import {frontendUrl, serverUrl} from '../../globals';
+import {clientId, frontendUrl, serverUrl} from '../../environments/environment';
 
 @Injectable()
 export class AuthService {
 
   auth0 = new auth0.WebAuth({
-    clientID: 'qtI0xZsb4N3I6eKbHjnFPWkmoCTeu1Me',
+    clientID: clientId,
     domain: 'carpoolingapplication.eu.auth0.com',
     responseType: 'token id_token',
     audience: serverUrl,

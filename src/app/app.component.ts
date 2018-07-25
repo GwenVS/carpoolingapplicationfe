@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {AnalyticsService} from './@core/utils/analytics.service';
 import {AuthService} from './services/auth.service';
 
 @Component({
@@ -7,12 +6,17 @@ import {AuthService} from './services/auth.service';
   template: '<router-outlet></router-outlet>'
 })
 export class AppComponent implements OnInit {
-  title = 'app';
-  constructor(private analytics: AnalyticsService, private authService: AuthService) {
+  title = 'Carpoolers';
+  constructor(private authService: AuthService) {
   }
 
   ngOnInit(): void {
-    this.analytics.trackPageViews();
     this.authService.handleAuthentication();
+  }
+
+
+  getRouteAnimation(outlet) {
+
+    return outlet.activatedRouteData.animation;
   }
 }

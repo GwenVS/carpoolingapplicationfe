@@ -17,7 +17,7 @@ export class CarpoolerService {
     return this.http.get<Carpooler[]>('/server/api/carpoolers',
       { headers: new HttpHeaders()
           .set('Authorization', 'Bearer ' + token)}).pipe(
-      catchError(this.handleError<Carpooler[]>('getBikes', [])));
+      catchError(this.handleError<Carpooler[]>('getCarpoolers', [])));
   }
 
   /**

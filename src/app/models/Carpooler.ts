@@ -2,8 +2,8 @@ export class Carpooler {
   carpoolerId: number;
   firstName: string;
   lastName: string;
-  userName: string;
-  isSmoker: boolean;
+  username: string;
+  smoker: boolean;
   gender: string;
   cars;
 }

@@ -1,9 +1,4 @@
-<nb-card>
-  <nb-card-header>
-    Table of Carpoolers
-  </nb-card-header>
-
-  <nb-card-body>
+<div class="container">
     <table class="table table-bordered table-inverse">
       <tr>
         <th>Name</th>
@@ -16,15 +11,14 @@
           <a [routerLink]="['/pages/view', carpooler.carpoolerId]">{{carpooler.firstName}} {{carpooler.lastName}}</a>
         </td>
         <td>
-          {{carpooler.userName}}
+          {{carpooler.username}}
         </td>
         <td>
-          {{carpooler.isSmoker}}
+          {{carpooler.smoker}}
         </td>
         <td class="text-right">
           {{carpooler.gender}}
         </td>
       </tr>
     </table>
-  </nb-card-body>
-</nb-card>
+</div>
