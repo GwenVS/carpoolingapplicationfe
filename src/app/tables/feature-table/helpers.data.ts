@@ -62,7 +62,7 @@ export const TABLE_HELPERS = {
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="userName">
+    <ng-container matColumnDef="username">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
     </ng-container>
@@ -115,7 +115,7 @@ import 'rxjs/add/operator/debounceTime';
   templateUrl: 'table-overview-example.html',
 })
 export class TableOverviewExample {
-  displayedColumns = ['select', 'userId', 'userName', 'progress', 'color'];
+  displayedColumns = ['select', 'userId', 'username', 'progress', 'color'];
   exampleDatabase = new ExampleDatabase();
   selection = new SelectionModel<string>(true, []);
   dataSource: ExampleDataSource | null;
@@ -269,7 +269,7 @@ export class ExampleDataSource extends DataSource<any> {
 
       switch (this._sort.active) {
         case 'userId': [propertyA, propertyB] = [a.id, b.id]; break;
-        case 'userName': [propertyA, propertyB] = [a.name, b.name]; break;
+        case 'username': [propertyA, propertyB] = [a.name, b.name]; break;
         case 'progress': [propertyA, propertyB] = [a.progress, b.progress]; break;
         case 'color': [propertyA, propertyB] = [a.color, b.color]; break;
       }
