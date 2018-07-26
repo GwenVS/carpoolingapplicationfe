@@ -3,7 +3,8 @@ export class Carpooler {
   firstName: string;
   lastName: string;
   username: string;
-  smoker: boolean;
+  isSmoker: boolean;
   gender: string;
   cars;
 }
+

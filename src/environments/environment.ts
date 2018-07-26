@@ -33,14 +33,14 @@ export const palete = {
  * For development purpososes
  * Easy switch between localhost run and deploy
  */
-// export const serverUrl = 'https://carpoolingapplication.herokuapp.com';
-export const serverUrl = 'http://localhost:9090';
+export const serverUrl = 'https://carpoolingapplication.herokuapp.com';
+// export const serverUrl = 'http://localhost:9090';
 
-// export const frontendUrl = 'https://carpoolingapplicationfe.herokuapp.com';
-export const frontendUrl = 'http://localhost:4200';
+export const frontendUrl = 'https://carpoolingapplicationfe.herokuapp.com';
+// export const frontendUrl = 'http://localhost:4200';
 
-// export const clientId = 'qtI0xZsb4N3I6eKbHjnFPWkmoCTeu1Me';
-export const clientId = '3gXaZrmNoS40hzJvHwm2cP0Qq782nSdw';
+export const clientId = 'qtI0xZsb4N3I6eKbHjnFPWkmoCTeu1Me';
+// export const clientId = '3gXaZrmNoS40hzJvHwm2cP0Qq782nSdw';
 
 
 /*

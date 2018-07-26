@@ -12,7 +12,7 @@ export class AuthService {
     responseType: 'token id_token',
     audience: serverUrl,
     redirectUri: frontendUrl + '/callback',
-    scope: 'openid view:carpoolers view:dashboard'
+    scope: 'openid view:carpoolers view:dashboard',
   });
 
   constructor(public router: Router) {}
@@ -26,7 +26,7 @@ export class AuthService {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         this.setSession(authResult);
-        this.router.navigate(['/admin']);
+        this.router.navigate(['/carpoolers']);
       } else if (err) {
         this.router.navigate(['/']);
         console.log(err);
