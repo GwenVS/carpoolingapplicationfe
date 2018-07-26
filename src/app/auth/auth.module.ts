@@ -15,13 +15,14 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 import { appRoutes } from './lazyloader.routes';
 
+import { DashboardCrmModule } from '../dashboard-crm/dashboard-crm.module';
+
+import { CoreModule } from '../core/core.module';
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     suppressScrollX: true
 };
 
-import { DashboardCrmModule } from '../dashboard-crm/dashboard-crm.module';
-
-import { CoreModule } from '../core/core.module';
 
 
 @NgModule({

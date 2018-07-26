@@ -219,12 +219,6 @@ export const menus = [
                 'icon': 'mail',
                 'link': 'mail/mail',
                 'open': false,
-            },
-            {
-                'name': 'Editor',
-                'icon': 'editor',
-                'link': 'editor/editor',
-                'open': false,
             }
         ]
     }
