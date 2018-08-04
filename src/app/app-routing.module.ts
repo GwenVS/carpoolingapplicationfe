@@ -1,26 +1,18 @@
+import {RouterModule, Routes} from '@angular/router';
+import {MainComponent} from './containers/main/main.component';
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule, ExtraOptions} from '@angular/router';
-import {CallbackComponent} from './pages/callback/callback.component';
-import {CarpoolersComponent} from './pages/carpoolers/carpoolers.component';
-import {AuthGuard} from './services/auth.guard';
+import {LoginComponent} from './containers/login/login.component';
+import {GameScreenComponent} from './containers/game-screen/game-screen.component';
 
-const routes: Routes = [{
-  path: 'carpoolers',
-  component: CarpoolersComponent,
-  canActivate: [AuthGuard]
-},  {
-  path: 'callback',
-  component: CallbackComponent
-}, {
-  path: '',
-  redirectTo: 'auth/dashboard',
-  pathMatch: 'full'
-}
+const routes: Routes = [
+  {path: 'login', component: LoginComponent},
+  {path: 'main', component: MainComponent},
+  {path: 'game', component: GameScreenComponent},
+  {path: '**', redirectTo: '/login'}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}
