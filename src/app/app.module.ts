@@ -39,10 +39,6 @@ import {EditCardComponent} from './components/edit-card/edit-card.component';
 import { ThemesComponent } from './containers/themes/themes.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import {LobbyItemUserComponent} from './components/lobby-item-user/lobby-item-user.component';
-import {GameComponent} from './components/game/game.component';
-import {ChatboxComponent} from './components/chatbox/chatbox.component';
-import {LobbyListComponent} from './components/lobby-list/lobby-list.component';
-import {GameScreenComponent} from './containers/game-screen/game-screen.component';
 import {ColorService} from './services/color.service';
 
 
@@ -79,10 +75,6 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     PlayingcardComponent,
     EditCardComponent,
     ThemesComponent,
-    GameScreenComponent,
-    LobbyListComponent,
-    ChatboxComponent,
-    GameComponent,
     LobbyItemUserComponent,
     GameCardComponent
   ],
