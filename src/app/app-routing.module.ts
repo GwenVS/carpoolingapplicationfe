@@ -1,11 +1,11 @@
 import {RouterModule, Routes} from '@angular/router';
 import {MainComponent} from './containers/main/main.component';
 import {NgModule} from '@angular/core';
-import {LoginComponent} from './containers/login/login.component';
+import {SessionSetupComponent} from './components/session-setup/session-setup.component';
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
   {path: 'main', component: MainComponent},
+  {path: 'settings', component: SessionSetupComponent},
   {path: '**', redirectTo: '/login'}
 ];
 
