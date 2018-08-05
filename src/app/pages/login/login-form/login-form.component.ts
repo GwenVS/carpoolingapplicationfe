@@ -1,16 +1,16 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {HttpLoginServiceService} from '../../../services/http-login-service.service';
 import {LoginUser} from '../../../model/loginUser';
 import {Router} from '@angular/router';
 import {UserService} from '../../../services/user.service';
 import {AuthService} from '../../../services/auth.service';
-import {TOKEN_NAME} from '../../../services/auth.constant';
+
 
 @Component({
   selector: 'login-form',
   templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.css']
+  styleUrls: ['../login.component.scss']
 })
 export class LoginFormComponent implements OnInit {
   service: AuthService;
@@ -20,7 +20,7 @@ export class LoginFormComponent implements OnInit {
   public error = '';
   public feedback = '';
 
-  constructor(router: Router, private userService: UserService, private authService: AuthService, private httpLoginService: HttpLoginServiceService) {
+  constructor(router: Router, private userService: UserService, private authService: AuthService, private httpLoginService: HttpLoginServiceService, private fb: FormBuilder) {
     this.service = authService;
     this.router = router;
     this.httpService = httpLoginService;
@@ -30,6 +30,10 @@ export class LoginFormComponent implements OnInit {
     'username': new FormControl('', [Validators.required, Validators.minLength(3)]),
     'password': new FormControl('', [Validators.required])
   });
+  formErrors = {
+    'username': '',
+    'password': ''
+  };
 
   ngOnInit(): void {
     //this.userService.logout();
@@ -61,6 +65,29 @@ export class LoginFormComponent implements OnInit {
           this.error = 'Username or password incorrect!';
         }
       );
+  }
+
+  buildForm() {
+    this.form = this.fb.group({
+      'username': ['', [
+        Validators.required,
+        Validators.email
+      ]
+      ],
+      'password': ['', [
+        Validators.pattern('^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$'),
+        Validators.minLength(6),
+        Validators.maxLength(25)
+      ]
+      ],
+    });
+
+    this.form.valueChanges.subscribe(data => this.onValueChanged(data));
+    this.onValueChanged();
+  }
+
+  onValueChanged(data?: any) {
+
   }
 
 }

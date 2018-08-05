@@ -6,7 +6,7 @@ import {RegisterUser} from "../../../model/RegisterUser";
 @Component({
   selector: 'signup-form',
   templateUrl: './signup-form.component.html',
-  styleUrls: ['./signup-form.component.css']
+  styleUrls: ['../login.component.scss']
 })
 export class SignupFormComponent {
   service: HttpLoginServiceService;

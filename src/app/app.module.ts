@@ -5,7 +5,6 @@ import {FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NavigationBarComponent} from "./components/navigation-bar/navigation-bar.component";
 import {HttpClientModule} from "@angular/common/http";
 import { MainComponent } from './containers/main/main.component';
-import { LoginComponent } from './containers/login/login.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { ProfileComponent } from './components/profile/profile.component';
 import { SessionComponent } from './components/session/session.component';
@@ -50,7 +49,6 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     AppComponent,
     NavigationBarComponent,
     MainComponent,
-    LoginComponent,
     ProfileComponent,
     SessionComponent,
     ImageUploadComponent,

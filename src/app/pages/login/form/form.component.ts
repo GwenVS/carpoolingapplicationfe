@@ -4,7 +4,7 @@ import {HttpLoginServiceService} from "../../../services/http-login-service.serv
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['../login.component.scss']
 })
 export class FormComponent {
   loginForm = false;
