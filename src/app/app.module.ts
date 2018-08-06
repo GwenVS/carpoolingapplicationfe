@@ -6,12 +6,10 @@ import {NavigationBarComponent} from "./components/navigation-bar/navigation-bar
 import {HttpClientModule} from "@angular/common/http";
 import { MainComponent } from './containers/main/main.component';
 import {AppRoutingModule} from "./app-routing.module";
-import { ProfileComponent } from './components/profile/profile.component';
 import { SessionComponent } from './components/session/session.component';
 import {TOKEN_NAME} from "./services/auth.constant";
 import {AuthConfig, AuthHttp} from "angular2-jwt";
 import {Http, HttpModule, RequestOptions} from "@angular/http";
-import { ImageUploadComponent } from './components/image-upload/image-upload.component';
 import { GameSessionComponent } from './components/game-session/game-session.component';
 import { CreateGameSessionComponent } from './components/create-game-session/create-game-session.component';
 import { GameSessionSettingsComponent } from './components/game-session-settings/game-session-settings.component';
@@ -30,10 +28,13 @@ import {EditCardComponent} from './components/edit-card/edit-card.component';
 import { ThemesComponent } from './containers/themes/themes.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import {LobbyItemUserComponent} from './components/lobby-item-user/lobby-item-user.component';
-import {CoreModule} from './core/core.module';
 import {ServicesModule} from './services/services.module';
 import {PagesModule} from './pages/pages.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AuthenticatedModule} from './containers/authenticated/authenticated.module';
+import {CoreModule} from './containers/core/core.module';
+// import {ImageUploadComponent} from './components/image-upload/image-upload.component';
+//import {ProfileComponent} from './authenticated-pages/profile/profile.component';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -49,9 +50,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     AppComponent,
     NavigationBarComponent,
     MainComponent,
-    ProfileComponent,
     SessionComponent,
-    ImageUploadComponent,
     GameSessionComponent,
     CreateGameSessionComponent,
     GameSessionSettingsComponent,
@@ -66,7 +65,9 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     EditCardComponent,
     ThemesComponent,
     LobbyItemUserComponent,
-    GameCardComponent
+    GameCardComponent,
+//    ProfileComponent,
+//    ImageUploadComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -81,7 +82,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     Ng2CompleterModule,
     HttpClientModule,
     NgLoadingSpinnerModule,
-    ServicesModule
+    ServicesModule,
+    AuthenticatedModule
   ],
   providers: [
     {provide: AuthHttp, useFactory: authHttpServiceFactory, deps: [Http]},

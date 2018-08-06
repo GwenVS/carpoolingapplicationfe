@@ -1,9 +1,9 @@
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {User} from "../../model/User";
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {AppDataService} from "../../services/app-data.service";
 import {RegisterUser} from "../../model/RegisterUser";
-import {USERNAME} from "../../services/auth.constant";
+import {User} from '../../model/User';
+
 
 @Component({
   selector: 'app-profile',

@@ -15,8 +15,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {PagesRouterModule} from './pages.routes';
 import {ContactComponent} from './contact/contact.component';
 import {AboutComponent} from './about/about.component';
-import {CoreModule} from '../core/core.module';
 import {LoginModule} from './login/login.module';
+import {CoreModule} from '../containers/core/core.module';
 
 @NgModule({
   imports: [

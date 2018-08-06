@@ -5,7 +5,7 @@ import {
   MatButtonModule,
   MatButtonToggleModule,
   MatInputModule,
-  MatToolbarModule
+  MatToolbarModule, MatRadioModule
 } from '@angular/material';
 import {CommonModule} from '@angular/common';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -24,6 +24,7 @@ const routes: Routes = [
     MatCardModule,
     CommonModule,
     FlexLayoutModule,
+    MatRadioModule,
     MatButtonModule,
     MatButtonToggleModule,
     MatInputModule,
