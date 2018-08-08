@@ -1,23 +1,15 @@
 <label id="feedback">{{feedback}}</label>
-
-<form fxLayout="column" fxLayoutAlign="start stretch" [formGroup]="form" (ngSubmit)="login()">
+<form fxLayout="column" fxLayoutAlign="start stretch" [formGroup]="form" (ngSubmit)="clickLogin()">
   <mat-form-field class="full-width">
     <input [(ngModel)]="loginUser.username" name="username" type="email" id="username" class="input"
            placeholder="Please enter your email"
            formControlName="username" required matInput>
   </mat-form-field>
-  <div *ngIf="formErrors.username" class="help is-danger">
-    {{ formErrors.username }}
-  </div>
   <mat-form-field class="full-width">
     <input [(ngModel)]="loginUser.password" type="password" id="password" class="input"
            placeholder="please  enter your password"
            formControlName="password" required matInput>
   </mat-form-field>
-  <label>{{error}}</label><br/>
-  <div *ngIf="formErrors.password" class="help is-danger">
-    {{ formErrors.password }}
-  </div>
   <label>{{error}}</label><br/>
   <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid" (click)=clickLogin()>log
     in

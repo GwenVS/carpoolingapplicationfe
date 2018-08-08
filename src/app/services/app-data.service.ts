@@ -33,9 +33,7 @@ export class AppDataService {
       'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
     });
 
-
     return this.http.get(this.springURL + '/users/username/' + sessionStorage.getItem(USERNAME), {headers}).map((resp: Response) => new User().fromJSON(resp));
-
   }
 
   getProfilePicture() {
@@ -54,16 +52,8 @@ export class AppDataService {
       let urlCreator = window.URL;
       let testUrl = urlCreator.createObjectURL(blob);
 
-      //let url = URL.createObjectURL(blob);
       return testUrl;
     });
-    // return this.http.get(this.springURL + "/users/" + sessionStorage.getItem(USERNAME) + "/picture", {headers: headers, responseType: 'arraybuffer'}).subscribe(
-    //   (data) => {
-    //     let blob = new Blob([data], {type: 'image/png'});
-    //     let url = URL.createObjectURL(blob);
-    //     return url;
-    //   }
-    // );
   }
 
   getProfilePictureOfUser(username) {
@@ -81,7 +71,6 @@ export class AppDataService {
       let urlCreator = window.URL;
       let testUrl = urlCreator.createObjectURL(blob);
 
-      //let url = URL.createObjectURL(blob);
       return testUrl;
     });
   }
@@ -293,7 +282,7 @@ export class AppDataService {
       'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
     });
 
-    return this.http.post(this.openSpringUrl + '/subthemes/'+ subTheme.theme.themeId , subTheme, {headers: headers}).map((resp: Response) => resp);
+    return this.http.post(this.openSpringUrl + '/subthemes/' + subTheme.theme.themeId, subTheme, {headers: headers}).map((resp: Response) => resp);
   }
 }
 

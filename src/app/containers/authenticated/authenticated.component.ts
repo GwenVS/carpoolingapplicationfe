@@ -1,5 +1,9 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {MediaChange, ObservableMedia} from '@angular/flex-layout';
+import {User} from '../../model/User';
+import {USERNAME} from '../../services/auth.constant';
+import {UserService} from '../../services/user.service';
+import {AppDataService} from '../../services/app-data.service';
 
 
 @Component({
@@ -11,7 +15,9 @@ import {MediaChange, ObservableMedia} from '@angular/flex-layout';
 
 export class AuthenticatedComponent implements OnInit {
   @Input() isVisible: boolean = true;
+  user$: User;
   visibility = 'shown';
+  imageSrc = "https://www.vccircle.com/wp-content/uploads/2017/03/default-profile.png";
 
   sideNavOpened: boolean = true;
   matDrawerOpened: boolean = false;
@@ -22,13 +28,23 @@ export class AuthenticatedComponent implements OnInit {
     this.visibility = this.isVisible ? 'shown' : 'hidden';
   }
 
-  constructor(private media: ObservableMedia) {
+  constructor(private media: ObservableMedia, private userService: UserService, private appDataService: AppDataService,) {
   }
 
   ngOnInit() {
     this.media.subscribe((mediaChange: MediaChange) => {
       this.toggleView();
     });
+    this.user$ = new User();
+    this.appDataService.getUser(sessionStorage.getItem(USERNAME)).subscribe(data => {
+      this.user$ = data;
+    });
+
+    this.appDataService.getProfilePicture().subscribe(
+      (data) => {
+        this.imageSrc = data;
+      }
+    );
   }
 
   getRouteAnimation(outlet) {

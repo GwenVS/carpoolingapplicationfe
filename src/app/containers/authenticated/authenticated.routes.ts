@@ -8,8 +8,8 @@ export const authenticatedRoutes: Routes = [{
   path: '', component: AuthenticatedComponent, children: [
     {path: 'dashboard', component: DashboardCrmComponent},
     /*{path: 'tables', loadChildren: '../tables/tables.module#TablesModule'},
-    {path: 'maps', loadChildren: '../maps/maps.module#MapsModule'},
-    {path: 'profile', component: ProfileComponent},*/
+    {path: 'maps', loadChildren: '../maps/maps.module#MapsModule'},*/
+    {path: 'profile', component: ProfileComponent},
     {path: '**', redirectTo: 'dashboard'},
   ]
 }];

@@ -23,7 +23,7 @@ export class MainComponent implements OnInit{
   theme = false;
   profileImageUpload = false;
   user$: User;
-  page: string = 'session';
+  page: string = 'profile';
   activeSessionsNumber: 0;
   chosenGameSessionId: Number;
   chosenCardId: Number;
