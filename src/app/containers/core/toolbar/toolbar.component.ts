@@ -7,7 +7,7 @@ import { ToolbarHelpers } from './toolbar.helpers';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-	
+	@Input() _user$;
   @Input() sidenav;
 	@Input() sidebar;
 	@Input() drawer;

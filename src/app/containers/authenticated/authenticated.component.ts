@@ -4,6 +4,7 @@ import {User} from '../../model/User';
 import {USERNAME} from '../../services/auth.constant';
 import {UserService} from '../../services/user.service';
 import {AppDataService} from '../../services/app-data.service';
+import {DomSanitizer} from '@angular/platform-browser';
 
 
 @Component({
@@ -28,7 +29,7 @@ export class AuthenticatedComponent implements OnInit {
     this.visibility = this.isVisible ? 'shown' : 'hidden';
   }
 
-  constructor(private media: ObservableMedia, private userService: UserService, private appDataService: AppDataService,) {
+  constructor(private media: ObservableMedia, private userService: UserService, private appDataService: AppDataService, private domSanitizer: DomSanitizer) {
   }
 
   ngOnInit() {
@@ -48,9 +49,7 @@ export class AuthenticatedComponent implements OnInit {
   }
 
   getRouteAnimation(outlet) {
-
     return outlet.activatedRouteData.animation;
-    // return outlet.isActivated ? outlet.activatedRoute : ''
   }
 
   toggleView() {
@@ -71,6 +70,4 @@ export class AuthenticatedComponent implements OnInit {
       this.matDrawerShow = false;
     }
   }
-
-
 }

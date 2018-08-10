@@ -5,7 +5,7 @@
           <img width="100" [style.borderRadius]="'50%'" class="Sidebar-logo" id="profilePic" [src]="domSanitizerService.bypassSecurityTrustUrl(imageSrc)">
         </div>
         <div *ngIf="iconOnly" style="height: 100px;" fxLayoutAlign="space-around center"  >
-            <img width="50" [style.borderRadius]="'50%'" class="Sidebar-logo" id="profilePic" [src]="domSanitizerService.bypassSecurityTrustUrl(imageSrc)">
+            <img width="50" [style.borderRadius]="'50%'" class="Sidebar-logo" id="profilePicSmall" [src]="domSanitizerService.bypassSecurityTrustUrl(imageSrc)">
         </div>
         <cdk-sidemenu-item *ngFor="let menu of menus" [menu]="menu" [iconOnly]="iconOnly"> </cdk-sidemenu-item>
     </div>

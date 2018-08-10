@@ -3,15 +3,16 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {AppDataService} from "../../services/app-data.service";
 import {RegisterUser} from "../../model/RegisterUser";
 import {User} from '../../model/User';
+import {USERNAME} from '../../services/auth.constant';
 
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit{
-
+  //public _user$: User;
   @Input() public imageSrc: String;
   @Input() public _user$: User;
   @Output() userChanged: EventEmitter<User> = new EventEmitter<User>();
@@ -42,6 +43,16 @@ export class ProfileComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this._user$ = new User();
+    this.appDataService.getUser(sessionStorage.getItem(USERNAME)).subscribe(data => {
+      this._user$ = data;
+    });
+
+    this.appDataService.getProfilePicture().subscribe(
+      (data) => {
+        this.imageSrc = data;
+      }
+    );
     this.updatedUser= new RegisterUser('','','','','','','', '');
     this.updatedUser.username = this._user$.username;
     this.updatedUser.firstName = this._user$.firstName;
