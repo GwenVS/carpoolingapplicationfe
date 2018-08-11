@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94708ec7-96da-4063-8a24-c56bd8b6a5d6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/protractor.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/protractor.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -82,26 +80,26 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="html" value="30" />
+          <entry key="html" value="33" />
           <entry key="json" value="1" />
           <entry key="png" value="1" />
           <entry key="scss" value="7" />
-          <entry key="ts" value="44" />
+          <entry key="ts" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="30" />
+          <entry key="HTML" value="33" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="1" />
           <entry key="SCSS" value="7" />
-          <entry key="TypeScript" value="44" />
+          <entry key="TypeScript" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="454" />
+          <entry key="html" value="455" />
           <entry key="js" value="1" />
           <entry key="scss" value="5" />
           <entry key="ts" value="356" />
@@ -109,7 +107,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="454" />
+          <entry key="HTML" value="455" />
           <entry key="JavaScript" value="1" />
           <entry key="SCSS" value="5" />
           <entry key="TypeScript" value="356" />
@@ -168,27 +166,58 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/containers/authenticated/authenticated.component.html">
+        <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/profile/profile.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+            <state relative-caret-position="541">
+              <caret line="141" column="20" lean-forward="true" selection-start-line="141" selection-start-column="20" selection-end-line="141" selection-end-column="20" />
               <folding>
-                <element signature="n#style#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#mat-drawer-content#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#cdk-toolbar#0;n#mat-drawer-content#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
+                <element signature="n#mat-radio-group#0;n#form#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#mat-radio-button#0;n#mat-radio-group#0;n#form#0;n#div#0;n#div#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/profile/profile.component.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/pages/login/login.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="147" column="24" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
+            <state relative-caret-position="34">
+              <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/pages/login/login.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
-                <element signature="n#mat-radio-group#0;n#form#0;n#div#0;n#div#0;n#!!top" />
-                <element signature="n#mat-radio-button#0;n#mat-radio-group#0;n#form#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/pages/login/form/form.component.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-255">
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -205,7 +234,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>profileCom</find>
       <find>app/core/sidemenu/sidemenu.component.scss</find>
       <find>profileComponent</find>
       <find>CUSTOM_ELEMENTS_SCHEMA</find>
@@ -233,8 +261,9 @@
       <find>cdk-toolbar</find>
       <find>USERNAME</find>
       <find>cdk-user-menu</find>
-      <find>userForm</find>
       <find>this._user$</find>
+      <find>userForm</find>
+      <find>app-login</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Gwen\Desktop\IntegratieProject2FrontEnd</dir>
@@ -283,7 +312,6 @@
         <option value="$PROJECT_DIR$/src/app/pages/login/login.module.ts" />
         <option value="$PROJECT_DIR$/src/app/services/app-data.service.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/login/signup-form/signup-form.component.html" />
-        <option value="$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.html" />
         <option value="$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.ts" />
         <option value="$PROJECT_DIR$/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/src/app/containers/authenticated/authenticated.routes.ts" />
@@ -322,6 +350,7 @@
         <option value="$PROJECT_DIR$/src/app/containers/core/user-menu/user-menu.component.ts" />
         <option value="$PROJECT_DIR$/src/app/authenticated-pages/profile/profile.component.html" />
         <option value="$PROJECT_DIR$/src/app/authenticated-pages/profile/profile.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.html" />
       </list>
     </option>
   </component>
@@ -417,53 +446,6 @@
               <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="image-upload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="navigation-bar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="playingcard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="session" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="session-setup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -479,59 +461,33 @@
               <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
               <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="search-bar" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
               <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="sidemenu" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
               <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="toolbar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="user-menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="login-form" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
@@ -583,7 +539,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534012580386" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534012584934" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IP2/IntegratieProject2" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -716,18 +672,18 @@
       <workItem from="1533397254398" duration="2914000" />
       <workItem from="1533425685504" duration="37080000" />
       <workItem from="1533642209075" duration="9795000" />
-      <workItem from="1533832593261" duration="26042000" />
+      <workItem from="1533832593261" duration="26529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344365000" />
+    <option name="totallyTimeSpent" value="344852000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-8" width="1873" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" order="0" visible="true" weight="0.20904578" />
+      <window_info active="true" id="Project" order="0" visible="true" weight="0.20904578" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -769,31 +725,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/containers/core/sidemenu-item/sidemenu-item.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/core/sidebar/sidebar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/core/fullscreen/fullscreen.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#50#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/core/fullscreen/fullscreen.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/core/fullscreen/fullscreen.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/containers/authenticated/authenticated.component.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1106,11 +1037,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/profile/profile.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="147" column="24" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
+        <state relative-caret-position="541">
+          <caret line="141" column="20" lean-forward="true" selection-start-line="141" selection-start-column="20" selection-end-line="141" selection-end-column="20" />
           <folding>
             <element signature="n#mat-radio-group#0;n#form#0;n#div#0;n#div#0;n#!!top" />
             <element signature="n#mat-radio-button#0;n#mat-radio-group#0;n#form#0;n#div#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/login/form/form.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -11,7 +11,7 @@
            formControlName="password" required matInput>
   </mat-form-field>
   <label>{{error}}</label><br/>
-  <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid" (click)=clickLogin()>log
+  <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid" (click)=clickLogin()>log
     in
   </button>
 </form>
