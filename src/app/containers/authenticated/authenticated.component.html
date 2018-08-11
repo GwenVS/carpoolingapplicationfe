@@ -16,7 +16,7 @@
       </mat-drawer>
       <mat-drawer-content style="overflow: hidden;">
 
-        <cdk-toolbar [sidenav]="sidenav" [drawer]="drawer" [sidebar]="sidenav2" [matDrawerShow]="matDrawerShow"
+        <cdk-toolbar [sidenav]="sidenav" [drawer]="drawer" [sidebar]="sidenav2" [matDrawerShow]="matDrawerShow"  [_user$]="user$"
                      style="z-index: 500"></cdk-toolbar>
         <perfect-scrollbar>
           <router-outlet></router-outlet>

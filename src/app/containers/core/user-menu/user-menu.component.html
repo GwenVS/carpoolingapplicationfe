@@ -1,8 +1,8 @@
 <div class="toolbar-user-container">
 	<button mat-button (click)="isOpen = !isOpen" class="toolbar-user-btn" [class.open]="isOpen" [ngStyle.xs]="{'min-width': '70px'}">
   		<span fxLayout="row" fxLayoutAlign="start center">
-    		<img class="avatar" [src]="currentUser?.photoURL || 'assets/images/avatars/noavatar.png'">
-    		<span class="name" fxHide fxShow.gt-xs>{{currentUser?.currentUserName || Hari}}</span>
+    		<img class="avatar" [src]="domSanitizer.bypassSecurityTrustUrl(imageSrc)">
+    		<span class="name" fxHide fxShow.gt-xs>{{currentUser.firstName}} {{currentUser.lastName}}</span>
     		<mat-icon class="icon" fxHide fxShow.gt-xs>keyboard_arrow_down</mat-icon>
   		</span>
   	</button>
@@ -11,7 +11,7 @@
   	<div class="dropdown mat-elevation-z1" [class.open]="isOpen">
     	<div class="content">
       		<mat-nav-list>
-      			<mat-list-item>
+      			<mat-list-item (click) = "profileClick()">
       				<a matLine >Profile</a>
 				    <button mat-icon-button>
 				       <mat-icon>account_circle</mat-icon>
@@ -26,7 +26,7 @@
 
       			<mat-divider></mat-divider>
 
-      			<mat-list-item>
+      			<mat-list-item (click)="logout()">
       				<a matLine >Logout</a>
 				    <button mat-icon-button>
 				       <mat-icon>exit_to_app</mat-icon>

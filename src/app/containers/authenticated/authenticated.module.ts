@@ -6,14 +6,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatFormFieldModule, MatInputModule, MatTabsModule} from '@angular/material';
+import {MatFormFieldModule, MatInputModule, MatRadioModule, MatTabsModule} from '@angular/material';
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 import {PERFECT_SCROLLBAR_CONFIG} from 'ngx-perfect-scrollbar';
 import {PerfectScrollbarConfigInterface} from 'ngx-perfect-scrollbar';
 import {AuthenticatedPagesRouterModule, authenticatedRoutes} from './authenticated.routes';
 import {CoreModule} from '../core/core.module';
 import {DashboardCrmModule} from '../../authenticated-pages/dashboard-crm/dashboard-crm.module';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ImageUploadComponent} from '../../components/image-upload/image-upload.component';
 import {ProfileComponent} from '../../authenticated-pages/profile/profile.component';
 
@@ -34,9 +34,11 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatTabsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatRadioModule,
     CoreModule,
     MatSidenavModule,
     PerfectScrollbarModule,
+    FormsModule,
     ReactiveFormsModule,
     AuthenticatedPagesRouterModule
   ],

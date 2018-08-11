@@ -2,5 +2,5 @@
   <img id="pic" [src]="domSanitizerService.bypassSecurityTrustUrl(imageUrl)"/>
   <br>
   <input #imageInput type="file" name="file" (change)="fileChange($event)" placeholder="Upload image">
-  <button type="submit" class="btn btn-primary" (click)="doUploadFile()" value="Upload">Upload</button>
+  <button mat-raised-button color="primary" type="submit" class="btn btn-primary" (click)="doUploadFile()" value="Upload">Upload</button>
 </div>

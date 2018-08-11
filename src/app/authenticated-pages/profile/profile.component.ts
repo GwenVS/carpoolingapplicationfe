@@ -12,9 +12,8 @@ import {USERNAME} from '../../services/auth.constant';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit{
-  //public _user$: User;
+  public _user$: User;
   @Input() public imageSrc: String;
-  @Input() public _user$: User;
   @Output() userChanged: EventEmitter<User> = new EventEmitter<User>();
   @Output() profilePictureChanged: EventEmitter<String> = new EventEmitter<String>();
 
@@ -23,6 +22,7 @@ export class ProfileComponent implements OnInit{
   public passwordError = "Passwords are not the same!";
   updateUserDetails: Boolean = true;
   message = '';
+  genders = ['Male', 'Female'];
 
   form = new FormGroup({
     'firstName': new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -53,13 +53,6 @@ export class ProfileComponent implements OnInit{
         this.imageSrc = data;
       }
     );
-    this.updatedUser= new RegisterUser('','','','','','','', '');
-    this.updatedUser.username = this._user$.username;
-    this.updatedUser.firstName = this._user$.firstName;
-    this.updatedUser.lastName = this._user$.lastName;
-    this.updatedUser.email = this._user$.email;
-    this.updatedUser.birthday = this._user$.birthday;
-    this.updatedUser.gender = this._user$.gender;
   }
 
   checkPassword(){
@@ -109,6 +102,13 @@ export class ProfileComponent implements OnInit{
 
   changeUser(){
     if(this.form.valid){
+      this.updatedUser= new RegisterUser('','','','','','','', '');
+      this.updatedUser.username = this._user$.username;
+      this.updatedUser.firstName = this._user$.firstName;
+      this.updatedUser.lastName = this._user$.lastName;
+      this.updatedUser.email = this._user$.email;
+      this.updatedUser.birthday = this._user$.birthday;
+      this.updatedUser.gender = this._user$.gender;
       this.appDataService.updateUser(this.updatedUser).subscribe(
         data => {
           this._user$ = data;
@@ -136,6 +136,14 @@ export class ProfileComponent implements OnInit{
 
   updatePassword(){
     if(this.changePasswordForm.valid){
+      this.updatedUser= new RegisterUser('','','','','','','', '');
+      this.updatedUser.username = this._user$.username;
+      this.updatedUser.firstName = this._user$.firstName;
+      this.updatedUser.lastName = this._user$.lastName;
+      this.updatedUser.email = this._user$.email;
+      this.updatedUser.birthday = this._user$.birthday;
+      this.updatedUser.gender = this._user$.gender;
+      this.updatedUser.password = this._user$.password;
       this.appDataService.updatePassword(this.updatedUser).subscribe(
         (data) => this.message = "Password updated successfully",
         (error) => this.message = "Something went wrong while updating your password!"
