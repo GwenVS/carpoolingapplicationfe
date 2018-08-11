@@ -14,6 +14,7 @@ export class UserMenuComponent implements OnInit {
   router: Router;
   isOpen: boolean = false;
   imageSrc = 'assets/images/avatars/noavatar.png';
+  public domSanitizer : DomSanitizer;
 
   @HostListener('document:click', ['$event', '$event.target'])
   onClick(event: MouseEvent, targetElement: HTMLElement) {
@@ -28,8 +29,9 @@ export class UserMenuComponent implements OnInit {
   }
 
 
-  constructor(private elementRef: ElementRef, router: Router, private appDataService: AppDataService,private domSanitizer : DomSanitizer) {
+  constructor(private elementRef: ElementRef, router: Router, private appDataService: AppDataService, domSanitizer : DomSanitizer) {
     this.router = router;
+    this.domSanitizer = domSanitizer;
   }
 
 
