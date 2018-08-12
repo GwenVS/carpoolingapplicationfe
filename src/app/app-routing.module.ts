@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: 'settings', component: SessionSetupComponent},
   {path: 'auth', loadChildren: './containers/authenticated/authenticated.module#AuthenticatedModule'},
   {path: '**', redirectTo: '/login'},
-//  {path: '', redirectTo: '/login', pathMatch:'full'}
+  {path: '', redirectTo: '/login', pathMatch:'full'}
 ];
 
 
