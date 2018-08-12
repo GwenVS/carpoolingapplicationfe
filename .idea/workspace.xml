@@ -3,49 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="94708ec7-96da-4063-8a24-c56bd8b6a5d6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0.9378146d7f30efa16ecb.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/220px-Taka_Shiba.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/arch-pattern.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/banner-profile.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/bg20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/images/avatars/friend1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/images/avatars/hari.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/images/avatars/noavatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/images/bg/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/images/bg/cdk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/images/bg/city1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/images/bg/s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/list.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/login1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/login1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/login11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/logo.codetok.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/man.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/noavatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/pages/custom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/pages/ecommerce.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/pages/mobile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/pages/prototype.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/pages/strategy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/pages/webdesign.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/profile.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/restore.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/shibainu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/user-check.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/user-image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/user-plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/user-times.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/user-verified-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/verified-user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/inline.8acf4f88b4f34262815f.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.a666f7298803665aaba6.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/polyfills.367619bafcf2473263d3.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/styles.42e3be51c0bb74a40c84.bundle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/image-upload/image-upload.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/image-upload/image-upload.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -89,7 +49,7 @@
           <entry key="json" value="5" />
           <entry key="png" value="1" />
           <entry key="scss" value="7" />
-          <entry key="ts" value="52" />
+          <entry key="ts" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -101,7 +61,7 @@
           <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SCSS" value="7" />
-          <entry key="TypeScript" value="52" />
+          <entry key="TypeScript" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -109,7 +69,7 @@
           <entry key="html" value="455" />
           <entry key="js" value="1" />
           <entry key="scss" value="5" />
-          <entry key="ts" value="410" />
+          <entry key="ts" value="438" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -117,7 +77,7 @@
           <entry key="HTML" value="455" />
           <entry key="JavaScript" value="1" />
           <entry key="SCSS" value="5" />
-          <entry key="TypeScript" value="410" />
+          <entry key="TypeScript" value="438" />
         </counts>
       </usages-collector>
     </session>
@@ -127,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+            <state relative-caret-position="413">
+              <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -137,8 +97,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.angular-cli.json">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/environments/environment.prod.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="74" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/environments/environment.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="74" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -156,20 +132,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/components/image-upload/image-upload.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="97" column="36" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+            <state relative-caret-position="952">
+              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="e#0#100#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -246,7 +213,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>profileComponent</find>
       <find>CUSTOM_ELEMENTS_SCHEMA</find>
       <find>MatFormFieldControl</find>
       <find>mat-form-field</find>
@@ -276,6 +242,7 @@
       <find>userForm</find>
       <find>app-login</find>
       <find>e</find>
+      <find>new</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Gwen\Desktop\IntegratieProject2FrontEnd</dir>
@@ -312,8 +279,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/theme/theme.scss" />
-        <option value="$PROJECT_DIR$/src/app/authenticated-pages/dashboard-crm/dashboard-crm.module.ts" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/doughnut-graph/doughnut-graph.component.ts" />
         <option value="$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashboard-widget.module.ts" />
@@ -322,7 +287,6 @@
         <option value="$PROJECT_DIR$/src/app/pages/login/login.module.ts" />
         <option value="$PROJECT_DIR$/src/app/services/app-data.service.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/login/signup-form/signup-form.component.html" />
-        <option value="$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.ts" />
         <option value="$PROJECT_DIR$/src/app/containers/authenticated/authenticated.routes.ts" />
         <option value="$PROJECT_DIR$/src/app/authenticated-pages/profile/profile.component.css" />
         <option value="$PROJECT_DIR$/src/app/containers/main/main.component.css" />
@@ -363,6 +327,9 @@
         <option value="$PROJECT_DIR$/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/src/app/authenticated-pages/profile/profile.component.ts" />
         <option value="$PROJECT_DIR$/src/app/components/image-upload/image-upload.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.ts" />
+        <option value="$PROJECT_DIR$/src/environments/environment.prod.ts" />
+        <option value="$PROJECT_DIR$/src/environments/environment.ts" />
       </list>
     </option>
   </component>
@@ -443,15 +410,13 @@
               <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="authenticated-pages" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
               <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="authenticated-pages" type="462c0819:PsiDirectoryNode" />
-              <item name="profile" type="462c0819:PsiDirectoryNode" />
+              <item name="environments" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -470,7 +435,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534067171769" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534067988070" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IP2/IntegratieProject2" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -603,16 +568,15 @@
       <workItem from="1533397254398" duration="2914000" />
       <workItem from="1533425685504" duration="37080000" />
       <workItem from="1533642209075" duration="9795000" />
-      <workItem from="1533832593261" duration="31253000" />
+      <workItem from="1533832593261" duration="31846000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="349576000" />
+    <option name="totallyTimeSpent" value="350169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-8" width="1873" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" order="0" visible="true" weight="0.20904578" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -656,21 +620,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/containers/core/core.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-crm/dashboard-crm.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -918,16 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.angular-cli.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -936,27 +875,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/core/user-menu/user-menu.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/profile/profile.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1167">
-          <caret line="141" column="20" selection-start-line="141" selection-start-column="20" selection-end-line="141" selection-end-column="20" />
-          <folding>
-            <element signature="n#mat-radio-group#0;n#form#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#mat-radio-button#0;n#mat-radio-group#0;n#form#0;n#div#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protractor.conf.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -998,20 +916,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/model/loginUser.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/image-upload/image-upload.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="97" column="36" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+        <state relative-caret-position="952">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="e#0#100#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/profile/profile.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="40" />
+        <state relative-caret-position="1167">
+          <caret line="141" column="20" selection-start-line="141" selection-start-column="20" selection-end-line="141" selection-end-column="20" />
+          <folding>
+            <element signature="n#mat-radio-group#0;n#form#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#mat-radio-button#0;n#mat-radio-group#0;n#form#0;n#div#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/containers/core/user-menu/user-menu.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/environments/environment.prod.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="74" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/environments/environment.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="74" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -15,7 +15,7 @@ import {AuthService} from '../../../services/auth.service';
 export class LoginFormComponent implements OnInit {
   service: AuthService;
   httpService: HttpLoginServiceService;
-  loginUser = new LoginUser('', '');
+  loginUser : LoginUser;
   public router: Router;
   public error = '';
   public feedback = '';
@@ -24,6 +24,7 @@ export class LoginFormComponent implements OnInit {
     this.service = authService;
     this.router = router;
     this.httpService = httpLoginService;
+    this.loginUser = new LoginUser('', '');
   }
 
   form = new FormGroup({
