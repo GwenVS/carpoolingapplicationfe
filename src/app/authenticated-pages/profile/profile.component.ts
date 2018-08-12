@@ -53,6 +53,7 @@ export class ProfileComponent implements OnInit{
         this.imageSrc = data;
       }
     );
+    this.updatedUser= new RegisterUser('','','','','','','', '');
   }
 
   checkPassword(){
@@ -102,7 +103,6 @@ export class ProfileComponent implements OnInit{
 
   changeUser(){
     if(this.form.valid){
-      this.updatedUser= new RegisterUser('','','','','','','', '');
       this.updatedUser.username = this._user$.username;
       this.updatedUser.firstName = this._user$.firstName;
       this.updatedUser.lastName = this._user$.lastName;
@@ -136,7 +136,6 @@ export class ProfileComponent implements OnInit{
 
   updatePassword(){
     if(this.changePasswordForm.valid){
-      this.updatedUser= new RegisterUser('','','','','','','', '');
       this.updatedUser.username = this._user$.username;
       this.updatedUser.firstName = this._user$.firstName;
       this.updatedUser.lastName = this._user$.lastName;
