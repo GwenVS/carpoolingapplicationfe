@@ -1,5 +1,4 @@
 import {Injectable, Input} from '@angular/core';
-import {AuthHttp} from 'angular2-jwt';
 import {TOKEN_NAME, USERNAME} from './auth.constant';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
@@ -9,18 +8,16 @@ import {RegisterUser} from '../model/RegisterUser';
 import {tap} from 'rxjs/operators';
 import {GameSession} from '../model/GameSession';
 import {Notifications} from '../model/Notifications';
-import {Headers, RequestOptions} from '@angular/http';
 import {UserItem} from '../model/UserItem';
 import {MainThema} from '../model/MainThema';
 import {Playingcard} from '../model/Playingcard';
-import {serverUrl} from '../../environments/environment';
 
 
 @Injectable()
 export class AppDataService {
   //Please work
-  private springURL = serverUrl + '/api/private';
-  private openSpringUrl = serverUrl + '/api/public';
+  private springURL = 'https://carpoolingapplication.herokuapp.com' + '/api/private';
+  private openSpringUrl = 'https://carpoolingapplication.herokuapp.com' + '/api/public';
   public http;
 
   constructor(http: HttpClient) {

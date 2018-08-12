@@ -3,13 +3,11 @@ import {Http, Headers} from "@angular/http";
 import 'rxjs/add/operator/map';
 import {LoginUser} from "../model/loginUser";
 import {TOKEN_NAME, USERNAME} from "./auth.constant";
-import {User} from "../model/User";
-import {serverUrl} from '../../environments/environment';
 
 @Injectable()
 export class AuthService {
 
-  static AUTH_TOKEN = serverUrl + '/api/public/login';
+  static AUTH_TOKEN = 'https://carpoolingapplication.herokuapp.com/api/public/login';
 
   constructor(private http: Http) {
   }
