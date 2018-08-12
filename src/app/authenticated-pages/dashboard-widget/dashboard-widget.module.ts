@@ -23,7 +23,6 @@ import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { SalesListComponent } from './sales-list/sales-list.component';
 import { D3UsaComponent } from './d3-usa/d3-usa.component';
 import { WorldMapComponent } from './world-map/world-map.component';
-import {Ng2OdometerModule} from 'ng2-odometer';
 
 
 @NgModule({
@@ -35,7 +34,6 @@ import {Ng2OdometerModule} from 'ng2-odometer';
     MatTabsModule,
     MatToolbarModule,
     MatListModule,
-    Ng2OdometerModule,
     RoundProgressModule,
     MatMenuModule,
     MatChipsModule,

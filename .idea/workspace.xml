@@ -3,11 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="94708ec7-96da-4063-8a24-c56bd8b6a5d6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/0.9378146d7f30efa16ecb.chunk.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/inline.cd664719c2196fc05310.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.5a8270f7102cbaf91455.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/inline.97930b4dfec133d90f45.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.02b4770dd45335989fb7.bundle.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashboard-widget.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashboard-widget.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashcard/dashcard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashcard/dashcard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/share-price/share-price.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/share-price/share-price.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -47,37 +52,39 @@
         <counts>
           <entry key="css" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="37" />
+          <entry key="html" value="41" />
           <entry key="js" value="3" />
-          <entry key="json" value="7" />
+          <entry key="json" value="8" />
           <entry key="png" value="1" />
-          <entry key="scss" value="7" />
-          <entry key="ts" value="88" />
+          <entry key="scss" value="9" />
+          <entry key="ts" value="91" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="37" />
+          <entry key="HTML" value="41" />
           <entry key="Image" value="1" />
-          <entry key="JSON" value="7" />
+          <entry key="JSON" value="8" />
           <entry key="JavaScript" value="3" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="SCSS" value="7" />
-          <entry key="TypeScript" value="88" />
+          <entry key="SCSS" value="9" />
+          <entry key="TypeScript" value="91" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="455" />
+          <entry key="html" value="461" />
           <entry key="js" value="1" />
+          <entry key="json" value="1" />
           <entry key="scss" value="5" />
           <entry key="ts" value="467" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="455" />
+          <entry key="HTML" value="461" />
+          <entry key="JSON" value="1" />
           <entry key="JavaScript" value="1" />
           <entry key="SCSS" value="5" />
           <entry key="TypeScript" value="467" />
@@ -87,11 +94,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/share-price/share-price.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/share-price/share-price.component.scss">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashcard/dashcard.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-93" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="91" selection-start-line="13" selection-start-column="91" selection-end-line="13" selection-end-column="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashcard/dashcard.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="27" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-crm/dashboard-crm.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-crm/dashboard-crm.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="40" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="40" />
+            <state relative-caret-position="61">
+              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -107,9 +177,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MatFormFieldControl</find>
-      <find>mat-form-field</find>
-      <find>main</find>
       <find>&quot;_co.userForm</find>
       <find>path:'auth'</find>
       <find>hover</find>
@@ -137,6 +204,9 @@
       <find>e</find>
       <find>new</find>
       <find>InjectionToken</find>
+      <find>odometer</find>
+      <find>cdk-dashcard</find>
+      <find>odom</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Gwen\Desktop\IntegratieProject2FrontEnd</dir>
@@ -173,10 +243,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/pages/login/login.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/login/signup-form/signup-form.component.html" />
-        <option value="$PROJECT_DIR$/src/app/containers/authenticated/authenticated.routes.ts" />
-        <option value="$PROJECT_DIR$/src/app/authenticated-pages/profile/profile.component.css" />
         <option value="$PROJECT_DIR$/src/app/containers/main/main.component.css" />
         <option value="$PROJECT_DIR$/src/app/app.component.css" />
         <option value="$PROJECT_DIR$/src/app/app.component.html" />
@@ -223,6 +289,10 @@
         <option value="$PROJECT_DIR$/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/src/app/components/card/card.component.ts" />
         <option value="$PROJECT_DIR$/src/app/services/auth.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashboard-widget.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashcard/dashcard.component.html" />
+        <option value="$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/share-price/share-price.component.html" />
+        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
@@ -291,7 +361,77 @@
             <path>
               <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
               <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="authenticated-pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="authenticated-pages" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard-crm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="authenticated-pages" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard-widget" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="authenticated-pages" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard-widget" type="462c0819:PsiDirectoryNode" />
+              <item name="bar-graph" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="authenticated-pages" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard-widget" type="462c0819:PsiDirectoryNode" />
+              <item name="dashcard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="authenticated-pages" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard-widget" type="462c0819:PsiDirectoryNode" />
+              <item name="share-price" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carpoolingapplicationfe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carpoolingapplicationfe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="authenticated-pages" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard-widget" type="462c0819:PsiDirectoryNode" />
+              <item name="weather" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -310,7 +450,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534104543858" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534105875426" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IntegratieProject2FrontEnd" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -450,7 +590,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358437000" />
+    <option name="totallyTimeSpent" value="360013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1874" height="1096" extended-state="6" />
@@ -476,7 +616,7 @@
       <window_info anchor="bottom" id="NativeScript" order="11" weight="0.32943678" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32943678" />
       <window_info anchor="bottom" id="Floobits" order="13" weight="0.32943678" />
-      <window_info anchor="bottom" id="Terminal" order="14" visible="true" weight="0.21276596" />
+      <window_info anchor="bottom" id="Terminal" order="14" visible="true" weight="0.39361703" />
       <window_info anchor="bottom" id="TypeScript" order="15" weight="0.3287234" />
       <window_info anchor="right" id="Nativescript Palette" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -541,40 +681,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/containers/main/main.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1057">
-          <caret line="39" selection-start-line="39" selection-end-line="39" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/main/main.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="35" column="56" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/login/form/form.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/login/login-form/login-form.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="73" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/containers/core/user-menu/user-menu.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -790,21 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-crm/dashboard-crm.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-crm/dashboard-crm.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashboard-widget.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-518">
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/world-map/world-map.component.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -839,10 +930,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-crm/dashboard-crm.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-crm/dashboard-crm.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashcard/dashcard.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashcard/dashcard.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashboard-widget.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/share-price/share-price.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/share-price/share-price.component.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authenticated-pages/dashboard-widget/dashcard/dashcard.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-93" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="91" selection-start-line="13" selection-start-column="91" selection-end-line="13" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="40" />
+        <state relative-caret-position="61">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
         </state>
       </provider>
     </entry>
