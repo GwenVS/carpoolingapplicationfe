@@ -7,4 +7,6 @@ export const environment = {
   production: false
 };
 
+export const serverUrl = 'https://carpoolingapplication.herokuapp.com';
+// export const serverUrl = 'http://localhost:9090';
 

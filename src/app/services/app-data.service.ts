@@ -11,13 +11,14 @@ import {Notifications} from '../model/Notifications';
 import {UserItem} from '../model/UserItem';
 import {MainThema} from '../model/MainThema';
 import {Playingcard} from '../model/Playingcard';
+import {serverUrl} from '../../environments/environment';
 
 
 @Injectable()
 export class AppDataService {
   //Please work
-  private springURL = 'https://carpoolingapplication.herokuapp.com' + '/api/private';
-  private openSpringUrl = 'https://carpoolingapplication.herokuapp.com' + '/api/public';
+  private springURL = serverUrl + '/api/private';
+  private openSpringUrl = serverUrl + '/api/public';
   public http;
 
   constructor(http: HttpClient) {

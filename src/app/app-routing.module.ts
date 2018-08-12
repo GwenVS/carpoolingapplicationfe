@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {SessionSetupComponent} from './components/session-setup/session-setup.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/login', pathMatch:'full'},
+  //{path: '', redirectTo: '/login', pathMatch:'full'},
   {path: 'main', component: MainComponent},
   {path: 'settings', component: SessionSetupComponent},
   {path: 'auth', loadChildren: './containers/authenticated/authenticated.module#AuthenticatedModule'},

@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Http} from "@angular/http";
+import {serverUrl} from '../../../environments/environment';
 
 @Component({
   selector: 'app-card',
@@ -26,7 +27,7 @@ export class CardComponent implements OnInit {
   }
 
   deleteTheme() {
-    let url = 'https://carpoolingapplication.herokuapp.com' + "/api/theme?name="+ this.theme.name;
+    let url = serverUrl + "/api/theme?name="+ this.theme.name;
     this._http.delete(url).subscribe(theme => this.myEvent.emit(theme.json()));
   }
 

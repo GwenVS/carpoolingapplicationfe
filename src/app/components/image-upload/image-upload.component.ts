@@ -4,6 +4,7 @@ import {TOKEN_NAME, USERNAME} from "../../services/auth.constant";
 import {FormControl, FormGroup} from "@angular/forms";
 import {Headers, Http, RequestOptions} from "@angular/http";
 import {DomSanitizer} from '@angular/platform-browser';
+import {serverUrl} from '../../../environments/environment';
 
 
 @Component({
@@ -63,10 +64,10 @@ export class ImageUploadComponent implements OnInit {
 
   doUploadFile(){
     if(this.typeOfUpload === 'profilePicture'){
-      this.actionUrl = 'https://carpoolingapplication.herokuapp.com' + "/api/private/users/" + sessionStorage.getItem(USERNAME) + "/uploadImage";
+      this.actionUrl = serverUrl + "/api/private/users/" + sessionStorage.getItem(USERNAME) + "/uploadImage";
     }
     else if(this.typeOfUpload === 'gameSessionImage'){
-      this.actionUrl = 'https://carpoolingapplication.herokuapp.com' + "/api/private/users/" + sessionStorage.getItem(USERNAME) + "/sessions/" + this.createdSessionId + "/uploadImage";
+      this.actionUrl = serverUrl + "/api/private/users/" + sessionStorage.getItem(USERNAME) + "/sessions/" + this.createdSessionId + "/uploadImage";
     }
     else{
       this.imageData.emit(this.formData);
@@ -102,7 +103,7 @@ export class ImageUploadComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.actionUrl = 'https://carpoolingapplication.herokuapp.com' + "/api/private/users/" + sessionStorage.getItem(USERNAME) + "/uploadImage";
+    this.actionUrl = serverUrl + "/api/private/users/" + sessionStorage.getItem(USERNAME) + "/uploadImage";
   }
 
   sendPage(page){

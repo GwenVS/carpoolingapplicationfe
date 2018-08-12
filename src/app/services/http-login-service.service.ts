@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {catchError, tap} from "rxjs/operators";
 import {RegisterUser} from "../model/RegisterUser";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {serverUrl} from '../../environments/environment';
 
 const httpOptions2 = {headers: new HttpHeaders({'content-type': 'application/json'})};
 const headers = new HttpHeaders();
@@ -9,7 +10,7 @@ const headers = new HttpHeaders();
 @Injectable()
 export class HttpLoginServiceService {
   private baseURL = '/api/public';
-  private springURL = 'https://carpoolingapplication.herokuapp.com' + this.baseURL;
+  private springURL = serverUrl + this.baseURL;
   private _error;
   private _registrationComplete = false;
 
