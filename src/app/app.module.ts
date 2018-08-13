@@ -45,7 +45,9 @@ import {ColorService} from './services/color.service';
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
     tokenName: TOKEN_NAME,
-    tokenGetter: (() => {return "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJLYW5kb2UiLCJzdWIiOiJzdmVuZW1hbiIsImF1ZCI6IndlYiIsImlhdCI6MTUxOTM4MzQyNywiZXhwIjoxNTE5Mzg3MDI3fQ.ACdBoEeppBPfWYv6k4ouwEmGzaCS9sRzF4SiDb9Dtpohb50n_Z4kidqRncL3hKjVK37JJWxPVLLOGgJgE-IYjw"}),
+    //tokenGetter: (() => {return "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJLYW5kb2UiLCJzdWIiOiJzdmVuZW1hbiIsImF1ZCI6IndlYiIsImlhdCI6MTUxOTM4MzQyNywiZXhwIjoxNTE5Mzg3MDI3fQ.ACdBoEeppBPfWYv6k4ouwEmGzaCS9sRzF4SiDb9Dtpohb50n_Z4kidqRncL3hKjVK37JJWxPVLLOGgJgE-IYjw"}),
+    tokenGetter: (() => {return "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDYXJwb29saW5nYXBwbGljYXRpb24iLCJzdWIiOiJnd2VuIiwiYXVkIjoid2ViIiwiaWF0IjoxNTE5MzgzNDI3LCJleHAiOjE1MTkzODcwMjd9.qWX-cbmjq2gQKx4Ods9xm8tmkm_WkLE_9j6hZvEo8_isZM1riZg5VFXGR2kh1JlPNgfO4o4M4JfNmG-rXVmZGw"}),
+
     globalHeaders: [{'Content-Type':'application/json'}],
   }), http, options);
 }
