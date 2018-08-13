@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('frontend App', () => {
+describe('cd-admin-v2 App', () => {
   let page: AppPage;
 
   beforeEach(() => {

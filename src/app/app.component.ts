@@ -1,12 +1,25 @@
-import {Component, OnInit} from '@angular/core';
-
+import {Component} from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  query,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss'],
+
+
 })
-export class AppComponent implements OnInit {
-  ngOnInit(): void {
+export class AppComponent {
+  title = 'app';
+
+  getRouteAnimation(outlet) {
+
+    return outlet.activatedRouteData.animation;
   }
 }
