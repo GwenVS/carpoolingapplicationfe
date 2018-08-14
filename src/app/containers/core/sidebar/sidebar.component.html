@@ -1,0 +1,16 @@
+<mat-tab-group>
+  <mat-tab label="Notifications">
+    <div class="sidebar">
+      <mat-list>
+        <mat-list-item *ngFor="let message of messages">
+          <img matListAvatar src="../../../../assets/friend1.jpeg" alt="...">
+          <h3 matLine style="margin: 0; font-weight: bold;"> {{message.from}} </h3>
+          <p matLine>
+            <span> {{message.subject}} </span>
+            <span> -- {{message.content}} </span>
+          </p>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-tab>
+</mat-tab-group>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GameCardComponent } from './game-card.component';
+import { SidemenuItemComponent } from './sidemenu-item.component';
 
-describe('GameCardComponent', () => {
-  let component: GameCardComponent;
-  let fixture: ComponentFixture<GameCardComponent>;
+describe('SidemenuItemComponent', () => {
+  let component: SidemenuItemComponent;
+  let fixture: ComponentFixture<SidemenuItemComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GameCardComponent ]
+      declarations: [ SidemenuItemComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GameCardComponent);
+    fixture = TestBed.createComponent(SidemenuItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -28,7 +28,6 @@ import {CreateCardComponent} from './components/create-card/create-card.componen
 import {PlayingcardComponent} from './components/playingcard/playingcard.component';
 import {EditCardComponent} from './components/edit-card/edit-card.component';
 import {ThemesComponent} from './containers/themes/themes.component';
-import {GameCardComponent} from './components/game-card/game-card.component';
 import {LobbyItemUserComponent} from './components/lobby-item-user/lobby-item-user.component';
 import {LoginModule} from './publicPages/login/login.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -66,8 +65,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     PlayingcardComponent,
     EditCardComponent,
     ThemesComponent,
-    LobbyItemUserComponent,
-    GameCardComponent
+    LobbyItemUserComponent
   ],
   imports: [
     BrowserModule,
