@@ -1,51 +1,47 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import {FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
-import {NavigationBarComponent} from "./components/navigation-bar/navigation-bar.component";
-import {HttpLoginServiceService} from "./services/http-login-service.service";
-import {HttpClientModule} from "@angular/common/http";
-import { MainComponent } from './containers/main/main.component';
-import {AppRoutingModule} from "./app-routing.module";
-import { ProfileComponent } from './components/profile/profile.component';
-import { SessionComponent } from './components/session/session.component';
-import {TOKEN_NAME} from "./services/auth.constant";
-import {AuthConfig, AuthHttp} from "angular2-jwt";
-import {Http, HttpModule, RequestOptions} from "@angular/http";
-import {AuthService} from "./services/auth.service";
-import {UserService} from "./services/user.service";
-import {AppDataService} from "./services/app-data.service";
-import { ImageUploadComponent } from './components/image-upload/image-upload.component';
-import { GameSessionComponent } from './components/game-session/game-session.component';
-import { CreateGameSessionComponent } from './components/create-game-session/create-game-session.component';
-import { GameSessionSettingsComponent } from './components/game-session-settings/game-session-settings.component';
-import { GameSessionEditComponent } from './components/game-session-edit/game-session-edit.component';
-import { ListViewComponent } from './components/list-view/list-view.component';
-import {CompleterService, Ng2CompleterModule} from "ng2-completer";
-import { NgLoadingSpinnerModule, NgLoadingSpinnerInterceptor } from 'ng-loading-spinner';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { CreateMainThemeComponent } from './components/create-main-theme/create-main-theme.component';
-import { MainThemesComponent } from './components/main-themes/main-themes.component';
-import {CardComponent} from "./components/card/card.component";
-import {SessionSetupComponent} from "./components/session-setup/session-setup.component";
-import { CreateCardComponent } from './components/create-card/create-card.component';
-import { PlayingcardComponent } from './components/playingcard/playingcard.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NavigationBarComponent} from './components/navigation-bar/navigation-bar.component';
+import {HttpClientModule} from '@angular/common/http';
+import {MainComponent} from './containers/main/main.component';
+import {AppRoutingModule} from './app-routing.module';
+import {ProfileComponent} from './components/profile/profile.component';
+import {SessionComponent} from './components/session/session.component';
+import {TOKEN_NAME} from './services/auth.constant';
+import {AuthConfig, AuthHttp} from 'angular2-jwt';
+import {Http, HttpModule, RequestOptions} from '@angular/http';
+import {ImageUploadComponent} from './components/image-upload/image-upload.component';
+import {GameSessionComponent} from './components/game-session/game-session.component';
+import {CreateGameSessionComponent} from './components/create-game-session/create-game-session.component';
+import {GameSessionSettingsComponent} from './components/game-session-settings/game-session-settings.component';
+import {GameSessionEditComponent} from './components/game-session-edit/game-session-edit.component';
+import {ListViewComponent} from './components/list-view/list-view.component';
+import {CompleterService, Ng2CompleterModule} from 'ng2-completer';
+import {NgLoadingSpinnerModule, NgLoadingSpinnerInterceptor} from 'ng-loading-spinner';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {CreateMainThemeComponent} from './components/create-main-theme/create-main-theme.component';
+import {MainThemesComponent} from './components/main-themes/main-themes.component';
+import {CardComponent} from './components/card/card.component';
+import {SessionSetupComponent} from './components/session-setup/session-setup.component';
+import {CreateCardComponent} from './components/create-card/create-card.component';
+import {PlayingcardComponent} from './components/playingcard/playingcard.component';
 import {EditCardComponent} from './components/edit-card/edit-card.component';
-import { ThemesComponent } from './containers/themes/themes.component';
-import { GameCardComponent } from './components/game-card/game-card.component';
+import {ThemesComponent} from './containers/themes/themes.component';
+import {GameCardComponent} from './components/game-card/game-card.component';
 import {LobbyItemUserComponent} from './components/lobby-item-user/lobby-item-user.component';
-import {ColorService} from './services/color.service';
 import {LoginModule} from './publicPages/login/login.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ServicesModule} from './services/services.module';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
     tokenName: TOKEN_NAME,
-    //tokenGetter: (() => {return "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJLYW5kb2UiLCJzdWIiOiJzdmVuZW1hbiIsImF1ZCI6IndlYiIsImlhdCI6MTUxOTM4MzQyNywiZXhwIjoxNTE5Mzg3MDI3fQ.ACdBoEeppBPfWYv6k4ouwEmGzaCS9sRzF4SiDb9Dtpohb50n_Z4kidqRncL3hKjVK37JJWxPVLLOGgJgE-IYjw"}),
-    tokenGetter: (() => {return "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDYXJwb29saW5nYXBwbGljYXRpb24iLCJzdWIiOiJnd2VuIiwiYXVkIjoid2ViIiwiaWF0IjoxNTE5MzgzNDI3LCJleHAiOjE1MTkzODcwMjd9.qWX-cbmjq2gQKx4Ods9xm8tmkm_WkLE_9j6hZvEo8_isZM1riZg5VFXGR2kh1JlPNgfO4o4M4JfNmG-rXVmZGw"}),
-
-    globalHeaders: [{'Content-Type':'application/json'}],
+    tokenGetter: (() => {
+      return 'eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDYXJwb29saW5nYXBwbGljYXRpb24iLCJzdWIiOiJnd2VuIiwiYXVkIjoid2ViIiwiaWF0IjoxNTE5MzgzNDI3LCJleHAiOjE1MTkzODcwMjd9.qWX-cbmjq2gQKx4Ods9xm8tmkm_WkLE_9j6hZvEo8_isZM1riZg5VFXGR2kh1JlPNgfO4o4M4JfNmG-rXVmZGw';
+    }),
+    globalHeaders: [{'Content-Type': 'application/json'}],
   }), http, options);
 }
 
@@ -84,19 +80,14 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     HttpClientModule,
     NgLoadingSpinnerModule,
     LoginModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ServicesModule
   ],
   providers: [
     {provide: AuthHttp, useFactory: authHttpServiceFactory, deps: [Http]},
-    AuthService,
-    UserService,
-    HttpLoginServiceService,
-    AppDataService,
     Ng2CompleterModule,
     CompleterService,
-    { provide: HTTP_INTERCEPTORS, useClass: NgLoadingSpinnerInterceptor, multi: true },
-
-    ColorService
+    {provide: HTTP_INTERCEPTORS, useClass: NgLoadingSpinnerInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })
