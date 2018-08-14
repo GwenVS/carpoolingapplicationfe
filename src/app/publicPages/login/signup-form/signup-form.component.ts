@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {FormGroup, FormControl, Validators} from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import {HttpLoginServiceService} from '../../../services/http-login-service.service';
 import {RegisterUser} from '../../../model/RegisterUser';
 
@@ -7,40 +7,49 @@ import {RegisterUser} from '../../../model/RegisterUser';
 @Component({
   selector: 'signup-form',
   templateUrl: './signup-form.component.html',
-  styleUrls: ['./signup-form.component.css']
+  styleUrls: ['./signup-form.component.scss']
 })
-export class SignupFormComponent {
+export class SignupFormComponent implements OnInit {
   service: HttpLoginServiceService;
-  registerUser: RegisterUser = new RegisterUser('','','','','','','', '');
+  registerUser: RegisterUser = new RegisterUser('', '', '', '', '', '', '', '');
   public label;
   public _passwordsAreTheSame: boolean = false;
-  public passwordError = "Passwords are not the same!";
+  public passwordError = 'Passwords are not the same!';
   formHasErrors = false;
+  form: FormGroup;
 
-  constructor(service: HttpLoginServiceService){
+  constructor(service: HttpLoginServiceService, private fb: FormBuilder) {
     this.service = service;
   }
 
-  form = new FormGroup({
-    'username': new FormControl('', [Validators.required, Validators.minLength(4)]),
-    'password': new FormControl('', [Validators.required, Validators.minLength(8)]),
-    'password2': new FormControl('', [Validators.required, Validators.minLength(8)]),
-    'firstName': new FormControl('', [Validators.required, Validators.minLength(1)]),
-    'lastName': new FormControl('', [Validators.required]),
-    'email': new FormControl('', [Validators.required]),
-    'birthday': new FormControl('', [Validators.required]),
-    'gender': new FormControl('', [Validators.required]),
-    'profilePicture': new FormControl('')
-  });
 
-  checkPassword(){
-    let password:String = this.form.get('password').value;
-    let password2:String = this.form.get('password2').value;
+  ngOnInit(): void {
+    this.buildForm();
+  }
 
-    if(password === password2){
+
+  buildForm() {
+    this.form = this.fb.group({
+      'username': new FormControl('', [Validators.required, Validators.minLength(4)]),
+      'password': new FormControl('', [Validators.required, Validators.minLength(8)]),
+      'password2': new FormControl('', [Validators.required, Validators.minLength(8)]),
+      'firstName': new FormControl('', [Validators.required, Validators.minLength(1)]),
+      'lastName': new FormControl('', [Validators.required]),
+      'email': new FormControl('', [Validators.required]),
+      'birthday': new FormControl('', [Validators.required]),
+      'gender': new FormControl('', [Validators.required]),
+      'profilePicture': new FormControl('')
+    });
+  }
+
+  checkPassword() {
+    let password: String = this.form.get('password').value;
+    let password2: String = this.form.get('password2').value;
+
+    if (password === password2) {
       this._passwordsAreTheSame = true;
     }
-    else{
+    else {
       this._passwordsAreTheSame = false;
     }
   }
@@ -77,13 +86,14 @@ export class SignupFormComponent {
     return this.form.get('gender');
   }
 
-  get profilePicture(){
+  get profilePicture() {
     return this.form.get('profilePicture');
   }
 
-  clickRegister(){
-    if(this.form.valid && this._passwordsAreTheSame){
-      this.service.doRegister(this.registerUser).subscribe((data) => {}, error => console.log(this.label = error.error));
+  clickRegister() {
+    if (this.form.valid && this._passwordsAreTheSame) {
+      this.service.doRegister(this.registerUser).subscribe((data) => {
+      }, error => console.log(this.label = error.error));
     }
   }
 
