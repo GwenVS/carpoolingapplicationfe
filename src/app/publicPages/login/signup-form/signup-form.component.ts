@@ -1,7 +1,8 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component} from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
-import {HttpLoginServiceService} from "../../services/http-login-service.service";
-import {RegisterUser} from "../../model/RegisterUser";
+import {HttpLoginServiceService} from '../../../services/http-login-service.service';
+import {RegisterUser} from '../../../model/RegisterUser';
+
 
 @Component({
   selector: 'signup-form',

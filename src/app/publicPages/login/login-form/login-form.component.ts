@@ -1,12 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Http} from "@angular/http";
-import {HttpLoginServiceService} from "../../services/http-login-service.service";
-import {LoginUser} from "../../model/loginUser";
 import {Router} from "@angular/router";
-import {UserService} from "../../services/user.service";
-import {AuthService} from "../../services/auth.service";
-import {TOKEN_NAME} from "../../services/auth.constant";
+import {AuthService} from '../../../services/auth.service';
+import {HttpLoginServiceService} from '../../../services/http-login-service.service';
+import {LoginUser} from '../../../model/loginUser';
+import {UserService} from '../../../services/user.service';
 
 @Component({
   selector: 'login-form',

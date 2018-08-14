@@ -1,15 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {SignupFormComponent} from "./components/signup-form/signup-form.component";
 import {FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NavigationBarComponent} from "./components/navigation-bar/navigation-bar.component";
-import {LoginFormComponent} from "./components/login-form/login-form.component";
-import {FormComponent} from "./components/form/form.component";
 import {HttpLoginServiceService} from "./services/http-login-service.service";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from "@angular/common/http";
 import { MainComponent } from './containers/main/main.component';
-import { LoginComponent } from './containers/login/login.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { ProfileComponent } from './components/profile/profile.component';
 import { SessionComponent } from './components/session/session.component';
@@ -39,6 +35,7 @@ import { ThemesComponent } from './containers/themes/themes.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import {LobbyItemUserComponent} from './components/lobby-item-user/lobby-item-user.component';
 import {ColorService} from './services/color.service';
+import {LoginModule} from './publicPages/login/login.module';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -54,12 +51,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
 @NgModule({
   declarations: [
     AppComponent,
-    SignupFormComponent,
     NavigationBarComponent,
-    LoginFormComponent,
-    FormComponent,
     MainComponent,
-    LoginComponent,
     ProfileComponent,
     SessionComponent,
     ImageUploadComponent,
@@ -89,6 +82,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     Ng2CompleterModule,
     HttpClientModule,
     NgLoadingSpinnerModule,
+    LoginModule
   ],
   providers: [
     {provide: AuthHttp, useFactory: authHttpServiceFactory, deps: [Http]},

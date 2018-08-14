@@ -1,7 +1,7 @@
 import {Routes} from "@angular/router";
-import {LoginComponent} from "./containers/login/login.component";
 import {MainComponent} from "./containers/main/main.component";
 import {SessionSetupComponent} from "./components/session-setup/session-setup.component";
+import {LoginComponent} from './publicPages/login/login.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch:'full'},

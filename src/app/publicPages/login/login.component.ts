@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
-import {HttpLoginServiceService} from "../../services/http-login-service.service";
+import { Component, OnInit } from '@angular/core';
+import {HttpLoginServiceService} from '../../services/http-login-service.service';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
-export class FormComponent {
+
+export class LoginComponent implements OnInit {
+
   loginForm = false;
   public service: HttpLoginServiceService;
 
@@ -22,4 +24,8 @@ export class FormComponent {
     this.service.registrationComplete = false;
     this.loginForm = false;
   }
+
+  ngOnInit() {
+  }
+
 }
