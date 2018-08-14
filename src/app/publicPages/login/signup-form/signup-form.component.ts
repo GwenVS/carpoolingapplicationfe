@@ -17,6 +17,7 @@ export class SignupFormComponent implements OnInit {
   public passwordError = 'Passwords are not the same!';
   formHasErrors = false;
   form: FormGroup;
+  genders = ['Male', 'Female'];
 
   constructor(service: HttpLoginServiceService, private fb: FormBuilder) {
     this.service = service;

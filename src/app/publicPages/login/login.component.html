@@ -15,7 +15,6 @@
         <mat-card-content>
           <div class="row"
                *ngIf="loginForm || service.registrationComplete;then login_content else signup_content"></div>
-
           <ng-template #login_content>
             <login-form></login-form>
           </ng-template>
