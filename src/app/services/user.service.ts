@@ -20,6 +20,7 @@ export class UserService {
     this.accessToken = null;
     this.isAdmin = false;
     sessionStorage.removeItem(TOKEN_NAME);
+    sessionStorage.clear();
   }
 
   isAdminUser(): boolean {

@@ -130,7 +130,7 @@ export class MainComponent implements OnInit{
   }
 
   logout(){
-    sessionStorage.clear();
+    this.userService.logout();
     this.router.navigateByUrl("login");
   }
 }
