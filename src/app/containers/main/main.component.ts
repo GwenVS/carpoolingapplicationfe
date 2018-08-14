@@ -16,14 +16,14 @@ import {ElementRef} from '@angular/core';
 export class MainComponent implements OnInit{
   router: Router;
   service: HttpLoginServiceService;
-  session = true;
-  profile = false;
+  session = false;
+  profile = true;
   playingcard = false;
   support = false;
   theme = false;
   profileImageUpload = false;
   user$: User;
-  page: string = 'session';
+  page: string = 'profile';
   activeSessionsNumber: 0;
   chosenGameSessionId: Number;
   chosenCardId: Number;

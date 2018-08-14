@@ -2,36 +2,21 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NavigationBarComponent} from './components/navigation-bar/navigation-bar.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MainComponent} from './containers/main/main.component';
 import {AppRoutingModule} from './app-routing.module';
 import {ProfileComponent} from './components/profile/profile.component';
-import {SessionComponent} from './components/session/session.component';
 import {TOKEN_NAME} from './services/auth.constant';
 import {AuthConfig, AuthHttp} from 'angular2-jwt';
 import {Http, HttpModule, RequestOptions} from '@angular/http';
 import {ImageUploadComponent} from './components/image-upload/image-upload.component';
-import {GameSessionComponent} from './components/game-session/game-session.component';
-import {CreateGameSessionComponent} from './components/create-game-session/create-game-session.component';
-import {GameSessionSettingsComponent} from './components/game-session-settings/game-session-settings.component';
-import {GameSessionEditComponent} from './components/game-session-edit/game-session-edit.component';
-import {ListViewComponent} from './components/list-view/list-view.component';
 import {CompleterService, Ng2CompleterModule} from 'ng2-completer';
 import {NgLoadingSpinnerModule, NgLoadingSpinnerInterceptor} from 'ng-loading-spinner';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
-import {CreateMainThemeComponent} from './components/create-main-theme/create-main-theme.component';
-import {MainThemesComponent} from './components/main-themes/main-themes.component';
-import {CardComponent} from './components/card/card.component';
-import {SessionSetupComponent} from './components/session-setup/session-setup.component';
-import {CreateCardComponent} from './components/create-card/create-card.component';
-import {PlayingcardComponent} from './components/playingcard/playingcard.component';
-import {EditCardComponent} from './components/edit-card/edit-card.component';
-import {ThemesComponent} from './containers/themes/themes.component';
-import {LobbyItemUserComponent} from './components/lobby-item-user/lobby-item-user.component';
 import {LoginModule} from './publicPages/login/login.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServicesModule} from './services/services.module';
+import {NavigationBarComponent} from './components/navigation-bar/navigation-bar.component';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -50,22 +35,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     NavigationBarComponent,
     MainComponent,
     ProfileComponent,
-    SessionComponent,
-    ImageUploadComponent,
-    GameSessionComponent,
-    CreateGameSessionComponent,
-    GameSessionSettingsComponent,
-    GameSessionEditComponent,
-    ListViewComponent,
-    CreateMainThemeComponent,
-    MainThemesComponent,
-    CardComponent,
-    SessionSetupComponent,
-    CreateCardComponent,
-    PlayingcardComponent,
-    EditCardComponent,
-    ThemesComponent,
-    LobbyItemUserComponent
+    ImageUploadComponent
   ],
   imports: [
     BrowserModule,
