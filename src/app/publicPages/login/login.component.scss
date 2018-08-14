@@ -1,16 +1,47 @@
-.form {
-  margin: 30px 3%;
+$gray-lighter: #eceeef !default;
+$image_path: "/assets/images/" !default;
+
+$prefix: 'sigin';
+
+.#{$prefix} {
+
+  &-conainer {
+    min-height: 100%;
+    background-size: cover;
+    padding: 100px;
+  }
+
+  &-main {
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+  }
 }
 
-button {
-  width: 120px;
-  height: 50px;
-  color: #fff;
-  background-color: #192a56;
-  border: none;
-  outline: none;
+.full-width {
+  width: 100%;
 }
 
-.active {
-  background-color: #e84118;
+.help {
+
+}
+
+.is-danger {
+
+}
+
+
+.loginwrapper{
+background-image:url('../../../assets/login11.jpg');height: 100%;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+
+a {
+  font-size: 14px;
+  margin-left: 10px;
+  color: #00AAAA;
+  cursor : pointer;
 }

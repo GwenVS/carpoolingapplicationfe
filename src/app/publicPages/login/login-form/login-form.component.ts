@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from "@angular/router";
 import {AuthService} from '../../../services/auth.service';
 import {HttpLoginServiceService} from '../../../services/http-login-service.service';
@@ -19,22 +19,32 @@ export class LoginFormComponent implements OnInit{
   public error = '';
   public feedback='';
 
-  constructor(router: Router, private userService: UserService, private authService: AuthService, private httpLoginService: HttpLoginServiceService) {
+  constructor(router: Router, private userService: UserService, private authService: AuthService, private httpLoginService: HttpLoginServiceService,private fb: FormBuilder) {
     this.service = authService;
     this.router = router;
     this.httpService = httpLoginService;
   }
 
-  form = new FormGroup({
-    'username': new FormControl('', [Validators.required, Validators.minLength(3)]),
-    'password': new FormControl('', [Validators.required])
-  });
-
+  form: FormGroup;
   ngOnInit(): void {
-    //this.userService.logout();
+    this.buildForm();
     if (this.httpService.registrationComplete){
       this.feedback = 'You are registered.';
     }
+  }
+
+  buildForm() {
+    this.form = this.fb.group({
+      'username': ['', [
+        Validators.required,
+        Validators.minLength(3)
+      ]
+      ],
+      'password': ['', [
+        Validators.required
+      ]
+      ],
+    });
   }
 
   get username() {

@@ -36,6 +36,7 @@ import { GameCardComponent } from './components/game-card/game-card.component';
 import {LobbyItemUserComponent} from './components/lobby-item-user/lobby-item-user.component';
 import {ColorService} from './services/color.service';
 import {LoginModule} from './publicPages/login/login.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -82,7 +83,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     Ng2CompleterModule,
     HttpClientModule,
     NgLoadingSpinnerModule,
-    LoginModule
+    LoginModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {provide: AuthHttp, useFactory: authHttpServiceFactory, deps: [Http]},

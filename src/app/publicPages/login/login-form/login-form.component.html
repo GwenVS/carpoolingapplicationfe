@@ -1,25 +1,27 @@
 <label id="feedback">{{feedback}}</label>
-<form [formGroup]="form">
-  <div class="form-group">
-    <label for="username">Username</label>
-    <input
-      [(ngModel)]="loginUser.username" name="username"
-      formControlName="username"
-      id="username"
-      type="text"
-      class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
+<form fxLayout="column" fxLayoutAlign="start stretch" [formGroup]="form">
+
+  <mat-form-field class="full-width">
+    <input [(ngModel)]="loginUser.username"
+           name="username"
+           formControlName="username"
+           id="username"
+           type="text"
+           placeholder="Please enter your username"
+           class="form-control"
+           required matInput>
+  </mat-form-field>
+  <mat-form-field class="full-width">
     <input
       [(ngModel)]="loginUser.password" name="password"
       formControlName="password"
       id="password"
       type="password"
-      class="form-control">
-  </div>
+      class="form-control input"
+      placeholder="please enter your password"
+      required matInput>
+  </mat-form-field>
   <label>{{error}}</label><br/>
-  <button class="btn btn-primary" type="submit" (click)=clickLogin()>Login</button>
-
+  <button mat-raised-button color="primary" type="submit" (click)="clickLogin()" [disabled]="!form.valid">log in
+  </button>
 </form>
-

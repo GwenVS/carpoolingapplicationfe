@@ -1,31 +1,40 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
-import { RouterModule, Routes } from '@angular/router'; 
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
+import {
+  MatCardModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatInputModule,
+  MatToolbarModule
+} from '@angular/material';
+import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import {LoginFormComponent} from './login-form/login-form.component';
 import {SignupFormComponent} from './signup-form/signup-form.component';
-import {ReactiveFormsModule} from '@angular/forms';
-const appRoutes: Routes = [
-    { path: '', component: LoginComponent },
-]
 
+const routes: Routes = [
+  {path: '', component: LoginComponent},
+];
 @NgModule({
   imports: [
-    CommonModule,
-    MatInputModule,
-    MatFormFieldModule,
     MatCardModule,
+    CommonModule,
+    FlexLayoutModule,
     MatButtonModule,
-    RouterModule.forChild(appRoutes),
-    ReactiveFormsModule
+    MatButtonToggleModule,
+    MatInputModule,
+    MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(routes)
   ],
   declarations: [
     LoginComponent,
     LoginFormComponent,
-    SignupFormComponent]
+    SignupFormComponent
+  ]
 })
-export class LoginModule { }
+export class LoginModule {
+}
