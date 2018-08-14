@@ -23,7 +23,6 @@ import { ImageUploadComponent } from './components/image-upload/image-upload.com
 import { GameSessionComponent } from './components/game-session/game-session.component';
 import { CreateGameSessionComponent } from './components/create-game-session/create-game-session.component';
 import { GameSessionSettingsComponent } from './components/game-session-settings/game-session-settings.component';
-import { routes } from './app.router';
 import { GameSessionEditComponent } from './components/game-session-edit/game-session-edit.component';
 import { ListViewComponent } from './components/list-view/list-view.component';
 import {CompleterService, Ng2CompleterModule} from "ng2-completer";
@@ -88,7 +87,6 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     AppRoutingModule,
     HttpModule,
     Ng2CompleterModule,
-    routes,
     HttpClientModule,
     NgLoadingSpinnerModule,
   ],

@@ -27,7 +27,7 @@ export class MainComponent implements OnInit{
   activeSessionsNumber: 0;
   chosenGameSessionId: Number;
   chosenCardId: Number;
-  imageSrc = "https://www.vccircle.com/wp-content/uploads/2017/03/default-profile.png";
+  imageSrc = "../../assets/noavatar.png";
   domSanitizerService;
   @ViewChild('session') sessionElement:ElementRef;
   @ViewChild('profile') profileElement:ElementRef;
