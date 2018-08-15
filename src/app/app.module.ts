@@ -13,7 +13,7 @@ import {ImageUploadComponent} from './components/image-upload/image-upload.compo
 import {CompleterService, Ng2CompleterModule} from 'ng2-completer';
 import {NgLoadingSpinnerModule, NgLoadingSpinnerInterceptor} from 'ng-loading-spinner';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
-import {LoginModule} from './publicPages/login/login.module';
+import {LoginModule} from './publicpages/login/login.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServicesModule} from './services/services.module';
 import {NavigationBarComponent} from './components/navigation-bar/navigation-bar.component';
