@@ -1,5 +1,8 @@
 import {Component, OnInit, Input, HostListener, ElementRef} from '@angular/core';
 import {Router} from '@angular/router';
+import {User} from '../../../model/User';
+import {DomSanitizer} from '@angular/platform-browser';
+import {AppDataService} from '../../../services/app-data.service';
 
 @Component({
   selector: 'app-user-menu',
@@ -8,9 +11,9 @@ import {Router} from '@angular/router';
 })
 export class UserMenuComponent implements OnInit {
 
-  @Input() currentUser = null;
+  @Input() currentUser: User;
+  @Input() _imageSrc;
   isOpen: boolean = false;
-  Hari;
 
   @HostListener('document:click', ['$event', '$event.target'])
   onClick(event: MouseEvent, targetElement: HTMLElement) {
@@ -30,8 +33,7 @@ export class UserMenuComponent implements OnInit {
   }
 
   profileClick() {
-    this.router.navigateByUrl('main');
-    //this.router.navigateByUrl('auth/profile');
+    this.router.navigateByUrl('auth/profile');
   }
 
   logout() {

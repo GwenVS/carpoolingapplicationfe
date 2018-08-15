@@ -3,6 +3,7 @@ import {User} from "../../model/User";
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {AppDataService} from "../../services/app-data.service";
 import {RegisterUser} from "../../model/RegisterUser";
+import {USERNAME} from '../../services/auth.constant';
 
 @Component({
   selector: 'app-profile',
@@ -10,9 +11,8 @@ import {RegisterUser} from "../../model/RegisterUser";
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit{
-
+  user$: User;
   @Input() public imageSrc: String;
-  @Input() public _user$: User;
   @Output() userChanged: EventEmitter<User> = new EventEmitter<User>();
   @Output() profilePictureChanged: EventEmitter<String> = new EventEmitter<String>();
 
@@ -41,7 +41,18 @@ export class ProfileComponent implements OnInit{
     this.updatedUser= new RegisterUser('','','','','','','', '');
   }
 
-  ngOnInit(): void {  }
+  ngOnInit(): void {
+    this.user$ = new User();
+    this.appDataService.getUser(sessionStorage.getItem(USERNAME)).subscribe(data => {
+      this.user$ = data;
+    });
+
+    this.appDataService.getProfilePicture().subscribe(
+      (data) => {
+        this.imageSrc = data;
+      }
+    );
+  }
 
   checkPassword(){
     let password:String = this.changePasswordForm.get('password').value;
@@ -81,7 +92,7 @@ export class ProfileComponent implements OnInit{
   }
 
   onUserChanged(){
-    this.userChanged.emit(this._user$);
+    this.userChanged.emit(this.user$);
   }
 
   onProfilePictureChanged(newUrl){
@@ -90,15 +101,15 @@ export class ProfileComponent implements OnInit{
 
   changeUser(){
     if(this.form.valid){
-      this.updatedUser.username = this._user$.username;
-      this.updatedUser.firstName = this._user$.firstName;
-      this.updatedUser.lastName = this._user$.lastName;
-      this.updatedUser.email = this._user$.email;
-      this.updatedUser.birthday = this._user$.birthday;
-      this.updatedUser.gender = this._user$.gender;
+      this.updatedUser.username = this.user$.username;
+      this.updatedUser.firstName = this.user$.firstName;
+      this.updatedUser.lastName = this.user$.lastName;
+      this.updatedUser.email = this.user$.email;
+      this.updatedUser.birthday = this.user$.birthday;
+      this.updatedUser.gender = this.user$.gender;
       this.appDataService.updateUser(this.updatedUser).subscribe(
         data => {
-          this._user$ = data;
+          this.user$ = data;
           this.message = "Your details were updated successfully";
           this.onUserChanged();
         },
@@ -124,13 +135,13 @@ export class ProfileComponent implements OnInit{
   updatePassword(){
     if(this.changePasswordForm.valid){
 
-      this.updatedUser.username = this._user$.username;
-      this.updatedUser.firstName = this._user$.firstName;
-      this.updatedUser.lastName = this._user$.lastName;
-      this.updatedUser.email = this._user$.email;
-      this.updatedUser.birthday = this._user$.birthday;
-      this.updatedUser.gender = this._user$.gender;
-      this.updatedUser.password = this._user$.password;
+      this.updatedUser.username = this.user$.username;
+      this.updatedUser.firstName = this.user$.firstName;
+      this.updatedUser.lastName = this.user$.lastName;
+      this.updatedUser.email = this.user$.email;
+      this.updatedUser.birthday = this.user$.birthday;
+      this.updatedUser.gender = this.user$.gender;
+      this.updatedUser.password = this.user$.password;
       this.appDataService.updatePassword(this.updatedUser).subscribe(
         (data) => this.message = "Password updated successfully",
         (error) => this.message = "Something went wrong while updating your password!"

@@ -60,7 +60,7 @@ export class LoginFormComponent implements OnInit{
         res => {
           if (res) {
             this.userService.login(res);
-            this.router.navigateByUrl('main');
+            this.router.navigateByUrl('auth');
           } else {
             this.error = 'Username or password incorrect!';
           }

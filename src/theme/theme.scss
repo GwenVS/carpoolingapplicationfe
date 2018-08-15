@@ -1,8 +1,8 @@
 @import '~@angular/material/theming';
-/*@import '../app/auth/auth.component.scss';
-@import '../app/core/sidemenu/sidemenu.component.scss';
-@import '../app/core/sidemenu-item/sidemenu-item.component.scss';
-@import '../app/dashboard-widget/dashcard/dashcard.component.scss';
+@import '../app/authpages/authpages/authpages.component.scss';
+@import '../app/containers/core/sidemenu/sidemenu.component.scss';
+@import '../app/containers/core/sidemenu-item/sidemenu-item.component.scss';
+/*@import '../app/dashboard-widget/dashcard/dashcard.component.scss';
 @import '../app/dashboard-widget/profile-card/profile-card.component.scss';
 @import '../app/dashboard-widget/round-progressbar/round-progressbar.component.scss';
 @import '../app/dashboard-widget/sales-list/sales-list.component.scss';*/
@@ -30,27 +30,25 @@ $primary : $mat-indigo;
 $accent  : $mat-orange;
 $warn    : $mat-red;
 
-
-
 $primary-app-primary: mat-palette($primary , 400);
 $primary-app-accent:  mat-palette($accent , 900);
 $primary-app-warn:    mat-palette($warn );
-$cdk-theme:   mat-light-theme($primary-app-primary, $primary-app-accent,$primary-app-warn);
+$app-theme:   mat-light-theme($primary-app-primary, $primary-app-accent,$primary-app-warn);
 
-/*cdk-sidemenu{
+app-sidemenu{
     $sidemenu-app-primary: mat-palette($primary , 400);
     $sidemenu-app-accent:  mat-palette($accent , 900);
     $sidemenu-app-warn:    mat-palette($warn );
-    $cdk-sidemenu-theme:   mat-dark-theme($sidemenu-app-primary, $sidemenu-app-accent,$sidemenu-app-warn);
-    @include mat-list-theme($cdk-sidemenu-theme);
+    $app-sidemenu-theme:   mat-dark-theme($sidemenu-app-primary, $sidemenu-app-accent,$sidemenu-app-warn);
+    @include mat-list-theme($app-sidemenu-theme);
 }
 
 
-cdk-sidemenu-item{
-    @include sidemenu-item($cdk-theme,20px)
+app-sidemenu-item{
+    @include sidemenu-item($app-theme,20px)
 }
 
-
+/*
 cdk-dashcard {
     $dashcard-primary: mat-palette($primary);
     $dashcard-accent:  mat-palette($accent);
@@ -67,10 +65,10 @@ cdk-profile-card{
     @include dashboard-profile($cdk-dashboard-profile-theme);
     @include mat-tabs-theme($cdk-dashboard-profile-theme);
 }*/
-@include angular-material-theme($cdk-theme);
-/*@include auth($cdk-theme);
-@include round-progressbar($cdk-theme);
-@include sales-list($cdk-theme);
+@include angular-material-theme($app-theme);
+@include auth($app-theme);
+/*@include round-progressbar($app-theme);
+@include sales-list($app-theme);
 */
 html {
   height:100%;

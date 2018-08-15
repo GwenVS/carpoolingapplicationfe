@@ -3,7 +3,7 @@ import {Router} from "@angular/router";
 import {HttpLoginServiceService} from "../../services/http-login-service.service";
 import {UserService} from "../../services/user.service";
 import {AppDataService} from "../../services/app-data.service";
-import {TOKEN_NAME, USERNAME} from "../../services/auth.constant";
+import {USERNAME} from "../../services/auth.constant";
 import {User} from "../../model/User";
 import {DomSanitizer} from '@angular/platform-browser';
 import {ElementRef} from '@angular/core';

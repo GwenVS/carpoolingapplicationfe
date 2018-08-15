@@ -7,7 +7,7 @@
     <mat-form-field class="full-width">
       <label for="username">Username</label>
       <input
-        [(ngModel)]="_user$.username"
+        [(ngModel)]="user$.username"
         [readonly]="true"
         formControlName="username"
         id="username"
@@ -18,7 +18,7 @@
     <mat-form-field class="full-width">
       <label for="firstName">First name</label>
       <input
-        [(ngModel)]="_user$.firstName"
+        [(ngModel)]="user$.firstName"
         formControlName="firstName"
         id="firstName"
         type="text"
@@ -28,13 +28,13 @@
     <mat-form-field class="full-width">
       <label for="lastName">Last name</label>
       <input
-        [(ngModel)]="_user$.lastName"
+        [(ngModel)]="user$.lastName"
         formControlName="lastName"
         id="lastName"
         type="text"
         class="form-control" matInput>
     </mat-form-field>
-    <mat-radio-group [(ngModel)]="_user$.gender" class="example-radio-button width" formControlName="gender"
+    <mat-radio-group [(ngModel)]="user$.gender" class="example-radio-button width" formControlName="gender"
                      id="gender">
       <label for="gender">Gender:</label>
       <mat-radio-button *ngFor="let gender of genders" [value]="gender" class="example-radio-button">
@@ -44,7 +44,7 @@
     <mat-form-field class="full-width">
       <label for="birthday">Birthday:</label>
       <input
-        [(ngModel)]="_user$.birthday" name="birthday"
+        [(ngModel)]="user$.birthday" name="birthday"
         formControlName="birthday"
         id="birthday"
         type="date"
@@ -58,7 +58,7 @@
       <label for="email">Email</label>
       <input
         (keyup)="checkPassword()"
-        [(ngModel)]="_user$.email"
+        [(ngModel)]="user$.email"
         [readonly]="true"
         formControlName="email"
         id="email"
@@ -99,7 +99,7 @@
       <form [formGroup]="changePasswordForm">
         <mat-form-field class="full-width">
           <label>Password</label>
-          <input [(ngModel)]="_user$.password" formControlName="password" id="password" name="password"
+          <input [(ngModel)]="user$.password" formControlName="password" id="password" name="password"
                  type="password" class="form-control" matInput>
           <div *ngIf="password.touched && password.invalid" class="alert alert-danger">
             <div *ngIf="password.errors.required">Password is required</div>

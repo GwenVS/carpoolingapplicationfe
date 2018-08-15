@@ -44,7 +44,6 @@
 
   </div>
     <div class="Main col-md-9" [ngSwitch]="page">
-      <app-profile *ngSwitchCase="'profile'" [_user$]="user$" (userChanged)="onUserChanged($event)" [imageSrc]="imageSrc" (profilePictureChanged)="updateProfilePicture($event)"></app-profile>
     </div>
 </div>
 

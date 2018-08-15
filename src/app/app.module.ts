@@ -13,7 +13,6 @@ import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {LoginModule} from './publicpages/login/login.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServicesModule} from './services/services.module';
-import {NavigationBarComponent} from './components/navigation-bar/navigation-bar.component';
 import {AuthpagesModule} from './authpages/authpages.module';
 
 
@@ -29,8 +28,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavigationBarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

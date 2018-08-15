@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { menus } from './menu-element';
+import {Component, OnInit, Input} from '@angular/core';
+import {menus} from './menu-element';
 
 @Component({
   selector: 'app-sidemenu',
@@ -7,13 +7,14 @@ import { menus } from './menu-element';
   styleUrls: ['./sidemenu.component.scss']
 })
 export class SidemenuComponent implements OnInit {
+  @Input() _imageSrc;
+  @Input() iconOnly: boolean = false;
+  public menus = menus;
 
-    @Input() iconOnly:boolean = false;
-    public menus = menus;
+  constructor() {
+  }
 
-    constructor() { }
-
-    ngOnInit() {
-    }
+  ngOnInit() {
+  }
 
 }
