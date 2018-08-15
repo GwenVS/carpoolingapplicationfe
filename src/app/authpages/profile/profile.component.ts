@@ -3,12 +3,11 @@ import {User} from "../../model/User";
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {AppDataService} from "../../services/app-data.service";
 import {RegisterUser} from "../../model/RegisterUser";
-import {USERNAME} from "../../services/auth.constant";
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit{
 
@@ -22,6 +21,7 @@ export class ProfileComponent implements OnInit{
   public passwordError = "Passwords are not the same!";
   updateUserDetails: Boolean = true;
   message = '';
+  genders = ['Male', 'Female'];
 
   form = new FormGroup({
     'firstName': new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -38,18 +38,10 @@ export class ProfileComponent implements OnInit{
   });
 
   constructor(private appDataService: AppDataService) {
-
-  }
-
-  ngOnInit(): void {
     this.updatedUser= new RegisterUser('','','','','','','', '');
-    this.updatedUser.username = this._user$.username;
-    this.updatedUser.firstName = this._user$.firstName;
-    this.updatedUser.lastName = this._user$.lastName;
-    this.updatedUser.email = this._user$.email;
-    this.updatedUser.birthday = this._user$.birthday;
-    this.updatedUser.gender = this._user$.gender;
   }
+
+  ngOnInit(): void {  }
 
   checkPassword(){
     let password:String = this.changePasswordForm.get('password').value;
@@ -98,6 +90,12 @@ export class ProfileComponent implements OnInit{
 
   changeUser(){
     if(this.form.valid){
+      this.updatedUser.username = this._user$.username;
+      this.updatedUser.firstName = this._user$.firstName;
+      this.updatedUser.lastName = this._user$.lastName;
+      this.updatedUser.email = this._user$.email;
+      this.updatedUser.birthday = this._user$.birthday;
+      this.updatedUser.gender = this._user$.gender;
       this.appDataService.updateUser(this.updatedUser).subscribe(
         data => {
           this._user$ = data;
@@ -125,6 +123,14 @@ export class ProfileComponent implements OnInit{
 
   updatePassword(){
     if(this.changePasswordForm.valid){
+
+      this.updatedUser.username = this._user$.username;
+      this.updatedUser.firstName = this._user$.firstName;
+      this.updatedUser.lastName = this._user$.lastName;
+      this.updatedUser.email = this._user$.email;
+      this.updatedUser.birthday = this._user$.birthday;
+      this.updatedUser.gender = this._user$.gender;
+      this.updatedUser.password = this._user$.password;
       this.appDataService.updatePassword(this.updatedUser).subscribe(
         (data) => this.message = "Password updated successfully",
         (error) => this.message = "Something went wrong while updating your password!"

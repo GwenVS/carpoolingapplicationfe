@@ -55,7 +55,7 @@ export class MainComponent implements OnInit{
 
   ngAfterViewInit()
   {
-    this.activeItem = this.sessionElement.nativeElement;
+    this.activeItem = this.profileElement.nativeElement;
     this.changeActive(this.activeItem);
   }
 

@@ -1,4 +1,4 @@
-import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {AppDataService} from "../../services/app-data.service";
 import {TOKEN_NAME, USERNAME} from "../../services/auth.constant";
 import {FormControl, FormGroup} from "@angular/forms";
@@ -10,12 +10,12 @@ import {serverUrl} from '../../../environments/environment';
 @Component({
   selector: 'app-image-upload',
   templateUrl: './image-upload.component.html',
-  styleUrls: ['./image-upload.component.css']
+  styleUrls: ['./image-upload.component.scss']
 })
 export class ImageUploadComponent implements OnInit {
   fileService: AppDataService;
   public image: File;
-  @Input() public imageUrl: String = "https://www.vccircle.com/wp-content/uploads/2017/03/default-profile.png";
+  @Input() public imageUrl: String = "../../assets/noavatar.png";
   @Input() public typeOfUpload;
   @Input() public createdSessionId;
   @Output() profilePictureChanged: EventEmitter<String> = new EventEmitter<String>();
@@ -111,7 +111,7 @@ export class ImageUploadComponent implements OnInit {
   }
 
   reset(){
-    this.imageUrl = "https://www.vccircle.com/wp-content/uploads/2017/03/default-profile.png";
+    this.imageUrl = "../../assets/noavatar.png";
     this.imageInput.nativeElement.value = "";
   }
 
