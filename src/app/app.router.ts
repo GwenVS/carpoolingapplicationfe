@@ -4,6 +4,7 @@ import {MainComponent} from "./containers/main/main.component";
 export const routes: Routes = [
   {path: 'login', loadChildren: './publicpages/login/login.module#LoginModule'},
   {path: 'main', component: MainComponent},
+  {path: 'auth', loadChildren: './authpages/authpages.module#AuthpagesModule'},
   {path: '**', redirectTo: 'login'},
   {path: '', redirectTo: 'login', pathMatch:'full'}
 ];
