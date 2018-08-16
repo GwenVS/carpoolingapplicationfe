@@ -131,6 +131,6 @@ export class MainComponent implements OnInit{
 
   logout(){
     this.userService.logout();
-    this.router.navigateByUrl("login");
+    this.router.navigateByUrl("pages/login");
   }
 }

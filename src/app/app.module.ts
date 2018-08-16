@@ -10,10 +10,10 @@ import {Http, HttpModule, RequestOptions} from '@angular/http';
 import {CompleterService, Ng2CompleterModule} from 'ng2-completer';
 import {NgLoadingSpinnerModule, NgLoadingSpinnerInterceptor} from 'ng-loading-spinner';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
-import {LoginModule} from './publicpages/login/login.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServicesModule} from './services/services.module';
 import {AuthpagesModule} from './authpages/authpages.module';
+import {PublicpagesModule} from './publicpages/publicpages.module';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
@@ -39,7 +39,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     Ng2CompleterModule,
     HttpClientModule,
     NgLoadingSpinnerModule,
-    LoginModule,
+    PublicpagesModule,
     BrowserAnimationsModule,
     ServicesModule,
     AuthpagesModule

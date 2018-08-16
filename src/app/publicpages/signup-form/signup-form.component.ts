@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
-import {HttpLoginServiceService} from '../../../services/http-login-service.service';
-import {RegisterUser} from '../../../model/RegisterUser';
+import {Router} from '@angular/router';
+import {HttpLoginServiceService} from '../../services/http-login-service.service';
+import {RegisterUser} from '../../model/RegisterUser';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class SignupFormComponent implements OnInit {
   form: FormGroup;
   genders = ['Male', 'Female'];
 
-  constructor(service: HttpLoginServiceService, private fb: FormBuilder) {
+  constructor(service: HttpLoginServiceService, private fb: FormBuilder, private router: Router) {
     this.service = service;
   }
 
@@ -92,9 +93,16 @@ export class SignupFormComponent implements OnInit {
   clickRegister() {
     if (this.form.valid && this._passwordsAreTheSame) {
       this.service.doRegister(this.registerUser).subscribe((data) => {
+        this.router.navigateByUrl("pages/login")
       }, error => console.log(this.label = error.error));
     }
   }
 
+  clickLogin(){
+    this.router.navigateByUrl("pages/login")
+  }
 
+  clickSearchRide() {
+    this.router.navigateByUrl("pages/ride")
+  }
 }
