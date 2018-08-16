@@ -71,7 +71,7 @@ export class AuthpagesComponent implements OnInit {
 
   logout(){
     this.userService.logout();
-    this.router.navigateByUrl("login");
+    this.router.navigateByUrl("pages/login");
   }
 
   onProfilePictureChanged(newUrl){

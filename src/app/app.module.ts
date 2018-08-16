@@ -14,6 +14,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServicesModule} from './services/services.module';
 import {AuthpagesModule} from './authpages/authpages.module';
 import {PublicpagesModule} from './publicpages/publicpages.module';
+import {AuthGuardService} from './services/guards/auth-guard.service';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
@@ -48,7 +49,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     {provide: AuthHttp, useFactory: authHttpServiceFactory, deps: [Http]},
     Ng2CompleterModule,
     CompleterService,
-    {provide: HTTP_INTERCEPTORS, useClass: NgLoadingSpinnerInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: NgLoadingSpinnerInterceptor, multi: true},
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })
