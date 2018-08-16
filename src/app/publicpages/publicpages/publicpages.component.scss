@@ -31,9 +31,11 @@ $prefix: 'sigin';
 }
 
 .publicwrapper {
+  min-height: 100%;
   background-image: url('../../../assets/slide-3-bg.jpg');
-  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
+

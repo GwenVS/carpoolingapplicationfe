@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicpagesRoutingModule } from './publicpages-routing.module';
-import {MatButtonModule, MatButtonToggleModule, MatCardModule, MatInputModule, MatRadioModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatInputModule,
+  MatRadioModule,
+  MatToolbarModule
+} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {LoginFormComponent} from './login-form/login-form.component';

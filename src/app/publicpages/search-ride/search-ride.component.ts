@@ -10,8 +10,7 @@ export class SearchRideComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {  }
 
   clickSignUp() {
     this.router.navigateByUrl("pages/signup")

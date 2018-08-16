@@ -10,7 +10,6 @@ export class PublicpagesComponent implements OnInit {
   constructor(){
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {  }
 
 }
