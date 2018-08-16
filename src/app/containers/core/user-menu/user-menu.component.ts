@@ -35,8 +35,14 @@ export class UserMenuComponent implements OnInit {
 
   profileClick() {
     this.router.navigateByUrl('auth/profile');
+    this.isOpen = false;
   }
 
+  helpClick() {
+    //todo: helpwindow
+    // this.router.navigateByUrl('help');
+    this.isOpen = false;
+  }
   logout() {
     this.loggingOut.emit(null);
   }

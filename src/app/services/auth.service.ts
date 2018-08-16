@@ -3,15 +3,16 @@ import {Http, Headers} from "@angular/http";
 import 'rxjs/add/operator/map';
 import {LoginUser} from "../model/loginUser";
 import {TOKEN_NAME, USERNAME} from "./auth.constant";
-import {User} from "../model/User";
 import {serverUrl} from '../../environments/environment';
+import {tokenNotExpired} from 'angular2-jwt';
+import {UserService} from './user.service';
 
 @Injectable()
 export class AuthService {
 
   static AUTH_TOKEN = serverUrl + '/api/public/login';
 
-  constructor(private http: Http) {
+  constructor(private http: Http, private userService: UserService) {
   }
 
   checkCredentials(loginUser: LoginUser) {
@@ -28,5 +29,13 @@ export class AuthService {
         }
         return null;
       });
+  }
+
+  isAuthenticated() {
+    if (tokenNotExpired(TOKEN_NAME, this.userService.accessToken)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
