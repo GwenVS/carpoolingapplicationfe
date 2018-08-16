@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MediaChange, ObservableMedia} from '@angular/flex-layout';
-import {User} from '../../model/User';
+import {User} from '../../models/User';
 import {USERNAME} from '../../services/auth.constant';
 import {AppDataService} from '../../services/app-data.service';
 import {DomSanitizer} from '@angular/platform-browser';

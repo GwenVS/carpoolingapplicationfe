@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from "@angular/router";
 import {AuthService} from '../../services/auth.service';
 import {HttpLoginServiceService} from '../../services/http-login-service.service';
-import {LoginUser} from '../../model/loginUser';
+import {LoginUser} from '../../models/loginUser';
 import {UserService} from '../../services/user.service';
 
 

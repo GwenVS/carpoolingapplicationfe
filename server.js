@@ -8,6 +8,9 @@ app.use(cors());
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist'));
 
+// Set our api routes proxy to point to spring boot server
+app.use('/server', proxy('https://carpoolingapplication.herokuapp.com'));
+
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('/*', function(req, res) {

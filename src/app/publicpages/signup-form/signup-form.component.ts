@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import {Router} from '@angular/router';
 import {HttpLoginServiceService} from '../../services/http-login-service.service';
-import {RegisterUser} from '../../model/RegisterUser';
+import {RegisterUser} from '../../models/RegisterUser';
 
 
 @Component({

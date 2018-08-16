@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers} from "@angular/http";
 import 'rxjs/add/operator/map';
-import {LoginUser} from "../model/loginUser";
+import {LoginUser} from "../models/loginUser";
 import {TOKEN_NAME, USERNAME} from "./auth.constant";
-import {serverUrl} from '../../environments/environment';
 import {tokenNotExpired} from 'angular2-jwt';
 import {UserService} from './user.service';
 
 @Injectable()
 export class AuthService {
 
-  static AUTH_TOKEN = serverUrl + '/api/public/login';
+  static AUTH_TOKEN = '/server/api/public/login';
 
   constructor(private http: Http, private userService: UserService) {
   }

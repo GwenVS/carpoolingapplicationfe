@@ -1,8 +1,8 @@
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {User} from "../../model/User";
+import {User} from "../../models/User";
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {AppDataService} from "../../services/app-data.service";
-import {RegisterUser} from "../../model/RegisterUser";
+import {RegisterUser} from "../../models/RegisterUser";
 import {USERNAME} from '../../services/auth.constant';
 
 @Component({
