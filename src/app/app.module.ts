@@ -16,7 +16,7 @@ import {AuthpagesModule} from './authpages/authpages.module';
 import {PublicpagesModule} from './publicpages/publicpages.module';
 import {AuthGuardService} from './services/guards/auth-guard.service';
 
-export function authHttpServiceFactory(http: Http, options: RequestOptions) {
+/*export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
     tokenName: TOKEN_NAME,
     tokenGetter: (() => {
@@ -24,7 +24,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     }),
     globalHeaders: [{'Content-Type': 'application/json'}],
   }), http, options);
-}
+}*/
 
 @NgModule({
   declarations: [
@@ -46,7 +46,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     AuthpagesModule
   ],
   providers: [
-    {provide: AuthHttp, useFactory: authHttpServiceFactory, deps: [Http]},
+    //{provide: AuthHttp, useFactory: authHttpServiceFactory, deps: [Http]},
     Ng2CompleterModule,
     CompleterService,
     {provide: HTTP_INTERCEPTORS, useClass: NgLoadingSpinnerInterceptor, multi: true},
