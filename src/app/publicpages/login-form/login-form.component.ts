@@ -58,7 +58,7 @@ export class LoginFormComponent implements OnInit{
   }
 
   clickLogin(){
-   this.authService.login(this.loginUser)
+   this.authService.checkCredentials(this.loginUser)
       .subscribe(
         res => {
           if (res) {

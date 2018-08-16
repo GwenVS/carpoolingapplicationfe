@@ -1,7 +1,7 @@
 <mat-card-title>
   <a class="redirect" (click)="clickSearchRide()">Find Rides</a>
   <a class="redirect" (click)="clickLogin()">User Login</a>
-  Register Account
+  Register
 </mat-card-title>
 <mat-card-content>
 <form fxLayout="column" fxLayoutAlign="start stretch" [formGroup]="form" name="loginForm">
@@ -123,7 +123,7 @@
     </div>
   </mat-form-field>
 
-  <label>{{label}}</label>
+  <label class="error">{{label}}</label>
 
   <button mat-raised-button color="primary" type="submit" (click)="clickRegister()">Sign Up</button>
 </form>

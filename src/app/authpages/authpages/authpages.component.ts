@@ -22,7 +22,6 @@ export class AuthpagesComponent implements OnInit {
   user$: User;
   imageSrc = "../../../assets/noavatar.png";
   sanImage;
-
   ngOnChanges() {
     this.visibility = this.isVisible ? 'shown' : 'hidden';
   }
@@ -31,6 +30,7 @@ export class AuthpagesComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.sanImage = this.domSanitizer.bypassSecurityTrustUrl(this.imageSrc)
     this.media.subscribe((mediaChange: MediaChange) => {
       this.toggleView();
     });
@@ -72,5 +72,11 @@ export class AuthpagesComponent implements OnInit {
   logout(){
     this.userService.logout();
     this.router.navigateByUrl("login");
+  }
+
+  onProfilePictureChanged(newUrl){
+    this.imageSrc = newUrl;
+    this.sanImage = this.domSanitizer.bypassSecurityTrustUrl(this.imageSrc)
+    //todo: pass info on to children: reload?
   }
 }

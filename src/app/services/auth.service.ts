@@ -14,7 +14,7 @@ export class AuthService {
   constructor(private http: Http) {
   }
 
-  login(loginUser: LoginUser) {
+  checkCredentials(loginUser: LoginUser) {
     const headers = new Headers();
     headers.append('Authorization', 'Bearer ' + TOKEN_NAME);
     headers.append("Content-Type", "application/json");
