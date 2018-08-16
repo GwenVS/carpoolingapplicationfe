@@ -2,6 +2,7 @@ const path = require('path');
 const cors = require('cors');
 //Install express server
 const express = require('express');
+const proxy = require('express-http-proxy');
 const app = express();
 
 app.use(cors());
