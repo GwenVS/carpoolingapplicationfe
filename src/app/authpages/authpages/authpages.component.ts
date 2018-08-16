@@ -4,6 +4,8 @@ import {User} from '../../model/User';
 import {USERNAME} from '../../services/auth.constant';
 import {AppDataService} from '../../services/app-data.service';
 import {DomSanitizer} from '@angular/platform-browser';
+import {UserService} from '../../services/user.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-authpages',
@@ -19,14 +21,13 @@ export class AuthpagesComponent implements OnInit {
   sideNavMode: string = 'side';
   user$: User;
   imageSrc = "../../../assets/noavatar.png";
-  domSanitizerService;
+  sanImage;
 
   ngOnChanges() {
     this.visibility = this.isVisible ? 'shown' : 'hidden';
   }
 
-  constructor(private media: ObservableMedia,private appDataService: AppDataService,private domSanitizer: DomSanitizer) {
-    this.domSanitizerService = this.domSanitizer;
+  constructor(private media: ObservableMedia,private userService: UserService ,private appDataService: AppDataService,private domSanitizer: DomSanitizer, private router: Router) {
   }
 
   ngOnInit() {
@@ -40,6 +41,7 @@ export class AuthpagesComponent implements OnInit {
     this.appDataService.getProfilePicture().subscribe(
       (data) => {
         this.imageSrc = data;
+        this.sanImage = this.domSanitizer.bypassSecurityTrustUrl(this.imageSrc)
       }
     );
 
@@ -65,5 +67,10 @@ export class AuthpagesComponent implements OnInit {
       this.matDrawerOpened = false;
       this.matDrawerShow = false;
     }
+  }
+
+  logout(){
+    this.userService.logout();
+    this.router.navigateByUrl("login");
   }
 }

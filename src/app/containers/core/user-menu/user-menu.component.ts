@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, HostListener, ElementRef} from '@angular/core';
+import {Component, OnInit, Input, HostListener, ElementRef, EventEmitter, Output} from '@angular/core';
 import {Router} from '@angular/router';
 import {User} from '../../../model/User';
 import {DomSanitizer} from '@angular/platform-browser';
@@ -14,6 +14,7 @@ export class UserMenuComponent implements OnInit {
   @Input() currentUser: User;
   @Input() _imageSrc;
   isOpen: boolean = false;
+  @Output() loggingOut: EventEmitter<any> = new EventEmitter();
 
   @HostListener('document:click', ['$event', '$event.target'])
   onClick(event: MouseEvent, targetElement: HTMLElement) {
@@ -37,7 +38,6 @@ export class UserMenuComponent implements OnInit {
   }
 
   logout() {
-    sessionStorage.clear(); //todo: niet voldoende??
-    this.router.navigateByUrl('login');
+    this.loggingOut.emit(null);
   }
 }

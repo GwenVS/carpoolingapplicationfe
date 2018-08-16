@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { ToolbarHelpers } from './toolbar.helpers';
 
 @Component({
@@ -13,6 +13,7 @@ export class ToolbarComponent implements OnInit {
 	@Input() sidebar;
 	@Input() drawer;
 	@Input() matDrawerShow;
+  @Output() loggingOut: EventEmitter<any> = new EventEmitter();
   
 	searchOpen: boolean = false;
     toolbarHelpers = ToolbarHelpers;
@@ -21,4 +22,7 @@ export class ToolbarComponent implements OnInit {
   	ngOnInit() {
   	}
 
+  	logout(){
+      this.loggingOut.emit(null);
+    }
 }

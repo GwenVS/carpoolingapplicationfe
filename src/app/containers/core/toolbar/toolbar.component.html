@@ -17,7 +17,7 @@
 
     <app-toolbar-notification [notifications]="toolbarHelpers?.notifications"></app-toolbar-notification>
 
-    <app-user-menu [currentUser]="_user$" [_imageSrc]="_imageSrc"></app-user-menu>
+    <app-user-menu [currentUser]="_user$" [_imageSrc]="_imageSrc" (loggingOut)="logout()"></app-user-menu>
     
      <button mat-icon-button (click)="sidebar.toggle();">
         <i class="material-icons app-toolbar-menu">menu </i>
