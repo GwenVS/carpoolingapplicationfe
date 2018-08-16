@@ -8,7 +8,7 @@ import {MainComponent} from '../containers/main/main.component';
 import {CoreModule} from '../containers/core/core.module';
 import {
   MatButtonModule,
-  MatButtonToggleModule, MatIconModule,
+  MatButtonToggleModule, MatCardModule, MatIconModule,
   MatInputModule,
   MatRadioModule,
   MatSidenavModule, MatTabsModule,
@@ -31,6 +31,7 @@ import { CreateRideComponent } from './create-ride/create-ride.component';
     MatIconModule,
     MatTabsModule,
     MatSidenavModule,
+    MatCardModule,
     PerfectScrollbarModule,
     FormsModule,
     ReactiveFormsModule,

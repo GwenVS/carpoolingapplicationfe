@@ -13,6 +13,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import {LoginFormComponent} from './login-form/login-form.component';
 import {SignupFormComponent} from './signup-form/signup-form.component';
+import {SearchRideComponent} from '../search-ride/search-ride.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -34,7 +35,8 @@ const routes: Routes = [
   declarations: [
     LoginComponent,
     LoginFormComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    SearchRideComponent
   ]
 })
 export class LoginModule {

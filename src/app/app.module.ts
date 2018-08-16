@@ -15,7 +15,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServicesModule} from './services/services.module';
 import {AuthpagesModule} from './authpages/authpages.module';
 
-
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
     tokenName: TOKEN_NAME,

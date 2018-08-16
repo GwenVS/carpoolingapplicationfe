@@ -21,6 +21,7 @@ export class ProfileComponent implements OnInit{
   public passwordError = "Passwords are not the same!";
   updateUserDetails: Boolean = true;
   message = '';
+  paswordMessage = '';
   genders = ['Male', 'Female'];
 
   form = new FormGroup({
@@ -143,8 +144,8 @@ export class ProfileComponent implements OnInit{
       this.updatedUser.gender = this.user$.gender;
       this.updatedUser.password = this.user$.password;
       this.appDataService.updatePassword(this.updatedUser).subscribe(
-        (data) => this.message = "Password updated successfully",
-        (error) => this.message = "Something went wrong while updating your password!"
+        (data) => this.paswordMessage = "Password updated successfully",
+        (error) => this.paswordMessage = "Something went wrong while updating your password!"
       );
     }
   }

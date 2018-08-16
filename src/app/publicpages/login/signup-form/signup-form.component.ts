@@ -23,11 +23,9 @@ export class SignupFormComponent implements OnInit {
     this.service = service;
   }
 
-
   ngOnInit(): void {
     this.buildForm();
   }
-
 
   buildForm() {
     this.form = this.fb.group({
