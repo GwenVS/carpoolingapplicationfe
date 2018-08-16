@@ -6,60 +6,37 @@ export const menus = [
     'open': true,
     'chip': {'value': 1, 'color': 'accent'},
   },
-  {
-    'name': 'Create Ride',
-    'icon': 'mode_edit',
-    'link': '/auth/createride',
-    'open': true,
-    'chip': {'value': 1, 'color': 'accent'},
-  }, {
-    'name': 'Applications',
+ {
+    'name': 'Rides',
     'icon': 'view_module',
     'open': false,
     'link': false,
     'sub': [
       {
-        'name': 'chat',
+        'name': 'Create Ride',
+        'icon': 'mode_edit',
+        'link': '/auth/createride',
+        'open': true,
+        'chip': {'value': 1, 'color': 'accent'},
+      },
+      {
+        'name': 'My Rides',
         'icon': 'chat',
-        'link': 'chats/chat',
-        'open': false,
+        'link': 'auth/myrides',
+        'open': true,
       },
       {
-        'name': 'mail',
+        'name': 'Find Ride',
         'icon': 'mail',
-        'link': 'mail/mail',
-        'open': false,
-      },
-      {
-        'name': 'Editor',
-        'icon': 'editor',
-        'link': 'editor/editor',
-        'open': false,
+        'link': 'auth/findride',
+        'open': true,
       }
     ]
   }
   , {
-    'name': 'Pages',
+    'name': 'Calender',
     'icon': 'content_copy',
-    'open': false,
-    'link': false,
-    'sub': [
-      {
-        'name': 'Login',
-        'icon': 'work',
-        'open': false,
-        'link': '../login',
-      }, {
-        'name': 'Services',
-        'icon': 'local_laundry_service',
-        'open': false,
-        'link': 'pages/services',
-      }, {
-        'name': 'Contact',
-        'icon': 'directions',
-        'open': false,
-        'link': 'pages/contact'
-      }
-    ]
+    'open': true,
+    'link': "auth/calender",
   }
 ];
