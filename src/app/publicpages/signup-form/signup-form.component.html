@@ -14,10 +14,10 @@
       type="text"
       class="form-control"
       required matInput>
-    <div *ngIf="firstName.touched && firstName.invalid" class="alert alert-danger">
-      <div *ngIf="firstName.errors.required">First name is required</div>
-      <div *ngIf="firstName.errors.minlength">First name must be {{firstName.errors.minlength.requiredLength}}</div>
-    </div>
+    <mat-error *ngIf="firstName.touched && firstName.invalid" class="alert alert-danger">
+      <mat-error *ngIf="firstName.errors.required">First name is required</mat-error>
+      <mat-error *ngIf="firstName.errors.minlength">First name must be {{firstName.errors.minlength.requiredLength}}</mat-error>
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="full-width">
@@ -29,10 +29,10 @@
       type="text"
       class="form-control"
       required matInput>
-    <div *ngIf="lastName.touched && lastName.invalid" class="alert alert-danger">
-      <div *ngIf="lastName.errors.required">Last name is required</div>
-      <div *ngIf="lastName.errors.minlength">Last name must be {{lastName.errors.minlength.requiredLength}}</div>
-    </div>
+    <mat-error *ngIf="lastName.touched && lastName.invalid" class="alert alert-danger">
+      <mat-error *ngIf="lastName.errors.required">Last name is required</mat-error>
+      <mat-error *ngIf="lastName.errors.minlength">Last name must be {{lastName.errors.minlength.requiredLength}}</mat-error>
+    </mat-error>
   </mat-form-field>
   <mat-form-field class="full-width">
     <label for="birthday">Birthday:</label>
@@ -43,9 +43,9 @@
       type="date"
       class="form-control"
       required matInput>
-    <div *ngIf="birthday.touched && birthday.invalid" class="alert alert-danger">
-      <div *ngIf="birthday.errors.required">Birthday is required</div>
-    </div>
+    <mat-error *ngIf="birthday.touched && birthday.invalid" class="alert alert-danger">
+      <mat-error *ngIf="birthday.errors.required">Birthday is required</mat-error>
+    </mat-error>
   </mat-form-field>
   <mat-form-field class=" full-width">
     <input matInput style="display: none" >
@@ -66,9 +66,9 @@
       type="email"
       class="form-control"
       required matInput>
-    <div *ngIf="email.touched && email.invalid" class="alert alert-danger">
-      <div *ngIf="email.errors.required">Email is required</div>
-    </div>
+    <mat-error *ngIf="email.touched && email.invalid" class="alert alert-danger">
+      <mat-error *ngIf="email.errors.required">Email is required</mat-error>
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="full-width">
@@ -80,10 +80,10 @@
       type="text"
       class="form-control"
       required matInput>
-    <div *ngIf="username.touched && username.invalid" class="alert alert-danger">
-      <div *ngIf="username.errors.required">Username is required</div>
-      <div *ngIf="username.errors.minlength">Username must be {{username.errors.minlength.requiredLength}}</div>
-    </div>
+    <mat-error *ngIf="username.touched && username.invalid" class="alert alert-danger">
+      <mat-error *ngIf="username.errors.required">Username is required</mat-error>
+      <mat-error *ngIf="username.errors.minlength">Username must be {{username.errors.minlength.requiredLength}}</mat-error>
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="full-width">
@@ -95,13 +95,13 @@
       type="password"
       class="form-control"
       required matInput>
-    <div *ngIf="password.touched && password.invalid" class="alert alert-danger">
-      <div *ngIf="password.errors.required">Password is required</div>
-      <div *ngIf="password.errors.minlength">Password must be {{password.errors.minlength.requiredLength}}</div>
-    </div>
-    <div *ngIf="password.touched && password2.touched && !_passwordsAreTheSame" class="alert alert-danger">
-      <div *ngIf="!passwordsAreTheSame">{{passwordError}}</div>
-    </div>
+    <mat-error *ngIf="password.touched && password.invalid" class="alert alert-danger">
+      <mat-error *ngIf="password.errors.required">Password is required</mat-error>
+      <mat-error *ngIf="password.errors.minlength">Password must be {{password.errors.minlength.requiredLength}}</mat-error>
+    </mat-error>
+    <mat-error *ngIf="password.touched && password2.touched && !_passwordsAreTheSame" class="alert alert-danger">
+      <mat-error *ngIf="!passwordsAreTheSame">{{passwordError}}</mat-error>
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="full-width">
@@ -114,13 +114,13 @@
       type="password"
       class="form-control"
       required matInput>
-    <div *ngIf="password2.touched && password2.invalid" class="alert alert-danger">
-      <div *ngIf="password2.errors.required">Password is required</div>
-      <div *ngIf="password2.errors.minlength">Password must be {{password2.errors.minlength.requiredLength}}</div>
-    </div>
-    <div *ngIf="password.touched && password2.touched && !_passwordsAreTheSame" class="alert alert-danger">
-      <div *ngIf="!passwordsAreTheSame">{{passwordError}}</div>
-    </div>
+    <mat-error *ngIf="password2.touched && password2.invalid" class="alert alert-danger">
+      <mat-error *ngIf="password2.errors.required">Password is required</mat-error>
+      <mat-error *ngIf="password2.errors.minlength">Password must be {{password2.errors.minlength.requiredLength}}</mat-error>
+    </mat-error>
+    <mat-error *ngIf="password.touched && password2.touched && !_passwordsAreTheSame" class="alert alert-danger">
+      <mat-error *ngIf="!passwordsAreTheSame">{{passwordError}}</mat-error>
+    </mat-error>
   </mat-form-field>
 
   <label class="error">{{label}}</label>

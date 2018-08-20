@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {tap} from "rxjs/operators";
 import {RegisterUser} from "../models/RegisterUser";
-import {TOKEN_NAME, USERNAME} from "./auth.constant";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 

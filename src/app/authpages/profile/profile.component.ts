@@ -145,7 +145,7 @@ export class ProfileComponent implements OnInit{
       this.updatedUser.password = this.user$.password;
       this.appDataService.updatePassword(this.updatedUser).subscribe(
         (data) => this.paswordMessage = "Password updated successfully",
-        (error) => this.paswordMessage = "Something went wrong while updating your password!"
+        (error) => this.paswordMessage = "Something went wrong while updating your password, please try again later."
       );
     }
   }
