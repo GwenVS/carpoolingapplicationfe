@@ -1,3 +1,5 @@
+import {Car} from './Car';
+
 export class RegisterUser {
   constructor(
     public username: String,
@@ -7,6 +9,7 @@ export class RegisterUser {
     public email: String,
     public birthday: String,
     public gender: String,
-    public profilePicture
+    public profilePicture,
+    public cars: Car[]
   ){}
 }

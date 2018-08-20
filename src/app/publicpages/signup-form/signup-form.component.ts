@@ -12,7 +12,7 @@ import {RegisterUser} from '../../models/RegisterUser';
 })
 export class SignupFormComponent implements OnInit {
   service: HttpLoginServiceService;
-  registerUser: RegisterUser = new RegisterUser('', '', '', '', '', '', '', '');
+  registerUser: RegisterUser = new RegisterUser('', '', '', '', '', '', '', '',[]);
   public label;
   public _passwordsAreTheSame: boolean = false;
   public passwordError = 'Passwords are not the same!';

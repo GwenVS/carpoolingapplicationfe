@@ -1,5 +1,6 @@
-export class User {
+import {Car} from './Car';
 
+export class User {
   private _username: String;
   private _firstName: String;
   private _lastName: String;
@@ -7,6 +8,7 @@ export class User {
   private _password: String;
   private _gender: String;
   private _birthday: String;
+  private _cars: Car[]
 
   constructor() {
     this._username = "";
@@ -16,6 +18,7 @@ export class User {
     this._password= "";
     this._gender = "";
     this._birthday = "";
+    this._cars = [];
   }
 
   fromJSON(obj: any){
@@ -26,6 +29,7 @@ export class User {
     this._password = obj.encryptedPassword;
     this._gender = obj.gender;
     this._birthday = obj.birthday;
+    this._cars = obj.cars;
     return this;
   }
 
@@ -84,5 +88,14 @@ export class User {
 
   set birthday(value: String) {
     this._birthday = value;
+  }
+
+
+  get cars(): Car[] {
+    return this._cars;
+  }
+
+  set cars(value: Car[]) {
+    this._cars = value;
   }
 }

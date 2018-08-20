@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Car} from '../../models/Car';
 import {CarService} from '../../services/car.service';
 
@@ -9,16 +9,11 @@ import {CarService} from '../../services/car.service';
 })
 export class CarsComponent implements OnInit {
 
-  public cars: Car[];
+  @Input() public cars: Car[];
 
-  constructor(private carService: CarService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getCars();
-  }
-
-  getCars():void {
-    this.carService.getCarsByUser().subscribe(cars=> this.cars= cars);
   }
 
 }
