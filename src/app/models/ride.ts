@@ -1,10 +1,14 @@
 import {Location} from './Location';
+import {SubRide} from './SubRide';
+import {RideRequest} from './RideRequest';
 export class Ride {
   private _departureTimeOutwardJourney: String;
   private _departureTimeReturnTrip: String;
   private _rideType: String;
   private _locations: Location[];
   private _carId: number;
+  private _subRides: SubRide[];
+  private _rideRequests: RideRequest[];
 
   get departureTimeOutwardJourney(): String {
     return this._departureTimeOutwardJourney;
@@ -44,5 +48,22 @@ export class Ride {
 
   set carId(value: number) {
     this._carId = value;
+  }
+
+
+  get subRides(): SubRide[] {
+    return this._subRides;
+  }
+
+  set subRides(value: SubRide[]) {
+    this._subRides = value;
+  }
+
+  get rideRequests(): RideRequest[] {
+    return this._rideRequests;
+  }
+
+  set rideRequests(value: RideRequest[]) {
+    this._rideRequests = value;
   }
 }

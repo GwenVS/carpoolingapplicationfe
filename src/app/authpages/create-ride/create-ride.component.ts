@@ -2,7 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import {RideService} from '../../services/ride.service';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Ride} from '../../models/ride';
-import {CreateRide} from '../../models/CreateRide';
 
 @Component({
   selector: 'app-create-ride',

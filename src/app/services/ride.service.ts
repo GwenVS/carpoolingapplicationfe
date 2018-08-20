@@ -2,10 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from '../../../node_modules/rxjs';
 import {of} from '../../../node_modules/rxjs/observable/of';
-import {catchError} from 'rxjs/operators';
 import {Ride} from '../models/ride';
 import {TOKEN_NAME, USERNAME} from './auth.constant';
-import {CreateRide} from '../models/CreateRide';
 
 
 const httpOptions = {
@@ -18,15 +16,13 @@ export class RideService {
   }
 
 
-  createRide(ride) {
+  createRide(ride): Observable<Ride> {
     const headers = new HttpHeaders({
       'Content-type': 'application/json',
       'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
     });
-    return this.http.post<CreateRide>('/server/api/public/rides/' + sessionStorage.getItem(USERNAME), ride, {headers: headers})
-      .map((resp: Ride) => resp);
+    return this.http.post<Ride>('/server/api/public/rides/ride/' + sessionStorage.getItem(USERNAME), ride, {headers: headers});
   }
-
 
   /**
    * Handle Http operation that failed.
