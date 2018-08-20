@@ -7,6 +7,7 @@ import {HttpLoginServiceService} from './http-login-service.service';
 import {UserService} from './user.service';
 import {AuthGuardService} from './guards/auth-guard.service';
 import {RideService} from './ride.service';
+import {CarService} from './car.service';
 
 const SERVICES = [
   AppDataService,
@@ -14,7 +15,8 @@ const SERVICES = [
   HttpLoginServiceService,
   UserService,
   AuthGuardService,
-  RideService
+  RideService,
+  CarService
 ];
 
 @NgModule({

@@ -14,4 +14,6 @@ import { CarsComponent } from './cars/cars.component';
     ImageUploadComponent, CarsComponent
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+
+}
