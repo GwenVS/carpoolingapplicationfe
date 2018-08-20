@@ -48,7 +48,7 @@ export class CreateRideComponent implements OnInit {
   clickCreateRide() {
     this.submitted = true;
     if(this.form.valid) {
-      this.rideService.createRide(this.ride).subscribe(
+      this.rideService.createRide(this.form.value).subscribe(
         data => {
           this.ride = data;
           this.message = "Your ride was succesfully created.";
