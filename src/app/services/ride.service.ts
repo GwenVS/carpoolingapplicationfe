@@ -5,16 +5,10 @@ import {of} from '../../../node_modules/rxjs/observable/of';
 import {Ride} from '../models/ride';
 import {TOKEN_NAME, USERNAME} from './auth.constant';
 
-
-const httpOptions = {
-  headers: new HttpHeaders({'Content-Type': 'application/json'})
-};
-
 @Injectable()
 export class RideService {
   constructor(private http: HttpClient) {
   }
-
 
   createRide(ride): Observable<Ride> {
     const headers = new HttpHeaders({
