@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {tap} from "rxjs/operators";
 import {RegisterUser} from "../models/RegisterUser";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 
 
 @Injectable()
@@ -13,9 +13,6 @@ export class HttpLoginServiceService {
 
   doRegister(registerUser: RegisterUser) {
     const url = '/server/api/public/register';
-    const headers = new HttpHeaders({
-      "Content-type": "multipart/form-data; boundry=pleaseJustWork",
-    });
     return this.http.post(url, registerUser).pipe(
       tap((regUser: RegisterUser) => this.registrationComplete = true)
     );
