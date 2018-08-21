@@ -14,11 +14,12 @@ export class CreateRideComponent implements OnInit {
   ride: Ride;
   message = '';
   rideTypes = ['Single', 'BackAndForth'];
+
   constructor(private rideService: RideService, private fb: FormBuilder) {
   }
 
   ngOnInit(): void {
-    this.ride= new Ride();
+    this.ride = new Ride();
     this.buildForm();
   }
 
@@ -30,6 +31,7 @@ export class CreateRideComponent implements OnInit {
       'carId': new FormControl('', [Validators.required])
     });
   }
+
   get departureTimeOutwardJourney() {
     return this.form.get('departureTimeOutwardJourney');
   }
@@ -37,22 +39,24 @@ export class CreateRideComponent implements OnInit {
   get departureTimeReturnTrip() {
     return this.form.get('departureTimeReturnTrip');
   }
+
   get rideType() {
     return this.form.get('rideType');
   }
+
   get carId() {
     return this.form.get('carId');
   }
 
   clickCreateRide() {
     this.submitted = true;
-    if(this.form.valid) {
+    if (this.form.valid) {
       this.rideService.createRide(this.form.value).subscribe(
         data => {
           this.ride = data;
-          this.message = "Your ride was succesfully created.";
+          this.message = 'Your ride was succesfully created.';
         },
-        error1 => this.message = "Something went wrong while trying to create your ride, please try again later."
+        error1 => this.message = 'Something went wrong while trying to create your ride, please try again later.'
       );
     }
   }

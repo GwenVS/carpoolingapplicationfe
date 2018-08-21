@@ -8,24 +8,24 @@
         <mat-form-field class="full-width">
           <label for="departureTimeOutwardJourney">Departure Time Outward Journey:</label>
           <input
-            [(ngModel)]="ride._departureTimeOutwardJourney"
+            [(ngModel)]="ride.departureTimeOutwardJourney"
             formControlName="departureTimeOutwardJourney"
             id="departureTimeOutwardJourney"
             type="datetime-local"
-            class="form-control" matInput>
+            class="form-control" matInput><!--todo: oplossing voor firefox! formatting yyyy-MM-ddTHH:mm: not supported splitsen in Date en Time-->
         </mat-form-field>
 
         <mat-form-field class="full-width">
-          <label for="departureTimeReturnTrip">departureTimeReturnTrip</label>
+          <label for="departureTimeReturnTrip">departure Time Return Trip</label>
           <input
-            [(ngModel)]="ride._departureTimeReturnTrip"
+            [(ngModel)]="ride.departureTimeReturnTrip"
             formControlName="departureTimeReturnTrip"
             id="departureTimeReturnTrip"
             type="datetime-local"
-            class="form-control" matInput>
+            class="form-control" matInput><!--todo: oplossing voor firefox! formatting yyyy-MM-ddTHH:mm: not supported splitsen in Date en Time-->
         </mat-form-field>
 
-        <mat-radio-group [(ngModel)]="ride._rideType" class="example-radio-button width" formControlName="rideType"
+        <mat-radio-group [(ngModel)]="ride.rideType" class="example-radio-button width" formControlName="rideType"
                          id="rideType">
           <label for="rideType">rideType:</label>
           <mat-radio-button *ngFor="let rideType of rideTypes" [value]="rideType" class="example-radio-button">
@@ -36,7 +36,7 @@
         <mat-form-field class="full-width">
           <label for="carId">carId</label>
           <input
-            [(ngModel)]="ride._carId"
+            [(ngModel)]="ride.carId"
             formControlName="carId"
             id="carId"
             type="number"
