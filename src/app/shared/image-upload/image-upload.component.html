@@ -1,8 +1,11 @@
-<div>
+<div  class="text-center content">
   <img id="profilePic" [src]="domSanitizerService.bypassSecurityTrustUrl(imageUrl)"/>
-  <br>
+</div>
+<div class="text-center content">
   <input #imageInput type="file" name="file" (change)="fileChange($event)" placeholder="Upload image">
+</div>
+<div class="text-center content">
   <button mat-raised-button color="primary" type="submit" class="btn btn-primary" (click)="doUploadFile()" value="Upload">Upload</button>
-
+  <p>{{validMessage}}</p><p></p>
 </div>
 

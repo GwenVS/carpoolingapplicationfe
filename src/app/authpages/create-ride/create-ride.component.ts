@@ -49,11 +49,12 @@ export class CreateRideComponent implements OnInit {
   }
 
   clickCreateRide() {
-    this.submitted = true;
     if (this.form.valid) {
       this.rideService.createRide(this.form.value).subscribe(
         data => {
           this.ride = data;
+          this.submitted = true;//todo: na submit nogmaals submit duwen en form unchanged: popup: are you sure you want to create this ride again,
+          this.form.reset();
           this.message = 'Your ride was succesfully created.';
         },
         error1 => this.message = 'Something went wrong while trying to create your ride, please try again later.'

@@ -1,0 +1,49 @@
+<div fxFlex class="list-component-holder">
+  <div fxLayout="row" fxLayoutGap="20px">
+    <mat-toolbar class="form-header">
+      <h1 class="mat-headline">My cars</h1>
+    </mat-toolbar>
+    <mat-list>
+      <mat-list-item *ngFor="let car of cars">
+        <h3 matLine>{{car.type}}</h3>
+        <p matLine>
+          <span>consumption: {{car.consumption}} l</span>
+          <span> -- {{car.maxAmountPassengers}} passengers</span>
+        </p>
+      </mat-list-item>
+    </mat-list>
+    <p></p>
+    <form [formGroup]="carForm" fxLayout="column" fxFlex="100" class="content">
+      <mat-form-field>
+        <label for="type">Car Type: </label>
+        <input
+          formControlName="type"
+          id="type"
+          type="text"
+          class="form-control" matInput>
+      </mat-form-field>
+
+      <mat-form-field>
+        <label for="consumption">consumption in liters: </label>
+        <input
+          formControlName="consumption"
+          id="consumption"
+          type="number"
+          class="form-control" matInput>
+      </mat-form-field>
+
+      <mat-form-field>
+        <label for="maxAmountPassengers">amount of passengerplaces:</label>
+        <input
+          formControlName="maxAmountPassengers"
+          id="maxAmountPassengers"
+          type="number"
+          class="form-control" matInput>
+      </mat-form-field>
+      <mat-error>{{validMessage}}<p></p></mat-error>
+      <div>
+        <button mat-raised-button color="primary" (click)="submitCar()" type="submit">Add Car</button>
+      </div>
+    </form>
+  </div>
+</div>

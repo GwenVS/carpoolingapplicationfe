@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MediaChange, ObservableMedia} from '@angular/flex-layout';
 import {User} from '../../models/User';
 import {USERNAME} from '../../services/auth.constant';
@@ -13,24 +13,21 @@ import {Router} from '@angular/router';
   styleUrls: ['./authpages.component.scss']
 })
 export class AuthpagesComponent implements OnInit {
-  @Input() isVisible : boolean = true;
+  isVisible : boolean = true;
   visibility = 'shown';
   sideNavOpened: boolean = true;
   matDrawerOpened: boolean = false;
   matDrawerShow: boolean = true;
   sideNavMode: string = 'side';
   user$: User;
-  imageSrc = "../../../assets/noavatar.png";
-  sanImage;
-  ngOnChanges() {
-    this.visibility = this.isVisible ? 'shown' : 'hidden';
-  }
+  _imageSrc = "../../../assets/noavatar.png";
+  imageSrc;
 
   constructor(private media: ObservableMedia,private userService: UserService ,private appDataService: AppDataService,private domSanitizer: DomSanitizer, private router: Router) {
   }
 
   ngOnInit() {
-    this.sanImage = this.domSanitizer.bypassSecurityTrustUrl(this.imageSrc)
+    this.imageSrc = this.domSanitizer.bypassSecurityTrustUrl(this._imageSrc);
     this.media.subscribe((mediaChange: MediaChange) => {
       this.toggleView();
     });
@@ -40,12 +37,17 @@ export class AuthpagesComponent implements OnInit {
     });
     this.appDataService.getProfilePicture().subscribe(
       (data) => {
-        this.imageSrc = data;
-        this.sanImage = this.domSanitizer.bypassSecurityTrustUrl(this.imageSrc)
+        this._imageSrc = data;
+        this.imageSrc = this.domSanitizer.bypassSecurityTrustUrl(this._imageSrc)
       }
     );
 
   }
+
+  ngOnChanges() {
+    this.visibility = this.isVisible ? 'shown' : 'hidden';
+  }
+
   getRouteAnimation(outlet) {
     return outlet.activatedRouteData.animation;
   }
@@ -75,8 +77,8 @@ export class AuthpagesComponent implements OnInit {
   }
 
   onProfilePictureChanged(newUrl){
-    this.imageSrc = newUrl;
-    this.sanImage = this.domSanitizer.bypassSecurityTrustUrl(this.imageSrc)
+    this._imageSrc = newUrl;
+    this.imageSrc = this.domSanitizer.bypassSecurityTrustUrl(this._imageSrc)
     //todo: pass info on to children: reload?
   }
 }

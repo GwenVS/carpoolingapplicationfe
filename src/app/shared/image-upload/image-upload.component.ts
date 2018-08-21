@@ -12,22 +12,18 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./image-upload.component.scss']
 })
 export class ImageUploadComponent implements OnInit {
-  fileService: AppDataService;
   public image: File;
-  @Input() public imageUrl: String = "../../assets/noavatar.png";
+  @Input() public imageUrl: string = "../../assets/noavatar.png";
   @Input() public typeOfUpload;
-  @Input() public createdSessionId;
   @Output() profilePictureChanged: EventEmitter<String> = new EventEmitter<String>();
-  @Output() pageChanged: EventEmitter<String> = new EventEmitter<String>();
   @Output() imageData: EventEmitter<FormData> = new EventEmitter<FormData>();
   @ViewChild("imageInput") imageInput;
-
-
-  actionUrl: String;
+  actionUrl = "/server/api/private/users/" + sessionStorage.getItem(USERNAME) + "/uploadImage";
   domSanitizerService;
   http: Http;
   formData;
   options;
+  validMessage = '';
 
   constructor(http: Http, private domSanitizer: DomSanitizer) {
     this.http = http;
@@ -48,7 +44,6 @@ export class ImageUploadComponent implements OnInit {
      let file: File = fileList[0];
      this.formData= new FormData();
 
-
      this.formData.append('uploadFile', file, file.name);
 
      let headers = new Headers();
@@ -64,25 +59,21 @@ export class ImageUploadComponent implements OnInit {
   doUploadFile(){
     if(this.typeOfUpload === 'profilePicture'){
       this.actionUrl = "/server/api/private/users/" + sessionStorage.getItem(USERNAME) + "/uploadImage";
-    }
-    else if(this.typeOfUpload === 'gameSessionImage'){
-      this.actionUrl = "/server/api/private/users/" + sessionStorage.getItem(USERNAME) + "/sessions/" + this.createdSessionId + "/uploadImage";
-    }
-    else{
+    } else{
       this.imageData.emit(this.formData);
     }
 
-    this.http.post(this.actionUrl.toString(), this.formData, this.options)
+    this.http.post(this.actionUrl, this.formData, this.options)
       .subscribe(
         (data) => {
           this.profilePictureUpdated();
-          this.sendPage("session");
         },
         (error) => console.log(error.status)
       );
   }
 
   profilePictureUpdated(){
+    this.validMessage = 'succesfully updated!';
     this.profilePictureChanged.emit(this.imageUrl);
   }
 
@@ -102,19 +93,9 @@ export class ImageUploadComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.actionUrl = "/server/api/private/users/" + sessionStorage.getItem(USERNAME) + "/uploadImage";
-  }
-
-  sendPage(page){
-    this.pageChanged.emit(page);
   }
 
   reset(){
     this.imageUrl = "../../assets/noavatar.png";
-    this.imageInput.nativeElement.value = "";
-  }
-
-  resetImageInput(){
-    this.imageInput.nativeElement.value = "";
   }
 }

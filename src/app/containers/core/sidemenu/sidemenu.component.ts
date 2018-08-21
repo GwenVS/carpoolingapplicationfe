@@ -16,5 +16,4 @@ export class SidemenuComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

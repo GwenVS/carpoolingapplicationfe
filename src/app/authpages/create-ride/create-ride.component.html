@@ -12,7 +12,8 @@
             formControlName="departureTimeOutwardJourney"
             id="departureTimeOutwardJourney"
             type="datetime-local"
-            class="form-control" matInput><!--todo: oplossing voor firefox! formatting yyyy-MM-ddTHH:mm: not supported splitsen in Date en Time-->
+            class="form-control" matInput>
+          <!--todo: oplossing voor firefox! formatting yyyy-MM-ddTHH:mm: not supported splitsen in Date en Time-->
         </mat-form-field>
 
         <mat-form-field class="full-width">
@@ -22,10 +23,11 @@
             formControlName="departureTimeReturnTrip"
             id="departureTimeReturnTrip"
             type="datetime-local"
-            class="form-control" matInput><!--todo: oplossing voor firefox! formatting yyyy-MM-ddTHH:mm: not supported splitsen in Date en Time-->
+            class="form-control" matInput>
+          <!--todo: oplossing voor firefox! formatting yyyy-MM-ddTHH:mm: not supported splitsen in Date en Time-->
         </mat-form-field>
 
-        <mat-radio-group [(ngModel)]="ride.rideType" class="example-radio-button width" formControlName="rideType"
+        <mat-radio-group [(ngModel)]="ride.rideType" class="example-radio-button full-width" formControlName="rideType"
                          id="rideType">
           <label for="rideType">rideType:</label>
           <mat-radio-button *ngFor="let rideType of rideTypes" [value]="rideType" class="example-radio-button">
@@ -42,10 +44,8 @@
             type="number"
             class="form-control" matInput>
         </mat-form-field>
-        <div class="text-center" class="content">
-          <h2 class="largerP">{{message}}</h2>
-        </div>
-        <div>
+        <div class="content">{{message}}</div>
+        <div class="content">
           <button mat-raised-button color="primary" (click)="clickCreateRide()" type="submit">Create Ride</button>
         </div>
       </form>

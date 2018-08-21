@@ -9,7 +9,7 @@ import {CoreModule} from '../containers/core/core.module';
 import {
   MatButtonModule,
   MatButtonToggleModule, MatCardModule, MatIconModule,
-  MatInputModule,
+  MatInputModule, MatListModule,
   MatRadioModule,
   MatSidenavModule, MatTabsModule,
   MatToolbarModule
@@ -17,6 +17,7 @@ import {
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from '../shared/shared.module';
 import { CreateRideComponent } from './create-ride/create-ride.component';
+import {CarsComponent} from './cars/cars.component';
 
 @NgModule({
   imports: [
@@ -35,13 +36,15 @@ import { CreateRideComponent } from './create-ride/create-ride.component';
     PerfectScrollbarModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    MatListModule
   ],
   declarations: [
     AuthpagesComponent,
     ProfileComponent,
     MainComponent,
-    CreateRideComponent
+    CreateRideComponent,
+    CarsComponent
   ]
 })
 export class AuthpagesModule { }

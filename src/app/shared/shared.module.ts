@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ImageUploadComponent} from './image-upload/image-upload.component';
-import {MatButtonModule} from '@angular/material';
-import { CarsComponent } from './cars/cars.component';
+import {MatButtonModule, MatToolbarModule} from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule
   ],
-  declarations: [ImageUploadComponent, CarsComponent],
+  declarations: [ImageUploadComponent],
   exports: [
-    ImageUploadComponent, CarsComponent
+    ImageUploadComponent
   ]
 })
 export class SharedModule {
