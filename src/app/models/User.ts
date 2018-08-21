@@ -26,7 +26,7 @@ export class User {
     this._firstName = obj.firstName;
     this._lastName = obj.lastName;
     this._email = obj.email;
-    this._password = obj.encryptedPassword;
+    this._password = obj.password;
     this._gender = obj.gender;
     this._birthday = obj.birthday;
     this._cars = obj.cars;

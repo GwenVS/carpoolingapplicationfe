@@ -91,7 +91,8 @@ export class AppDataService {
       'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
     });
 
-    return this.http.post(this.springURL + '/users/' + sessionStorage.getItem(USERNAME) + '/updatepassword', user, {headers: headers}).map((resp: Response) => resp);
+    return this.http.post(this.springURL + '/users/' + sessionStorage.getItem(USERNAME) + '/updatepassword', user, {headers: headers})
+      .map((resp: Response) => resp);
   }
 }
 

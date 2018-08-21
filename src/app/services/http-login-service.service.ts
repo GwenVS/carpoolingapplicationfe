@@ -13,9 +13,6 @@ export class HttpLoginServiceService {
 
   doRegister(registerUser: RegisterUser) {
     const url = '/server/api/public/register';
-    const headers = new HttpHeaders({
-      "Content-type": "multipart/form-data; boundry=pleaseJustWork",
-    });
     return this.http.post(url, registerUser).pipe(
       tap((regUser: RegisterUser) => this.registrationComplete = true)
     );
