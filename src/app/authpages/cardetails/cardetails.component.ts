@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Car} from '../../models/Car';
 import {CarService} from '../../services/car.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
@@ -10,6 +10,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class CardetailsComponent implements OnInit {
 
+  @Output() deleted: EventEmitter<Car> = new EventEmitter();
   @Input() car: Car;
   carForm: FormGroup;
   validMessage = '';
@@ -18,6 +19,7 @@ export class CardetailsComponent implements OnInit {
   constructor(private carService: CarService) {
   }
 
+  //todo: customValidation
   ngOnInit() {
     this.carForm = new FormGroup({
       type: new FormControl('', Validators.required),
@@ -45,9 +47,17 @@ export class CardetailsComponent implements OnInit {
     }
   }
 
-  delete() {
+  deleteCar() {
     this.carService.deleteCar(this.car).subscribe(
-      //todo: emit event to remove from list
+      (data) => {
+        this.deleted.emit(this.car);
+      },
+      (error) => {
+        console.log(error.status);
+        this.validMessage = '';
+        this.notValidMessage = 'delete not completed! Please try again later';
+      }
     );
+
   }
 }

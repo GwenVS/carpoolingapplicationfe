@@ -4,7 +4,7 @@
       <h1 class="mat-headline">My cars</h1>
     </mat-toolbar>
     <div fxLayout="column" fxFlex="100" class="content" *ngFor="let car of cars">
-        <app-cardetails [car]="car"></app-cardetails>
+        <app-cardetails [car]="car" (deleted)="deleteCar($event)"></app-cardetails>
     </div>
     <p></p>
     <form [formGroup]="carForm" fxLayout="column" fxFlex="100" class="content">

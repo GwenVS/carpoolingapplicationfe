@@ -40,4 +40,11 @@ export class CarsComponent implements OnInit {
     }
   }
 
+  deleteCar(car: Car){
+    const index: number = this.cars.indexOf(car);
+    if (index !== -1) {
+      this.cars.splice(index, 1);
+    }
+  }
+
 }
