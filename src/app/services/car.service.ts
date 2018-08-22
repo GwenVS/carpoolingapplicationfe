@@ -31,6 +31,13 @@ export class CarService {
       catchError(this.handleError<Car>('@CarService: createCar')));
   }
 
+  updateCar(car: Car): Observable<any> {
+    return this.http.put(this.carserviceUrl + "/" + car.carId, car, httpOptions).pipe(
+      catchError(this.handleError<any>('@CarService: updateHero'))
+    );
+
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.

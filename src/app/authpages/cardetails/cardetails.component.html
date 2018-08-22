@@ -1,0 +1,37 @@
+<div matLine>
+  <form [formGroup]="carForm" fxLayout="column" fxFlex="100" class="content">
+    <mat-form-field>
+      <label for="carType{{car.carId}}">Car Type: </label>
+      <input
+        formControlName="type"
+        [(ngModel)]="car.type"
+        id="carType{{car.carId}}"
+        type="text"
+        class="form-control"
+        matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <label for="carConsumption{{car.carId}}">consumption: </label>
+      <input
+        formControlName="consumption"
+        [(ngModel)]="car.consumption"
+        id="carConsumption{{car.carId}}"
+        type="number"
+        class="form-control"
+        matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <label for="carMaxAmountPassengers{{car.carId}}">amount of passengers: </label>
+      <input
+        formControlName="maxAmountPassengers"
+        [(ngModel)]="car.maxAmountPassengers"
+        id="carMaxAmountPassengers{{car.carId}}"
+        type="number"
+        matInput>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" (click)="save()">save</button>
+    <mat-error>{{validMessage}}<p></p></mat-error>
+  </form>
+</div>

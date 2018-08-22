@@ -18,6 +18,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from '../shared/shared.module';
 import { CreateRideComponent } from './create-ride/create-ride.component';
 import {CarsComponent} from './cars/cars.component';
+import { CardetailsComponent } from './cardetails/cardetails.component';
 
 @NgModule({
   imports: [
@@ -44,7 +45,8 @@ import {CarsComponent} from './cars/cars.component';
     ProfileComponent,
     MainComponent,
     CreateRideComponent,
-    CarsComponent
+    CarsComponent,
+    CardetailsComponent
   ]
 })
 export class AuthpagesModule { }

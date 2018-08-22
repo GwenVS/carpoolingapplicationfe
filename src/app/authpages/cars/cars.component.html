@@ -3,42 +3,38 @@
     <mat-toolbar class="form-header">
       <h1 class="mat-headline">My cars</h1>
     </mat-toolbar>
-    <mat-list>
-      <mat-list-item *ngFor="let car of cars">
-        <h3 matLine>{{car.type}}</h3>
-        <p matLine>
-          <span>consumption: {{car.consumption}} l</span>
-          <span> -- {{car.maxAmountPassengers}} passengers</span>
-        </p>
-      </mat-list-item>
-    </mat-list>
+    <div fxLayout="column" fxFlex="100" class="content" *ngFor="let car of cars">
+        <app-cardetails [car]="car"></app-cardetails>
+    </div>
     <p></p>
     <form [formGroup]="carForm" fxLayout="column" fxFlex="100" class="content">
       <mat-form-field>
-        <label for="type">Car Type: </label>
+        <label for="type">Car Type: (Brand, model,..) </label>
         <input
           formControlName="type"
           id="type"
           type="text"
-          class="form-control" matInput>
+          class="form-control"
+          matInput>
       </mat-form-field>
 
       <mat-form-field>
-        <label for="consumption">consumption in liters: </label>
+        <label for="consumption">consumption in liters/100km: </label>
         <input
           formControlName="consumption"
           id="consumption"
           type="number"
-          class="form-control" matInput>
+          class="form-control"
+          matInput>
       </mat-form-field>
 
       <mat-form-field>
-        <label for="maxAmountPassengers">amount of passengerplaces:</label>
+        <label for="maxAmountPassengers">amount of passengers you can transport: </label>
         <input
           formControlName="maxAmountPassengers"
           id="maxAmountPassengers"
           type="number"
-          class="form-control" matInput>
+          matInput>
       </mat-form-field>
       <mat-error>{{validMessage}}<p></p></mat-error>
       <div>
