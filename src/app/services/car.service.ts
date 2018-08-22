@@ -33,12 +33,21 @@ export class CarService {
 
   updateCar(car: Car): Observable<any> {
     return this.http.put(this.carserviceUrl + "/" + car.carId, car, httpOptions).pipe(
-      catchError(this.handleError<any>('@CarService: updateHero'))
+      catchError(this.handleError<any>('@CarService: updateCar'))
     );
 
   }
 
+  deleteCar(car: Car): Observable<Car> {
+    const id = typeof car === 'number' ? car : car.carId;
+    const url = `${this.carserviceUrl}/${id}`;
+    return this.http.delete<Car>(url,httpOptions).pipe(
+      catchError(this.handleError<Car>('@CarService: deleteCar'))
+    );
+  }
+
   /**
+   * todo: export this to seperate service
    * Handle Http operation that failed.
    * Let the app continue.
    * @param operation - name of the operation that failed

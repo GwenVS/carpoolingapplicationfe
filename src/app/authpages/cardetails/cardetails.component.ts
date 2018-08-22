@@ -13,8 +13,10 @@ export class CardetailsComponent implements OnInit {
   @Input() car: Car;
   carForm: FormGroup;
   validMessage = '';
+  notValidMessage = '';
 
-  constructor(private carService: CarService) { }
+  constructor(private carService: CarService) {
+  }
 
   ngOnInit() {
     this.carForm = new FormGroup({
@@ -25,7 +27,27 @@ export class CardetailsComponent implements OnInit {
   }
 
   save() {
+    if (this.carForm.valid) {
+      this.carService.updateCar(this.car).subscribe(
+        (data) => {
+          this.validMessage = 'Succesfully updated';
+          this.notValidMessage = '';
+        },
+        (error) => {
+          console.log(error.status);
+          this.validMessage = '';
+          this.notValidMessage = 'update not completed! Please try again later';
+        }
+      );
+    } else {
+      this.validMessage = '';
+      this.notValidMessage = 'Please fill out the details correctly before submitting';
+    }
+  }
 
-    this.carService.updateCar(this.car).subscribe();
+  delete() {
+    this.carService.deleteCar(this.car).subscribe(
+      //todo: emit event to remove from list
+    );
   }
 }

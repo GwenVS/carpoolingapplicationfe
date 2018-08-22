@@ -32,6 +32,8 @@
         matInput>
     </mat-form-field>
     <button mat-raised-button color="primary" type="submit" (click)="save()">save</button>
-    <mat-error>{{validMessage}}<p></p></mat-error>
+    <button mat-raised-button color="warn" type="submit" title="Delete Car" (click)="delete()">remove</button>
+    <p>{{validMessage}}</p>
+    <mat-error>{{notValidMessage}}<p></p></mat-error>
   </form>
 </div>
