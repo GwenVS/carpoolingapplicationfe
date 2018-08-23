@@ -4,51 +4,60 @@
       <mat-toolbar class="form-header">
         <h1 class="mat-headline center-align">Create a Ride</h1>
       </mat-toolbar>
-      <form [formGroup]="form" fxLayout="column" fxFlex="100" class="content">
-        <mat-form-field class="full-width">
-          <label for="departureTimeOutwardJourney">Departure Time Outward Journey:</label>
-          <input
-            [(ngModel)]="ride.departureTimeOutwardJourney"
-            formControlName="departureTimeOutwardJourney"
-            id="departureTimeOutwardJourney"
-            type="datetime-local"
-            class="form-control" matInput>
-          <!--todo: oplossing voor firefox! formatting yyyy-MM-ddTHH:mm: not supported splitsen in Date en Time-->
-        </mat-form-field>
+      <div *ngIf="cars?.length>0; else noCars">
+        <form [formGroup]="form" fxLayout="column" fxFlex="100" class="content">
+          <mat-form-field class="full-width">
+            <label for="departureTimeOutwardJourney">Departure Time Outward Journey:</label>
+            <input
+              [(ngModel)]="ride.departureTimeOutwardJourney"
+              formControlName="departureTimeOutwardJourney"
+              id="departureTimeOutwardJourney"
+              type="datetime-local"
+              class="form-control" matInput>
+            <!--todo: oplossing voor firefox! formatting yyyy-MM-ddTHH:mm: not supported splitsen in Date en Time-->
+          </mat-form-field>
 
-        <mat-form-field class="full-width">
-          <label for="departureTimeReturnTrip">departure Time Return Trip</label>
-          <input
-            [(ngModel)]="ride.departureTimeReturnTrip"
-            formControlName="departureTimeReturnTrip"
-            id="departureTimeReturnTrip"
-            type="datetime-local"
-            class="form-control" matInput>
-          <!--todo: oplossing voor firefox! formatting yyyy-MM-ddTHH:mm: not supported splitsen in Date en Time-->
-        </mat-form-field>
+          <mat-form-field class="full-width">
+            <label for="departureTimeReturnTrip">departure Time Return Trip</label>
+            <input
+              [(ngModel)]="ride.departureTimeReturnTrip"
+              formControlName="departureTimeReturnTrip"
+              id="departureTimeReturnTrip"
+              type="datetime-local"
+              class="form-control" matInput>
+            <!--todo: oplossing voor firefox! formatting yyyy-MM-ddTHH:mm: not supported splitsen in Date en Time-->
+          </mat-form-field>
 
-        <mat-radio-group [(ngModel)]="ride.rideType" class="example-radio-button full-width" formControlName="rideType"
-                         id="rideType">
-          <label for="rideType">rideType:</label>
-          <mat-radio-button *ngFor="let rideType of rideTypes" [value]="rideType" class="example-radio-button">
-            {{rideType}}
-          </mat-radio-button>
-        </mat-radio-group>
+          <mat-radio-group [(ngModel)]="ride.rideType" class="example-radio-button full-width"
+                           formControlName="rideType"
+                           id="rideType">
+            <label for="rideType">rideType:</label>
+            <mat-radio-button *ngFor="let rideType of rideTypes" [value]="rideType" class="example-radio-button">
+              {{rideType}}
+            </mat-radio-button>
+          </mat-radio-group>
 
-        <mat-form-field class="full-width">
-          <label for="carId">carId</label>
-          <input
-            [(ngModel)]="ride.carId"
-            formControlName="carId"
-            id="carId"
-            type="number"
-            class="form-control" matInput>
-        </mat-form-field>
-        <div class="content">{{message}}</div>
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Car" [(ngModel)]="ride.chosenCar" name="car" formControlName="chosenCar">
+              <mat-option *ngFor="let car of cars" [value]="car">
+                {{car.type}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div class="content">{{message}}</div>
+          <div class="content">
+            <button mat-raised-button color="primary" (click)="clickCreateRide()" type="submit">Create Ride</button>
+          </div>
+        </form>
+      </div>
+      <ng-template #noCars>
         <div class="content">
-          <button mat-raised-button color="primary" (click)="clickCreateRide()" type="submit">Create Ride</button>
+          <p>You need to have a car to offer a ride! </p>
+          <p>Go to your profile and add your car first.</p>
+          <button mat-raised-button color="primary" (click)="clickProfile()" type="submit">Go to Profile</button>
         </div>
-      </form>
+      </ng-template>
     </div>
     <h1 class="content"></h1>
     <h1 class="content"></h1>

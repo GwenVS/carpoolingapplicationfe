@@ -55,7 +55,7 @@ export class CardetailsComponent implements OnInit {
       (error) => {
         console.log(error.status);
         this.validMessage = '';
-        this.notValidMessage = 'delete not completed! Please try again later';
+        this.notValidMessage = 'delete not completed! Remove attached rides first!';
       }
     );
 

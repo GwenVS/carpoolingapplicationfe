@@ -9,7 +9,7 @@ import {
   MatButtonModule,
   MatButtonToggleModule, MatCardModule, MatIconModule,
   MatInputModule, MatListModule,
-  MatRadioModule,
+  MatRadioModule, MatSelectModule,
   MatSidenavModule, MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
@@ -40,7 +40,8 @@ import { MyridesComponent } from './myrides/myrides.component';
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-    MatListModule
+    MatListModule,
+    MatSelectModule
   ],
   declarations: [
     AuthpagesComponent,

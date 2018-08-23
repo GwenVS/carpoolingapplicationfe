@@ -3,8 +3,6 @@ import {Observable} from '../../../node_modules/rxjs';
 import {Car} from '../models/Car';
 import {TOKEN_NAME, USERNAME} from './auth.constant';
 import {Injectable} from '@angular/core';
-import {catchError} from 'rxjs/operators';
-import {of} from '../../../node_modules/rxjs/observable/of';
 
 
 const httpOptions = {
@@ -22,47 +20,21 @@ export class CarService {
   }
 
   getCarsByUser() : Observable<Car[]> {
-    return this.http.get<Car[]>(this.carserviceUrl + '/user/' + sessionStorage.getItem(USERNAME), httpOptions).pipe(
-      catchError(this.handleError<Car[]>('@CarService: getCarsByUser')));
+    return this.http.get<Car[]>(this.carserviceUrl + '/user/' + sessionStorage.getItem(USERNAME), httpOptions)
   }
 
   createCar(car: Car): Observable<Car> {
-    return this.http.post<Car>(this.carserviceUrl+ '/user/'+sessionStorage.getItem(USERNAME), car, httpOptions).pipe(
-      catchError(this.handleError<Car>('@CarService: createCar')));
+    return this.http.post<Car>(this.carserviceUrl+ '/user/'+sessionStorage.getItem(USERNAME), car, httpOptions)
   }
 
   updateCar(car: Car): Observable<any> {
-    return this.http.put(this.carserviceUrl + "/" + car.carId, car, httpOptions).pipe(
-      catchError(this.handleError<any>('@CarService: updateCar'))
-    );
+    return this.http.put(this.carserviceUrl + "/" + car.carId, car, httpOptions);
 
   }
 
   deleteCar(car: Car): Observable<Car> {
     const id = typeof car === 'number' ? car : car.carId;
     const url = `${this.carserviceUrl}/${id}`;
-    return this.http.delete<Car>(url,httpOptions).pipe(
-      catchError(this.handleError<Car>('@CarService: deleteCar'))
-    );
-  }
-
-  /**
-   * todo: export this to seperate service
-   * Handle Http operation that failed.
-   * Let the app continue.
-   * @param operation - name of the operation that failed
-   * @param result - optional value to return as the observable result
-   */
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-
-      // TODO: send the error to remote logging infrastructure
-      console.error(error); // log to console instead
-
-      // TODO: better job of transforming error for user consumption
-
-      // Let the app keep running by returning an empty result.
-      return of(result as T);
-    };
+    return this.http.delete<Car>(url,httpOptions);
   }
 }
