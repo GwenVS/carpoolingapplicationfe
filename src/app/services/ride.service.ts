@@ -1,16 +1,19 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Observable} from '../../../node_modules/rxjs';
-import {of} from '../../../node_modules/rxjs/observable/of';
 import {Ride} from '../models/ride';
 import {TOKEN_NAME, USERNAME} from './auth.constant';
-import {catchError} from '../../../node_modules/rxjs/operators';
+import {catchError} from 'rxjs/operators';
+import {Observable} from '../../../node_modules/rxjs';
+import {of} from '../../../node_modules/rxjs/observable/of';
+
 
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)})
+    'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
+  })
 };
+
 @Injectable()
 export class RideService {
 
@@ -20,6 +23,16 @@ export class RideService {
   createRide(ride: Ride): Observable<Ride> {
     return this.http.post<Ride>('/server/api/public/rides/' + sessionStorage.getItem(USERNAME), ride, httpOptions).pipe(
       catchError(this.handleError<Ride>('@RideService: createRide')));
+  }
+
+  getRides(): Observable<Ride[]> {
+    return this.http.get<Ride[]>('/server/api/public/rides', httpOptions).pipe(
+      catchError(this.handleError<Ride[]>('@RideService: getRides')));
+  }
+
+  getRidesByUser(): Observable<Ride[]> {
+    return this.http.get<Ride[]>('/server/api/public/user/' + sessionStorage.getItem(USERNAME)+ "/rides", httpOptions).pipe(
+      catchError(this.handleError<Ride[]>('@RideService: getRides')));
   }
 
   /**

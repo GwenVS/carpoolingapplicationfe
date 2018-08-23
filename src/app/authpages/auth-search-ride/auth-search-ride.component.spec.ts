@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainComponent } from './main.component';
+import { AuthSearchRideComponent } from './auth-search-ride.component';
 
-describe('MainComponent', () => {
-  let component: MainComponent;
-  let fixture: ComponentFixture<MainComponent>;
+describe('AuthSearchRideComponent', () => {
+  let component: AuthSearchRideComponent;
+  let fixture: ComponentFixture<AuthSearchRideComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainComponent ]
+      declarations: [ AuthSearchRideComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainComponent);
+    fixture = TestBed.createComponent(AuthSearchRideComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

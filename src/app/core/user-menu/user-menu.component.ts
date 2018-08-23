@@ -1,8 +1,6 @@
 import {Component, OnInit, Input, HostListener, ElementRef, EventEmitter, Output} from '@angular/core';
 import {Router} from '@angular/router';
-import {User} from '../../../models/User';
-import {DomSanitizer} from '@angular/platform-browser';
-import {AppDataService} from '../../../services/app-data.service';
+import {User} from '../../models/User';
 
 @Component({
   selector: 'app-user-menu',

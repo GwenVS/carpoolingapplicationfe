@@ -4,8 +4,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { AuthpagesRoutingModule } from './authpages-routing.module';
 import { AuthpagesComponent } from './authpages/authpages.component';
 import {ProfileComponent} from './profile/profile.component';
-import {MainComponent} from '../containers/main/main.component';
-import {CoreModule} from '../containers/core/core.module';
+import {CoreModule} from '../core/core.module';
 import {
   MatButtonModule,
   MatButtonToggleModule, MatCardModule, MatIconModule,
@@ -19,6 +18,9 @@ import {SharedModule} from '../shared/shared.module';
 import { CreateRideComponent } from './create-ride/create-ride.component';
 import {CarsComponent} from './cars/cars.component';
 import { CardetailsComponent } from './cardetails/cardetails.component';
+import { AuthSearchRideComponent } from './auth-search-ride/auth-search-ride.component';
+import {ImageUploadComponent} from './image-upload/image-upload.component';
+import { MyridesComponent } from './myrides/myrides.component';
 
 @NgModule({
   imports: [
@@ -43,10 +45,12 @@ import { CardetailsComponent } from './cardetails/cardetails.component';
   declarations: [
     AuthpagesComponent,
     ProfileComponent,
-    MainComponent,
     CreateRideComponent,
     CarsComponent,
-    CardetailsComponent
+    CardetailsComponent,
+    AuthSearchRideComponent,
+    ImageUploadComponent,
+    MyridesComponent
   ]
 })
 export class AuthpagesModule { }

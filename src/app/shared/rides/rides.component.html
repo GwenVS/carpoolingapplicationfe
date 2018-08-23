@@ -1,0 +1,18 @@
+<div fxFlex class="list-component-holder">
+  <mat-toolbar class="form-header full-width">
+    <h1 class="mat-headline">Available Rides</h1>
+  </mat-toolbar>
+  <div fxLayout="row" fxLayoutGap="20px">
+    <mat-list>
+      <div fxLayout="column" fxFlex="100" class="content" >
+      <mat-list-item *ngFor="let ride of rides">
+        <h1 matLine>RIDE</h1>
+        <h2 matLine>Departure Time Outward Journey: {{ride.departureTimeOutwardJourney |date:'dd/MM/yyyy @ hh:mm'}}</h2>
+        <p matLine>Departure Time Return trip: {{ride.departureTimeReturnTrip |date:'dd/MM/yyyy @ hh:mm'}}</p>
+        <p matLine>car: {{ride.carId}}</p>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+      </div>
+    </mat-list>
+  </div>
+</div>

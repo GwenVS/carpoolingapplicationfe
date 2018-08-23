@@ -22,13 +22,13 @@ export const menus = [
       {
         'name': 'My Rides',
         'icon': 'chat',
-        'link': 'auth/myrides',
+        'link': '/auth/myrides',
         'open': true,
       },
       {
         'name': 'Find Ride',
         'icon': 'mail',
-        'link': 'auth/findride',
+        'link': '/auth/findride',
         'open': true,
       }
     ]
@@ -37,6 +37,6 @@ export const menus = [
     'name': 'Calender',
     'icon': 'content_copy',
     'open': true,
-    'link': "auth/calender",
+    'link': "/auth/calender",
   }
 ];

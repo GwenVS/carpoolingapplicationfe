@@ -3,8 +3,7 @@ import * as screenfull from 'screenfull';
 
 @Component({
   selector: 'app-fullscreen',
-  templateUrl: './fullscreen.component.html',
-  styleUrls: ['./fullscreen.component.scss']
+  templateUrl: './fullscreen.component.html'
 })
 export class FullscreenComponent implements OnInit {
 	isFullscreen: boolean = false;

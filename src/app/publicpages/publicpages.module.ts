@@ -5,7 +5,7 @@ import {
   MatButtonModule,
   MatButtonToggleModule,
   MatCardModule,
-  MatInputModule,
+  MatInputModule, MatListModule,
   MatRadioModule,
   MatToolbarModule
 } from '@angular/material';
@@ -13,8 +13,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {LoginFormComponent} from './login-form/login-form.component';
 import {SignupFormComponent} from './signup-form/signup-form.component';
-import {SearchRideComponent} from './search-ride/search-ride.component';
 import {PublicpagesComponent} from './publicpages/publicpages.component';
+import { PublicSearchRideComponent } from './public-search-ride/public-search-ride.component';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -26,15 +27,17 @@ import {PublicpagesComponent} from './publicpages/publicpages.component';
     MatInputModule,
     MatRadioModule,
     MatToolbarModule,
+    MatListModule,
     FormsModule,
     ReactiveFormsModule,
     PublicpagesRoutingModule,
+    SharedModule
   ],
   declarations: [
     PublicpagesComponent,
     LoginFormComponent,
     SignupFormComponent,
-    SearchRideComponent
+    PublicSearchRideComponent
   ]
 })
 export class PublicpagesModule { }

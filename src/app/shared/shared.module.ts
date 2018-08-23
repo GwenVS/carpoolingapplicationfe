@@ -1,17 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ImageUploadComponent} from './image-upload/image-upload.component';
-import {MatButtonModule, MatToolbarModule} from '@angular/material';
+import {ImageUploadComponent} from '../authpages/image-upload/image-upload.component';
+import {MatButtonModule, MatListModule, MatToolbarModule} from '@angular/material';
+import {SearchRideComponent} from './search-ride/search-ride.component';
+import {RidesComponent} from './rides/rides.component';
+import {RidedetailsComponent} from './ridedetails/ridedetails.component';
 
 @NgModule({
   imports: [
     CommonModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatListModule
   ],
-  declarations: [ImageUploadComponent],
+  declarations: [
+    SearchRideComponent,
+    RidesComponent,
+    RidedetailsComponent
+  ],
   exports: [
-    ImageUploadComponent
+    SearchRideComponent,
+    RidesComponent,
+    RidedetailsComponent
   ]
 })
 export class SharedModule {
