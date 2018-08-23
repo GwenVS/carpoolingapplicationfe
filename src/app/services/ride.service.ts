@@ -31,7 +31,7 @@ export class RideService {
   }
 
   getRidesByUser(): Observable<Ride[]> {
-    return this.http.get<Ride[]>('/server/api/public/user/' + sessionStorage.getItem(USERNAME)+ "/rides", httpOptions).pipe(
+    return this.http.get<Ride[]>('/server/api/public/rides/user/' + sessionStorage.getItem(USERNAME), httpOptions).pipe(
       catchError(this.handleError<Ride[]>('@RideService: getRides')));
   }
 
