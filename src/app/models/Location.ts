@@ -1,5 +1,5 @@
 export class Location {
-  locationId: number;
-  latitude: number;
-  longitude: number;
+  public locationId: number;
+  public latitude: number;
+  public longitude: number;
 }

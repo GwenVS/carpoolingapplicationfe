@@ -1,6 +1,6 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import { AgmMap } from '@agm/core';
-
+import {Location} from '../../models/Location';
 
 @Component({
   selector: 'app-googlemap',

@@ -34,6 +34,6 @@ export class RideService {
 
 
   getRideById(rideId: number) : Observable<Ride>{
-    return this.http.get<Ride>('/server/api/public/rides/ride/' + rideId, httpOptions)
+    return this.http.get<Ride>('/server/api/public/rides/' + rideId, httpOptions)
   }
 }
