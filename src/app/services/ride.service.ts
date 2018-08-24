@@ -21,7 +21,7 @@ export class RideService {
   }
 
   createRide(ride: Ride): Observable<Ride> {
-    return this.http.post<Ride>('/server/api/public/rides/' + sessionStorage.getItem(USERNAME), ride, httpOptions);
+    return this.http.post<Ride>('/server/api/public/rides/ride/' + sessionStorage.getItem(USERNAME), ride, httpOptions);
   }
 
   getRides(): Observable<Ride[]> {
