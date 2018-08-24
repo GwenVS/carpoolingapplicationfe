@@ -30,7 +30,8 @@ export class ProfileComponent implements OnInit{
     'username': new FormControl(),
     'email': new FormControl(),
     'birthday': new FormControl('', [Validators.required]),
-    'gender': new FormControl('', [Validators.required])
+    'gender': new FormControl('', [Validators.required]),
+    'isSmoker' : new FormControl('', [Validators.required])
   });
 
   changePasswordForm = new FormGroup({
@@ -39,7 +40,7 @@ export class ProfileComponent implements OnInit{
   });
 
   constructor(private appDataService: AppDataService) {
-    this.updatedUser= new RegisterUser('','','','','','','', '', []);
+    this.updatedUser= new RegisterUser('','','','','','','', '', false, []);
   }
 
   ngOnInit(): void {
@@ -108,6 +109,7 @@ export class ProfileComponent implements OnInit{
       this.updatedUser.email = this.user$.email;
       this.updatedUser.birthday = this.user$.birthday;
       this.updatedUser.gender = this.user$.gender;
+      this.updatedUser.isSmoker = this.user$.isSmoker;
       this.appDataService.updateUser(this.updatedUser).subscribe(
         data => {
           this.user$ = data;
@@ -142,6 +144,7 @@ export class ProfileComponent implements OnInit{
       this.updatedUser.email = this.user$.email;
       this.updatedUser.birthday = this.user$.birthday;
       this.updatedUser.gender = this.user$.gender;
+      this.updatedUser.isSmoker = this.user$.isSmoker;
       this.updatedUser.password = this.user$.password;
       this.appDataService.updatePassword(this.updatedUser).subscribe(
         (data) => this.paswordMessage = "Password updated successfully",

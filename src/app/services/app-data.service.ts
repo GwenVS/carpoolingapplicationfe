@@ -5,7 +5,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {User} from '../models/User';
 import {Observable} from 'rxjs/Observable';
 import {RegisterUser} from '../models/RegisterUser';
-import {UserItem} from '../models/UserItem';
 
 @Injectable()
 export class AppDataService {
@@ -57,22 +56,6 @@ export class AppDataService {
       let urlCreator = window.URL;
       let testUrl = urlCreator.createObjectURL(blob);
       return testUrl;
-    });
-  }
-
-  getAllUsers() {
-    const headers = new HttpHeaders({
-      'Content-type': 'application/json',
-      'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
-    });
-
-    let users: UserItem[] = [];
-    return this.http.get(this.springURL + '/users/limited', {headers}).map((resp) => {
-      resp.forEach(userDto => {
-        let user = new UserItem().fromJSON(userDto);
-        users.push(user);
-      });
-      return users;
     });
   }
 

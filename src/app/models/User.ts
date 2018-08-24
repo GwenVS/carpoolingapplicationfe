@@ -8,7 +8,8 @@ export class User {
   private _password: String;
   private _gender: String;
   private _birthday: String;
-  private _cars: Car[]
+  private _isSmoker: boolean;
+  private _cars: Car[];
 
   constructor() {
     this._username = "";
@@ -18,6 +19,7 @@ export class User {
     this._password= "";
     this._gender = "";
     this._birthday = "";
+    this._isSmoker = false;
     this._cars = [];
   }
 
@@ -29,6 +31,7 @@ export class User {
     this._password = obj.password;
     this._gender = obj.gender;
     this._birthday = obj.birthday;
+    this._isSmoker = obj.isSmoker;
     this._cars = obj.cars;
     return this;
   }
@@ -90,6 +93,14 @@ export class User {
     this._birthday = value;
   }
 
+
+  get isSmoker(): boolean {
+    return this._isSmoker;
+  }
+
+  set isSmoker(value: boolean) {
+    this._isSmoker = value;
+  }
 
   get cars(): Car[] {
     return this._cars;

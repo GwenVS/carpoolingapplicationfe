@@ -7,7 +7,7 @@ import {ProfileComponent} from './profile/profile.component';
 import {CoreModule} from '../core/core.module';
 import {
   MatButtonModule,
-  MatButtonToggleModule, MatCardModule, MatIconModule,
+  MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatIconModule,
   MatInputModule, MatListModule,
   MatRadioModule, MatSelectModule,
   MatSidenavModule, MatTabsModule,
@@ -41,7 +41,8 @@ import { MyridesComponent } from './myrides/myrides.component';
     ReactiveFormsModule,
     SharedModule,
     MatListModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule
   ],
   declarations: [
     AuthpagesComponent,

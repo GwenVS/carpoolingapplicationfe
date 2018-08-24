@@ -10,6 +10,7 @@ export class RegisterUser {
     public birthday: String,
     public gender: String,
     public profilePicture,
+    public isSmoker: boolean,
     public cars: Car[]
   ){}
 }
