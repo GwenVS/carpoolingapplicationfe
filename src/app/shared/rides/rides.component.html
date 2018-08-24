@@ -4,13 +4,20 @@
   </mat-toolbar>
   <div fxLayout="row" fxLayoutGap="20px">
     <mat-list>
-      <div fxLayout="column" fxFlex="100" class="content" >
-      <mat-list-item *ngFor="let ride of rides">
-        <h1 matLine>RIDE</h1>
-        <h2 matLine>Departure Time Outward Journey: {{ride.departureTimeOutwardJourney |date:'dd/MM/yyyy @ hh:mm'}}</h2>
-        <p matLine>Departure Time Return trip: {{ride.departureTimeReturnTrip |date:'dd/MM/yyyy @ hh:mm'}}</p>
-        <mat-divider></mat-divider>
-      </mat-list-item>
+      <div fxLayout="column" fxFlex="100" class="content">
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let ride of rides">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <p matline>Ride</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                <p matLine>Show info</p>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <app-ridedetails [ride] = "ride"></app-ridedetails>
+          </mat-expansion-panel>
+        </mat-accordion>
       </div>
     </mat-list>
   </div>

@@ -47,6 +47,7 @@ export class CardetailsComponent implements OnInit {
     }
   }
 
+
   deleteCar() {
     this.carService.deleteCar(this.car).subscribe(
       (data) => {

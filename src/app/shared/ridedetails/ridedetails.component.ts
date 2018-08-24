@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Ride} from '../../models/ride';
+import {RideService} from '../../services/ride.service';
 
 @Component({
   selector: 'app-ridedetails',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RidedetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input() ride: Ride;
+
+  constructor(private rideService: RideService) { }
 
   ngOnInit() {
+    //todo: remove this and fix json response
+      this.rideService.getRideById(this.ride.rideId).subscribe(data =>
+      this.ride = data);
   }
 
 }
