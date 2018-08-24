@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ImageUploadComponent} from '../authpages/image-upload/image-upload.component';
 import {MatButtonModule, MatExpansionModule, MatListModule, MatToolbarModule} from '@angular/material';
 import {SearchRideComponent} from './search-ride/search-ride.component';
 import {RidesComponent} from './rides/rides.component';
 import {RidedetailsComponent} from './ridedetails/ridedetails.component';
 import {RouterModule} from '@angular/router';
+import { GooglemapComponent } from './googlemap/googlemap.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   imports: [
@@ -14,17 +15,23 @@ import {RouterModule} from '@angular/router';
     MatToolbarModule,
     MatListModule,
     RouterModule,
-    MatExpansionModule
+    MatExpansionModule,
+    AgmCoreModule.forRoot({
+      //todo: mykey
+      apiKey: 'AIzaSyAXTJwhYqJ6Pc7VXGRMTv40N1WRLqzuSNs'
+    }),
   ],
   declarations: [
     SearchRideComponent,
     RidesComponent,
-    RidedetailsComponent
+    RidedetailsComponent,
+    GooglemapComponent
   ],
   exports: [
     SearchRideComponent,
     RidesComponent,
-    RidedetailsComponent
+    RidedetailsComponent,
+    GooglemapComponent
   ]
 })
 
