@@ -8,18 +8,12 @@ import {Component, OnInit, Input} from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+
+  @Input() messages;
+
   constructor() {
   }
 
   ngOnInit() {
   }
-
-  messages = [
-    {from: 'Catherin', subject: 'Shopping', content: 'hi there??'},
-    {from: 'Jack', subject: 'Function', content: 'yes'},
-    {from: 'Karina', subject: 'Get together', content: 'nice'},
-    {from: 'Micheal', subject: 'Trip', content: 'ya.. I will'},
-    {from: 'Ashik', subject: 'Meeting', content: 'Time??'},
-    {from: 'Joy', subject: 'Party', content: 'Lets enjoy'},
-  ];
 }

@@ -5,7 +5,7 @@ import {RideService} from '../../services/ride.service';
 @Component({
   selector: 'app-ridedetails',
   templateUrl: './ridedetails.component.html',
-  styleUrls: ['./ridedetails.component.css']
+  styleUrls: ['./ridedetails.component.scss']
 })
 export class RidedetailsComponent implements OnInit {
 
@@ -14,9 +14,6 @@ export class RidedetailsComponent implements OnInit {
   constructor(private rideService: RideService) { }
 
   ngOnInit() {
-    //todo: remove this and fix json response
-      this.rideService.getRideById(this.ride.rideId).subscribe(data =>
-      this.ride = data);
   }
 
 }

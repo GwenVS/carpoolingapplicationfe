@@ -56,6 +56,8 @@ export class ImageUploadComponent implements OnInit {
    }
  }
 
+
+ //todo: wtf staat dat hier te doen
   doUploadFile(){
     if(this.typeOfUpload === 'profilePicture'){
       this.actionUrl = "/server/api/private/users/" + sessionStorage.getItem(USERNAME) + "/uploadImage";

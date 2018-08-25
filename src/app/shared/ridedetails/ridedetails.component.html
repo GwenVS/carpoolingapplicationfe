@@ -1,13 +1,15 @@
-<p matLine>Departure Time Outward Journey: {{ride.departureTimeOutwardJourney |date:'dd/MM/yyyy @hh:mm'}}</p>
-<p matLine>Departure Time Return trip: {{ride.departureTimeReturnTrip |date:'dd/MM/yyyy @ hh:mm'}}</p>
-<p matline>Car used: {{ride.chosenCar.type}} - {{ride.chosenCar.maxAmountPassengers}} places</p>
+<p matLine>Departure Time Outward Journey: {{ride.departureTimeOutwardJourney |date:'dd/MM/yyyy @hh:mm'}}<mat-divider></mat-divider></p>
+<p matLine>Departure Time Return trip: {{ride.departureTimeReturnTrip |date:'dd/MM/yyyy @ hh:mm'}}<mat-divider></mat-divider></p>
+<p matline>Car used: {{ride.chosenCar.type}} - {{ride.chosenCar.maxAmountPassengers}} places<mat-divider></mat-divider></p>
 <p matline>Locations passed :</p>
 <p matLine *ngFor="let location of ride.locations">
   <app-googlemap [location] = "location"></app-googlemap>
 </p>
 <p matline>Passengers:
   <a *ngFor="let uri of ride.userRideInfos"> {{uri.user.username}} </a>
+  <mat-divider></mat-divider>
 </p>
 <p matline>rideRequests by:
   <a *ngFor="let rideRequest of ride.rideRequests"> {{rideRequest.user.username}} </a>
+  <mat-divider></mat-divider>
 </p>

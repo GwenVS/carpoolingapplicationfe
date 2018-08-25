@@ -10,7 +10,7 @@ import {User} from '../../models/User';
 export class UserMenuComponent implements OnInit {
 
   @Input() currentUser: User;
-  @Input() _imageSrc;
+  @Input() imageSrc;
   isOpen: boolean = false;
   @Output() loggingOut: EventEmitter<any> = new EventEmitter();
 
@@ -36,11 +36,6 @@ export class UserMenuComponent implements OnInit {
     this.isOpen = false;
   }
 
-  helpClick() {
-    //todo: helpwindow
-    // this.router.navigateByUrl('help');
-    this.isOpen = false;
-  }
   logout() {
     this.loggingOut.emit(null);
   }

@@ -93,8 +93,8 @@ export class ProfileComponent implements OnInit{
     return this.form.get('gender');
   }
 
-  onUserChanged(){
-    this.userChanged.emit(this.user$);
+  onUserChanged(user: User){
+    this.userChanged.emit(user);
   }
 
   onProfilePictureChanged(newUrl){
@@ -114,15 +114,11 @@ export class ProfileComponent implements OnInit{
         data => {
           this.user$ = data;
           this.message = "Your details were updated successfully";
-          this.onUserChanged();
+          this.onUserChanged(data);
         },
         error => this.message = "Oeps something went wrong while updating your details. Try again later!"
     );
     }
-  }
-
-  onChange(event){
-    console.log(event);
   }
 
   onChangePasswordClicked(){

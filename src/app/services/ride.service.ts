@@ -2,9 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Ride} from '../models/ride';
 import {TOKEN_NAME, USERNAME} from './auth.constant';
-import {catchError} from 'rxjs/operators';
 import {Observable} from '../../../node_modules/rxjs';
-import {of} from '../../../node_modules/rxjs/observable/of';
 
 
 const httpOptions = {

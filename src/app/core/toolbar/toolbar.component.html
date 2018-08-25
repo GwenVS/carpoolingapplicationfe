@@ -15,12 +15,8 @@
 
     <app-fullscreen></app-fullscreen>
 
-    <app-toolbar-notification [notifications]="toolbarHelpers?.notifications"></app-toolbar-notification>
+    <app-toolbar-notification [notifications]="messages" (click)="sidebar.toggle()"></app-toolbar-notification>
 
-    <app-user-menu [currentUser]="_user$" [_imageSrc]="_imageSrc" (loggingOut)="logout()"></app-user-menu>
-    
-     <button mat-icon-button (click)="sidebar.toggle();">
-        <i class="material-icons app-toolbar-menu">menu</i>
-    </button>
+    <app-user-menu [currentUser]="user$" [imageSrc]="imageSrc" (loggingOut)="logout()"></app-user-menu>
     
 </mat-toolbar>

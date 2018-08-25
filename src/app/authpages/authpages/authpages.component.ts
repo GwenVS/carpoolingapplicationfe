@@ -22,6 +22,14 @@ export class AuthpagesComponent implements OnInit {
   user$: User;
   _imageSrc = "../../../assets/noavatar.png";
   imageSrc;
+  messages = [
+    {from: 'Catherin', subject: 'Shopping', content: 'hi there??'},
+    {from: 'Jack', subject: 'Function', content: 'yes'},
+    {from: 'Karina', subject: 'Get together', content: 'nice'},
+    {from: 'Micheal', subject: 'Trip', content: 'ya.. I will'},
+    {from: 'Ashik', subject: 'Meeting', content: 'Time??'},
+    {from: 'Joy', subject: 'Party', content: 'Lets enjoy'},
+  ];
 
   constructor(private media: ObservableMedia,private userService: UserService ,private appDataService: AppDataService,private domSanitizer: DomSanitizer, private router: Router) {
   }
@@ -77,8 +85,12 @@ export class AuthpagesComponent implements OnInit {
   }
 
   onProfilePictureChanged(newUrl){
-    this._imageSrc = newUrl;
-    this.imageSrc = this.domSanitizer.bypassSecurityTrustUrl(this._imageSrc)
+    newUrl.profilePictureChanged.subscribe(data=>
+    console.log(data));
+    //todo: pass info on to children: reload?
+  }
+  onUserChanged(user: User){
+    this.user$ = user;
     //todo: pass info on to children: reload?
   }
 }
