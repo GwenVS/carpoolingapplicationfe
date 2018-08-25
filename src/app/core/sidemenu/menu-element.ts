@@ -27,16 +27,10 @@ export const menus = [
       },
       {
         'name': 'Find Ride',
-        'icon': 'mail',
+        'icon': 'search',
         'link': '/auth/findride',
         'open': true,
       }
     ]
-  }
-  , {
-    'name': 'Calender',
-    'icon': 'content_copy',
-    'open': true,
-    'link': "/auth/calender",
   }
 ];

@@ -1,3 +1,27 @@
-<p>
-  apply works!
-</p>
+<mat-card>
+  <mat-card-title>Apply For Ride</mat-card-title>
+  <mat-card-content>
+
+    <div fxFlex class="list-component-holder">
+      <mat-toolbar class="form-header full-width">
+        <h1 class="mat-headline">Fill out the applicationform</h1>
+      </mat-toolbar>
+      <div fxLayout="row" fxLayoutGap="20px" class="content">
+        //todo: form to apply
+      </div>
+    </div>
+
+
+    <div fxFlex class="list-component-holder">
+      <mat-toolbar class="form-header full-width">
+        <h1 class="mat-headline">Ride Details</h1>
+      </mat-toolbar>
+      <div fxLayout="row" fxLayoutGap="20px" class="content">
+        <app-ridedetails [loggedIn]="loggedIn" [ride]="ride"></app-ridedetails>
+      </div>
+    </div>
+  </mat-card-content>
+  <p></p>
+  <p></p>
+</mat-card>
+

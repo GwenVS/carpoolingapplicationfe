@@ -6,9 +6,11 @@ import {CreateRideComponent} from './create-ride/create-ride.component';
 import {AuthSearchRideComponent} from './auth-search-ride/auth-search-ride.component';
 import {MyridesComponent} from './myrides/myrides.component';
 import {ApplyComponent} from './apply/apply.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 const routes: Routes = [{
   path: '', component: AuthpagesComponent, children: [
+    { path: 'dashboard', component: DashboardComponent},
     { path: 'profile', component: ProfileComponent},
     { path: 'createride', component: CreateRideComponent},
     {path: 'findride', component: AuthSearchRideComponent},
