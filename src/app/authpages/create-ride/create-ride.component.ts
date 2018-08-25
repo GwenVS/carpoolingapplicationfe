@@ -32,6 +32,8 @@ export class CreateRideComponent implements OnInit {
     this.ride = new Ride();
     this.location = new Location();
     this.defaultLoc = new Location();
+    this.defaultLoc.latitude = 51.21815434824982;
+    this.defaultLoc.longitude = 4.400898814201355;
     this.getCars();
     this.buildForm();
   }

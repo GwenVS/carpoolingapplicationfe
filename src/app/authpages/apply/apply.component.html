@@ -6,12 +6,22 @@
       <mat-toolbar class="form-header full-width">
         <h1 class="mat-headline">Fill out the applicationform</h1>
       </mat-toolbar>
-      <div fxLayout="row" fxLayoutGap="20px" class="content">
-        //todo: form to apply
-      </div>
+      <form fxLayout="column" fxLayoutAlign="start stretch" [formGroup]="rideRequestForm" class="content">
+        <mat-form-field class="full-width">
+          <input [(ngModel)]="rideRequest.requestText"
+                 name="requestText"
+                 formControlName="requestText"
+                 id="requestText"
+                 type="text"
+                 placeholder="Enter any extra information for the request here."
+                 class="form-control" matInput>
+        </mat-form-field>
+      </form>
+      <p class="content">
+        <button mat-raised-button color="primary" type="submit" (click)="clickApply()">Apply</button>
+      </p>
     </div>
-
-
+    <p></p>
     <div fxFlex class="list-component-holder">
       <mat-toolbar class="form-header full-width">
         <h1 class="mat-headline">Ride Details</h1>

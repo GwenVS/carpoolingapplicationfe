@@ -26,6 +26,9 @@ export class SidemenuComponent implements OnInit ,OnChanges{
       } else {
         console.log(`prev: ${change.previousValue}, cur: ${change.currentValue}`);
       }
+      if(propName == 'imageSrc') {
+        this.imageSrc = change.currentValue;
+      }
     }
   }
 }

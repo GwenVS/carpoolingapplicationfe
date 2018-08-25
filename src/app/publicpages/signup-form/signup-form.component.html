@@ -122,9 +122,7 @@
       <mat-error *ngIf="!passwordsAreTheSame">{{passwordError}}</mat-error>
     </mat-error>
   </mat-form-field>
-
   <label class="error">{{label}}</label>
-
-  <button mat-raised-button color="primary" type="submit" (click)="clickRegister()">Sign Up</button>
 </form>
+  <button mat-raised-button color="primary" type="submit" (click)="clickRegister()" [disabled]="!form.valid">Sign Up</button>
 </mat-card-content>

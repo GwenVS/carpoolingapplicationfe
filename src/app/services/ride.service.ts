@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Ride} from '../models/ride';
 import {TOKEN_NAME, USERNAME} from './auth.constant';
 import {Observable} from '../../../node_modules/rxjs';
+import {RideRequest} from '../models/RideRequest';
 
 
 const httpOptions = {
@@ -27,11 +28,15 @@ export class RideService {
   }
 
   getRidesByUser(): Observable<Ride[]> {
-    return this.http.get<Ride[]>('/server/api/public/rides/user/' + sessionStorage.getItem(USERNAME), httpOptions)
+    return this.http.get<Ride[]>('/server/api/public/rides/user/' + sessionStorage.getItem(USERNAME), httpOptions);
   }
 
 
-  getRideById(rideId: number) : Observable<Ride>{
-    return this.http.get<Ride>('/server/api/public/rides/' + rideId, httpOptions)
+  getRideById(rideId: number): Observable<Ride> {
+    return this.http.get<Ride>('/server/api/public/rides/' + rideId, httpOptions);
+  }
+
+  createRideRequest(rideRequest: RideRequest, rideId: number): Observable<RideRequest> {
+    return this.http.post<RideRequest>('/server/api/public/rides/'+ rideId + '/user/'+ sessionStorage.getItem(USERNAME), rideRequest, httpOptions);
   }
 }

@@ -16,6 +16,7 @@ export class RidedetailsComponent implements OnInit {
   constructor(private rideService: RideService) { }
 
   ngOnInit() {
+
   }
 
   applyForRide() {
