@@ -21,6 +21,7 @@ import { CardetailsComponent } from './cardetails/cardetails.component';
 import { AuthSearchRideComponent } from './auth-search-ride/auth-search-ride.component';
 import {ImageUploadComponent} from './image-upload/image-upload.component';
 import { MyridesComponent } from './myrides/myrides.component';
+import { ApplyComponent } from './apply/apply.component';
 
 @NgModule({
   imports: [
@@ -52,7 +53,8 @@ import { MyridesComponent } from './myrides/myrides.component';
     CardetailsComponent,
     AuthSearchRideComponent,
     ImageUploadComponent,
-    MyridesComponent
+    MyridesComponent,
+    ApplyComponent
   ]
 })
 export class AuthpagesModule { }

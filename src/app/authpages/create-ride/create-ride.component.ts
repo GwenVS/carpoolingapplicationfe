@@ -48,11 +48,6 @@ export class CreateRideComponent implements OnInit {
       'rideType': new FormControl('', [Validators.required]),
       'chosenCar': new FormControl('', [Validators.required]),
     });
-/*
-    this.locationForm = this.fb.group({
-      'longitude': new FormControl('', [Validators.required]),
-      'latitude': new FormControl('', [Validators.required])
-    });*/
   }
 
   get departureTimeOutwardJourney() {
@@ -106,6 +101,10 @@ export class CreateRideComponent implements OnInit {
   onMapClicked(loc: Location) {
     this.location.longitude = loc.longitude;
     this.location.latitude = loc.latitude;
+  }
+
+  onAddedMapClicked(addedLoc:Location) {
+      //todo onAddedMapClicked: update location at createRide
   }
 }
 

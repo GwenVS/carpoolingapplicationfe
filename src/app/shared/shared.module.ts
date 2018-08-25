@@ -7,6 +7,7 @@ import {RidedetailsComponent} from './ridedetails/ridedetails.component';
 import {RouterModule} from '@angular/router';
 import { GooglemapComponent } from './googlemap/googlemap.component';
 import { AgmCoreModule } from '@agm/core';
+import { ShowmapComponent } from './showmap/showmap.component';
 
 @NgModule({
   imports: [
@@ -27,12 +28,14 @@ import { AgmCoreModule } from '@agm/core';
     RidesComponent,
     RidedetailsComponent,
     GooglemapComponent,
+    ShowmapComponent,
   ],
   exports: [
     SearchRideComponent,
     RidesComponent,
     RidedetailsComponent,
-    GooglemapComponent
+    GooglemapComponent,
+    ShowmapComponent
   ]
 })
 

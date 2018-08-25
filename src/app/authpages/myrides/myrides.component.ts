@@ -8,7 +8,8 @@ import {RideService} from '../../services/ride.service';
   styleUrls: ['./myrides.component.scss']
 })
 export class MyridesComponent implements OnInit {
-
+  loggedIn= true;
+  searchRides=false;
   rides: Ride[];
 
   constructor(private rideService: RideService) {

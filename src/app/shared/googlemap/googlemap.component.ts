@@ -13,7 +13,6 @@ export class GooglemapComponent implements OnInit {
   @ViewChild(AgmMap) private myMap: any;
   @ViewChild('mapContainer') mapContainer: any;
   @Output() mapClicked: EventEmitter<Location> = new EventEmitter<Location>();
-  newLoc: Location = new Location();
 
   constructor() { }
 
@@ -22,9 +21,10 @@ export class GooglemapComponent implements OnInit {
 
   onMapClicked(event){
     console.log(event);
-    this.newLoc.latitude= event.coords.lat;
-    this.newLoc.longitude = event.coords.lng;
-    this.mapClicked.emit(this.newLoc);
+    this.location.latitude= event.coords.lat;
+    this.location.longitude = event.coords.lng;
+    this.mapClicked.emit(this.location);
+
   }
 }
 

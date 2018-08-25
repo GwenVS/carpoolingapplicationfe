@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {Ride} from '../../models/ride';
 import {RideService} from '../../services/ride.service';
@@ -9,7 +9,8 @@ import {RideService} from '../../services/ride.service';
   styleUrls: ['./search-ride.component.scss']
 })
 export class SearchRideComponent implements OnInit {
-
+  @Input() loggedIn;
+  @Input() searchRides;
   rides : Ride[];
 
   constructor(private rideService : RideService) { }

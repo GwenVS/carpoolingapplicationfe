@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthSearchRideComponent implements OnInit {
 
+  loggedIn = true;
+  searchRides= true;
   constructor() { }
 
   ngOnInit() {

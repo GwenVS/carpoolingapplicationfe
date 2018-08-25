@@ -46,7 +46,7 @@
           </mat-form-field>
         </form>
         <div fxLayout="column" fxFlex="100" class="content" *ngFor="let addedlocation of newLocations">
-          <app-googlemap [location]="addedlocation"></app-googlemap>
+          <app-showmap [location]="addedlocation"></app-showmap>
           <button mat-raised-button color="warn" type="submit" title="Delete Location" (click)="deleteLocation(addedlocation)">remove</button>
         </div>
         <div class="content">

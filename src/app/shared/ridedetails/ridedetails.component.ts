@@ -10,10 +10,19 @@ import {RideService} from '../../services/ride.service';
 export class RidedetailsComponent implements OnInit {
 
   @Input() ride: Ride;
+  @Input() loggedIn;
+  @Input() searchRides;
 
   constructor(private rideService: RideService) { }
 
   ngOnInit() {
   }
 
+  applyForRide() {
+
+  }
+
+  loginClick() {
+
+  }
 }

@@ -7,7 +7,8 @@ import {Ride} from '../../models/ride';
   styleUrls: ['./rides.component.scss']
 })
 export class RidesComponent implements OnInit {
-
+  @Input() loggedIn;
+  @Input() searchRides;
   @Input() rides: Ride[];
   noRidesFound='';
 

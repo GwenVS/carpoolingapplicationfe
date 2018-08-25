@@ -5,6 +5,7 @@ import {ProfileComponent} from './profile/profile.component';
 import {CreateRideComponent} from './create-ride/create-ride.component';
 import {AuthSearchRideComponent} from './auth-search-ride/auth-search-ride.component';
 import {MyridesComponent} from './myrides/myrides.component';
+import {ApplyComponent} from './apply/apply.component';
 
 const routes: Routes = [{
   path: '', component: AuthpagesComponent, children: [
@@ -12,6 +13,7 @@ const routes: Routes = [{
     { path: 'createride', component: CreateRideComponent},
     {path: 'findride', component: AuthSearchRideComponent},
     {path: 'myrides', component: MyridesComponent},
+    {path: 'apply/:id', component: ApplyComponent},
     {path: '**', redirectTo: 'createride'},
   ]
 }];

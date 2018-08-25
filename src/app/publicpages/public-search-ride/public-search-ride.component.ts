@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -7,7 +7,8 @@ import {Router} from '@angular/router';
   styleUrls: ['./public-search-ride.component.scss']
 })
 export class PublicSearchRideComponent implements OnInit {
-
+  loggedIn = false;
+  searchRides = false;
   constructor(private router: Router) { }
 
   ngOnInit() {

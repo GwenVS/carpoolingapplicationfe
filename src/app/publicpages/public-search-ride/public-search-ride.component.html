@@ -3,6 +3,6 @@
   <a class="redirect" (click)="clickSignUp()">Register</a>
 </mat-card-title>
 <mat-card-content>
-  <app-search-ride></app-search-ride>
+  <app-search-ride [loggedIn]="loggedIn" [searchRides]="searchRides"></app-search-ride>
 </mat-card-content>
 
