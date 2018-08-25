@@ -1,7 +1,7 @@
 lat: {{location.latitude}} -- long: {{location.longitude}}
 
 
-<div class="components-container-gt-xs" >
+<div class="components-container-gt-xs smallerwidth" >
   <div fxLayout="column" fxFlexFill #mapContainer>
     <div class="mat-elevation-z1 map-container" fxFlexFill>
       <agm-map [latitude]="location.latitude" [longitude]="location.longitude" [zoom]="17" (mapClick)="onMapClicked($event)">

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatButtonModule, MatExpansionModule, MatListModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatExpansionModule, MatListModule, MatToolbarModule} from '@angular/material';
 import {SearchRideComponent} from './search-ride/search-ride.component';
 import {RidesComponent} from './rides/rides.component';
 import {RidedetailsComponent} from './ridedetails/ridedetails.component';
@@ -14,6 +14,7 @@ import { AgmCoreModule } from '@agm/core';
     MatButtonModule,
     MatToolbarModule,
     MatListModule,
+    MatCardModule,
     RouterModule,
     MatExpansionModule,
     AgmCoreModule.forRoot({
@@ -25,7 +26,7 @@ import { AgmCoreModule } from '@agm/core';
     SearchRideComponent,
     RidesComponent,
     RidedetailsComponent,
-    GooglemapComponent
+    GooglemapComponent,
   ],
   exports: [
     SearchRideComponent,

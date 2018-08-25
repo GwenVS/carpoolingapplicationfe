@@ -22,13 +22,16 @@ export class CreateRideComponent implements OnInit {
   rideTypes = ['Single', 'BackAndForth'];
   cars: Car[]=[];
   newLocations: Location[] = [];
-  location: Location = new Location();
+  location: Location;
+  defaultLoc: Location;
 
   constructor(private rideService: RideService, private fb: FormBuilder, private carService: CarService, private router: Router) {
   }
 
   ngOnInit(): void {
     this.ride = new Ride();
+    this.location = new Location();
+    this.defaultLoc = new Location();
     this.getCars();
     this.buildForm();
   }
@@ -45,11 +48,11 @@ export class CreateRideComponent implements OnInit {
       'rideType': new FormControl('', [Validators.required]),
       'chosenCar': new FormControl('', [Validators.required]),
     });
-
+/*
     this.locationForm = this.fb.group({
       'longitude': new FormControl('', [Validators.required]),
       'latitude': new FormControl('', [Validators.required])
-    });
+    });*/
   }
 
   get departureTimeOutwardJourney() {
@@ -89,14 +92,20 @@ export class CreateRideComponent implements OnInit {
   }
 
   submitLocation() {
-    if(this.locationForm.valid){
-      this.location.longitude= this.locationForm.controls['longitude'].value;
-      this.location.latitude = this.locationForm.controls['latitude'].value;
       this.newLocations.push(this.location);
       this.location = new Location();
-      this.locationForm.reset();
-    }
+  }
 
+  deleteLocation(addedlocation: Location) {
+    const index: number = this.newLocations.indexOf(addedlocation);
+    if (index !== -1) {
+      this.newLocations.splice(index, 1);
+    }
+  }
+
+  onMapClicked(loc: Location) {
+    this.location.longitude = loc.longitude;
+    this.location.latitude = loc.latitude;
   }
 }
 

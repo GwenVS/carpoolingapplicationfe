@@ -8,7 +8,6 @@ import {MyridesComponent} from './myrides/myrides.component';
 
 const routes: Routes = [{
   path: '', component: AuthpagesComponent, children: [
-    //{ path: 'dashboard', loadChildren: '../dashboard-crm/dashboard-crm.module#DashboardCrmModule' }
     { path: 'profile', component: ProfileComponent},
     { path: 'createride', component: CreateRideComponent},
     {path: 'findride', component: AuthSearchRideComponent},
