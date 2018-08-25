@@ -44,13 +44,40 @@
               </mat-option>
             </mat-select>
           </mat-form-field>
-
-
-          <div class="content">{{message}}</div>
-          <div class="content">
-            <button mat-raised-button color="primary" (click)="clickCreateRide()" type="submit">Create Ride</button>
-          </div>
         </form>
+        <div fxLayout="column" fxFlex="100" class="content" *ngFor="let addedlocation of newLocations">
+          {{addedlocation.latitude}} -- {{addedlocation.longitude}}
+        </div>
+        <form [formGroup]="locationForm" fxLayout="column" fxFlex="100" class="content">
+          <mat-form-field>
+            <label for="latitude">latitude: </label>
+            <input
+              formControlName="latitude"
+              id="latitude"
+              type="number"
+              class="form-control"
+              matInput>
+          </mat-form-field>
+
+          <mat-form-field>
+            <label for="longitude">longitude: </label>
+            <input
+              formControlName="longitude"
+              id="longitude"
+              type="number"
+              class="form-control"
+              matInput>
+          </mat-form-field>
+          <mat-error>{{validMessage}}<p></p></mat-error>
+        </form>
+        <div>
+          <button mat-raised-button color="primary" (click)="submitLocation()" type="submit">Add Location</button>
+        </div>
+        <div class="content">{{message}}</div>
+        <div class="content">
+          <button mat-raised-button color="primary" (click)="clickCreateRide()" type="submit">Create Ride</button>
+        </div>
+
       </div>
       <ng-template #noCars>
         <div class="content">

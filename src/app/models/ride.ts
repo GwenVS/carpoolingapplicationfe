@@ -8,9 +8,9 @@ export class Ride {
   departureTimeOutwardJourney: String;
   departureTimeReturnTrip: String;
   rideType: String;
-  locations: Location[];
+  locations: Location[]=[];
   chosenCar: Car;
-  subRides: SubRide[];
-  rideRequests: RideRequest[];
-  userRideInfos: UserRideInfo[];
+  subRides: SubRide[]=[];
+  rideRequests: RideRequest[]=[];
+  userRideInfos: UserRideInfo[]=[];
 }

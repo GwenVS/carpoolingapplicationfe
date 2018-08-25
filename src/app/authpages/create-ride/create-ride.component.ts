@@ -5,6 +5,8 @@ import {Ride} from '../../models/ride';
 import {Car} from '../../models/Car';
 import {CarService} from '../../services/car.service';
 import {Router} from '@angular/router';
+import {Location} from '../../models/Location';
+import {forEach} from '../../../../node_modules/@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-create-ride',
@@ -13,11 +15,14 @@ import {Router} from '@angular/router';
 })
 export class CreateRideComponent implements OnInit {
   form: FormGroup;
+  locationForm: FormGroup;
   submitted = false;
   ride: Ride;
   message = '';
   rideTypes = ['Single', 'BackAndForth'];
-  cars: Car[];
+  cars: Car[]=[];
+  newLocations: Location[] = [];
+  location: Location = new Location();
 
   constructor(private rideService: RideService, private fb: FormBuilder, private carService: CarService, private router: Router) {
   }
@@ -38,7 +43,12 @@ export class CreateRideComponent implements OnInit {
       'departureTimeOutwardJourney': new FormControl('', [Validators.required]),
       'departureTimeReturnTrip': new FormControl(''),
       'rideType': new FormControl('', [Validators.required]),
-      'chosenCar': new FormControl('', [Validators.required])
+      'chosenCar': new FormControl('', [Validators.required]),
+    });
+
+    this.locationForm = this.fb.group({
+      'longitude': new FormControl('', [Validators.required]),
+      'latitude': new FormControl('', [Validators.required])
     });
   }
 
@@ -55,13 +65,20 @@ export class CreateRideComponent implements OnInit {
   }
 
   clickCreateRide() {
-    if (this.form.valid) {
-      this.rideService.createRide(this.form.value).subscribe(
+    if(this.newLocations.length<2){
+      this.message = 'Your ride needs at least a start- and endlocation!'
+    } else if (this.form.valid) {
+      this.ride = this.form.value;
+      this.ride.locations = [];
+      this.newLocations.forEach(loc=> this.ride.locations.push(loc));
+      this.rideService.createRide(this.ride).subscribe(
         data => {
           this.ride = data;
           this.submitted = true;//todo: na submit nogmaals submit duwen en form unchanged: popup: are you sure you want to create this ride again,
           this.form.reset();
+          this.newLocations = [];
           this.message = 'Your ride was succesfully created.';
+
         },
         error1 => this.message = 'Something went wrong while trying to create your ride, please try again later.'
       );
@@ -70,4 +87,16 @@ export class CreateRideComponent implements OnInit {
   clickProfile() {
     this.router.navigateByUrl('/auth/profile')
   }
+
+  submitLocation() {
+    if(this.locationForm.valid){
+      this.location.longitude= this.locationForm.controls['longitude'].value;
+      this.location.latitude = this.locationForm.controls['latitude'].value;
+      this.newLocations.push(this.location);
+      this.location = new Location();
+      this.locationForm.reset();
+    }
+
+  }
 }
+

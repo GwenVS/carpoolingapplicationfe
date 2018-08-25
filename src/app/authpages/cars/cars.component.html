@@ -37,9 +37,9 @@
           matInput>
       </mat-form-field>
       <mat-error>{{validMessage}}<p></p></mat-error>
-      <div>
-        <button mat-raised-button color="primary" (click)="submitCar()" type="submit">Add Car</button>
-      </div>
     </form>
+    <div fxLayout="column" fxFlex="100" class="content">
+      <button mat-raised-button color="primary" (click)="submitCar()" type="submit">Add Car</button>
+    </div>
   </div>
 </div>
