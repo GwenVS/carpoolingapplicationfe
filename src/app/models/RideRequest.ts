@@ -3,7 +3,9 @@ import {Ride} from './ride';
 
 export class RideRequest {
   rideRequestId: number;
-  Text: String;
+  requestText: String;
+  startLocation: Location;
+  endLocation : Location;
   user : User;
   ride: Ride;
 }
