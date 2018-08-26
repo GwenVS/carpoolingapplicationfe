@@ -15,7 +15,6 @@ const httpOptions = {
 @Injectable()
 export class CarService {
 
-
   private carserviceUrl = '/server/api/public/cars';
 
   constructor(private http: HttpClient) {
@@ -31,12 +30,9 @@ export class CarService {
 
   updateCar(car: Car): Observable<any> {
     return this.http.put(this.carserviceUrl + '/' + car.carId, car, httpOptions);
-
   }
 
   deleteCar(car: Car): Observable<Car> {
-    const id = typeof car === 'number' ? car : car.carId;
-    const url = `${this.carserviceUrl}/${id}`;
-    return this.http.delete<Car>(url, httpOptions);
+    return this.http.delete<Car>(this.carserviceUrl + '/'+ car.carId, httpOptions);
   }
 }

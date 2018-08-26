@@ -3,8 +3,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Ride} from '../models/ride';
 import {TOKEN_NAME, USERNAME} from './auth.constant';
 import {Observable} from '../../../node_modules/rxjs';
-import {RideRequest} from '../models/RideRequest';
-
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -15,28 +13,29 @@ const httpOptions = {
 
 @Injectable()
 export class RideService {
+  private rideServiceUrl = '/server/api/public/rides';
 
   constructor(private http: HttpClient) {
   }
 
   createRide(ride: Ride): Observable<Ride> {
-    return this.http.post<Ride>('/server/api/public/rides/ride/' + sessionStorage.getItem(USERNAME), ride, httpOptions);
+    return this.http.post<Ride>(this.rideServiceUrl + '/ride/' + sessionStorage.getItem(USERNAME), ride, httpOptions);
   }
 
   getRides(): Observable<Ride[]> {
-    return this.http.get<Ride[]>('/server/api/public/rides', httpOptions);
+    return this.http.get<Ride[]>(this.rideServiceUrl, httpOptions);
   }
 
   getRidesByUser(): Observable<Ride[]> {
-    return this.http.get<Ride[]>('/server/api/public/rides/user/' + sessionStorage.getItem(USERNAME), httpOptions);
+    return this.http.get<Ride[]>(this.rideServiceUrl + '/user/' + sessionStorage.getItem(USERNAME), httpOptions);
   }
 
 
   getRideById(rideId: number): Observable<Ride> {
-    return this.http.get<Ride>('/server/api/public/rides/' + rideId, httpOptions);
+    return this.http.get<Ride>(this.rideServiceUrl + '/' + rideId, httpOptions);
   }
 
   deleteRide(ride: Ride): Observable<Ride> {
-    return this.http.delete<Ride>('/server/api/public/rides/' + ride.rideId, httpOptions);
+    return this.http.delete<Ride>(this.rideServiceUrl + '/' + ride.rideId, httpOptions);
   }
 }
