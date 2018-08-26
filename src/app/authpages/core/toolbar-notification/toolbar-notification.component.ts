@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-toolbar-notification',
@@ -10,17 +10,8 @@ export class ToolbarNotificationComponent implements OnInit {
   	isOpen: boolean = false;
   	@Input() notifications = [];
   	
-  	constructor(private elementRef: ElementRef) { }
+  	constructor() { }
 
   	ngOnInit() {
   	}
-
-  	select() {
-    	
-  	}
-
-  	delete(notification) {
-    
-  	}
-
 }

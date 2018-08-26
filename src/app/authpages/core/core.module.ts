@@ -14,7 +14,6 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FullscreenComponent } from './fullscreen/fullscreen.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { SidemenuItemComponent } from './sidemenu-item/sidemenu-item.component';
@@ -39,7 +38,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         SidemenuItemComponent,
         ToolbarNotificationComponent,
         ToolbarComponent,
-        SearchBarComponent,
         FullscreenComponent,
         SidebarComponent,
         UserMenuComponent
@@ -69,7 +67,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         SidemenuItemComponent,
         ToolbarNotificationComponent,
         ToolbarComponent,
-        SearchBarComponent,
         FullscreenComponent,
         SidebarComponent,
         UserMenuComponent

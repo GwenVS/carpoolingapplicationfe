@@ -1,6 +1,6 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { ToolbarHelpers } from './toolbar.helpers';
-import {RideRequest} from '../../models/RideRequest';
+import {RideRequest} from '../../../models/RideRequest';
 
 @Component({
   selector: 'app-toolbar',

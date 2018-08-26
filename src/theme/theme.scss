@@ -1,7 +1,7 @@
 @import '~@angular/material/theming';
 @import '../app/authpages/authpages/authpages.component.scss';
-@import '../app/core/sidemenu/sidemenu.component.scss';
-@import '../app/core/sidemenu-item/sidemenu-item.component.scss';
+@import '../app/authpages/core/sidemenu/sidemenu.component.scss';
+@import '../app/authpages/core/sidemenu-item/sidemenu-item.component.scss';
 
 $mat-light-theme-background: (
   status-bar: map_get($mat-grey, 300),

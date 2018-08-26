@@ -36,4 +36,7 @@ export class RideService {
     return this.http.get<Ride>('/server/api/public/rides/' + rideId, httpOptions);
   }
 
+  deleteRide(ride: Ride): Observable<Ride> {
+    return this.http.delete<Ride>('/server/api/public/rides/' + ride.rideId, httpOptions);
+  }
 }

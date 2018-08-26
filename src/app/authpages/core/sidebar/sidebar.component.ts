@@ -1,5 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {RideRequest} from '../../models/RideRequest';
+import {RideRequest} from '../../../models/RideRequest';
+
 
 @Component({
   selector: 'app-sidebar',

@@ -32,8 +32,14 @@
   <button mat-raised-button color="primary" type="submit" routerLink="/pages/login">Log in to Apply!</button>
 </p>
 <ng-template #elseBlock>
-  <button mat-raised-button color="primary" type="submit" routerLink="/auth/apply/{{ride.rideId}}" *ngIf="searchRides">
+  <button mat-raised-button color="primary" type="submit" routerLink="/auth/apply/{{ride.rideId}}" *ngIf="searchRides; else moreBlock">
     Apply for this Ride!
   </button>
 </ng-template>
+<ng-template #moreBlock>
+  <button mat-raised-button color="primary" type="submit" (click)="deleteRide()" *ngIf="isCreator">
+    Delete this ride!
+  </button>
+</ng-template>
+<p matline>{{validMessage}}</p>
 <h1 matline></h1>

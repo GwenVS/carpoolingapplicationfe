@@ -4,7 +4,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { AuthpagesRoutingModule } from './authpages-routing.module';
 import { AuthpagesComponent } from './authpages/authpages.component';
 import {ProfileComponent} from './profile/profile.component';
-import {CoreModule} from '../core/core.module';
+import {CoreModule} from './core/core.module';
 import {
   MatButtonModule,
   MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatIconModule,

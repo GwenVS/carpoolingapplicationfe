@@ -10,27 +10,9 @@ export class RidesComponent implements OnInit {
   @Input() loggedIn;
   @Input() searchRides;
   @Input() rides: Ride[];
-  noRidesFound='';
-
-
-  step = 0;
-  public basicPanelOpenState:any;
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-
-  setStep(index: number) {
-    this.step = index;
-  }
-
-  nextStep() {
-    this.step++;
-  }
-
-  prevStep() {
-    this.step--;
   }
 }
