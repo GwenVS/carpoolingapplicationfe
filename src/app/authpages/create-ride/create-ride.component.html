@@ -18,7 +18,17 @@
             <!--todo: oplossing voor firefox! formatting yyyy-MM-ddTHH:mm: not supported splitsen in Date en Time-->
           </mat-form-field>
 
-          <mat-form-field class="full-width">
+          <mat-radio-group [(ngModel)]="ride.rideType" class="example-radio-button full-width"
+                           formControlName="rideType"
+                           id="rideType">
+            <label for="rideType">rideType:</label>
+            <mat-radio-button *ngFor="let rideType of rideTypes" [value]="rideType" class="example-radio-button">
+              {{rideType}}
+            </mat-radio-button>
+          </mat-radio-group>
+
+          <mat-form-field class="full-width" *ngIf="ride.rideType ==='BackAndForth'">
+            <p matline>Adding a return date will create a second ride with given locations in opposite order.</p>
             <label for="departureTimeReturnTrip">departure Time Return Trip</label>
             <input
               [(ngModel)]="ride.departureTimeReturnTrip"
@@ -28,15 +38,6 @@
               class="form-control" matInput>
             <!--todo: oplossing voor firefox! formatting yyyy-MM-ddTHH:mm: not supported splitsen in Date en Time-->
           </mat-form-field>
-
-          <mat-radio-group [(ngModel)]="ride.rideType" class="example-radio-button full-width"
-                           formControlName="rideType"
-                           id="rideType">
-            <label for="rideType">rideType:</label>
-            <mat-radio-button *ngFor="let rideType of rideTypes" [value]="rideType" class="example-radio-button">
-              {{rideType}}
-            </mat-radio-button>
-          </mat-radio-group>
 
           <mat-form-field class="full-width">
             <mat-select placeholder="Car" [(ngModel)]="ride.chosenCar" name="car" formControlName="chosenCar">
