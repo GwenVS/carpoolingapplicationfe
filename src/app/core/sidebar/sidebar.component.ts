@@ -1,7 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {RideRequest} from '../../models/RideRequest';
-import {RideRequestService} from '../../services/ride-request.service';
-
 
 @Component({
   selector: 'app-sidebar',
@@ -10,8 +8,8 @@ import {RideRequestService} from '../../services/ride-request.service';
 })
 export class SidebarComponent implements OnInit {
 
-
   @Input() rideRequests : RideRequest[];
+  @Input() myRideRequests : RideRequest[];
 
   constructor() {
   }

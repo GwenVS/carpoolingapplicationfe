@@ -40,7 +40,7 @@ export class ProfileComponent implements OnInit{
   });
 
   constructor(private appDataService: AppDataService) {
-    this.updatedUser= new RegisterUser('','','','','','','', '', false, []);
+    this.updatedUser= new RegisterUser('','','','','','','', '', false, [],[]);
   }
 
   ngOnInit(): void {

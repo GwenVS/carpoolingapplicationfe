@@ -19,7 +19,6 @@ export class RideRequestService {
   constructor(private http: HttpClient) {
   }
 
-
   createRideRequest(rideRequest: RideRequest, rideId: number): Observable<RideRequest> {
     return this.http.post<RideRequest>('/server/api/public/rides/' + rideId + '/user/' + sessionStorage.getItem(USERNAME), rideRequest, httpOptions);
   }

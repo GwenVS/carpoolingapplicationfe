@@ -11,4 +11,15 @@
       </mat-list>
     </div>
   </mat-tab>
+  <mat-tab label="My Riderequests">
+    <div class="sidebar">
+      <mat-list>
+        <mat-list-item *ngFor="let myRideRequest of myRideRequests">
+          <p matLine>
+            <span> {{myRideRequest.requestText}} </span>
+          </p>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-tab>
 </mat-tab-group>

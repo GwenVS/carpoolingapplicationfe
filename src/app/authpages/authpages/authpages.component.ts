@@ -25,6 +25,7 @@ export class AuthpagesComponent implements OnInit {
   _imageSrc = "../../../assets/noavatar.png";
   imageSrc;
   rideRequests: RideRequest[]=[];
+  myRideRequests: RideRequest[]=[];
 
   constructor(private media: ObservableMedia,private userService: UserService ,private appDataService: AppDataService,private domSanitizer: DomSanitizer, private router: Router, private rideRequestService: RideRequestService) {
   }
@@ -45,6 +46,7 @@ export class AuthpagesComponent implements OnInit {
       }
     );
     this.rideRequestService.getRideRequestsForMyRides().subscribe(rideRequests => this.rideRequests = rideRequests);
+    this.rideRequestService.getMyRideRequests().subscribe(myRideRequests => this.myRideRequests = myRideRequests);
   }
 
   ngOnChanges() {

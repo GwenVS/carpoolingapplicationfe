@@ -30,7 +30,7 @@
           <mat-select placeholder="drop off (see details)" [(ngModel)]="rideRequest.endLocation"
                       name="endLoc" formControlName="endLoc">
             <mat-option *ngFor="let location of ride.locations" [value]="location">
-              {{location.latitude}} -- {{location.longitude}}
+              lat: {{location.latitude}} -- long: {{location.longitude}}
             </mat-option>
           </mat-select>
         </mat-form-field>

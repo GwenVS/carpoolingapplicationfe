@@ -1,4 +1,5 @@
 import {Car} from './Car';
+import {RideRequest} from './RideRequest';
 
 export class RegisterUser {
   constructor(
@@ -11,6 +12,7 @@ export class RegisterUser {
     public gender: String,
     public profilePicture,
     public isSmoker: boolean,
-    public cars: Car[]
+    public cars: Car[],
+    public rideRequests: RideRequest[]
   ){}
 }

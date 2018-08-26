@@ -1,4 +1,5 @@
 import {Car} from './Car';
+import {RideRequest} from './RideRequest';
 
 export class User {
   private _username: String;
@@ -10,6 +11,7 @@ export class User {
   private _birthday: String;
   private _isSmoker: boolean;
   private _cars: Car[];
+  private _rideRequests: RideRequest[];
 
   constructor() {
     this._username = "";
@@ -21,6 +23,7 @@ export class User {
     this._birthday = "";
     this._isSmoker = false;
     this._cars = [];
+    this._rideRequests = [];
   }
 
   fromJSON(obj: any){
@@ -33,6 +36,7 @@ export class User {
     this._birthday = obj.birthday;
     this._isSmoker = obj.isSmoker;
     this._cars = obj.cars;
+    this._rideRequests = obj.rideRequests;
     return this;
   }
 
@@ -108,5 +112,14 @@ export class User {
 
   set cars(value: Car[]) {
     this._cars = value;
+  }
+
+
+  get rideRequests(): RideRequest[] {
+    return this._rideRequests;
+  }
+
+  set rideRequests(value: RideRequest[]) {
+    this._rideRequests = value;
   }
 }
