@@ -1,4 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
+import {RideRequest} from '../../models/RideRequest';
+import {RideRequestService} from '../../services/ride-request.service';
 
 
 @Component({
@@ -9,7 +11,7 @@ import {Component, OnInit, Input} from '@angular/core';
 export class SidebarComponent implements OnInit {
 
 
-  @Input() messages;
+  @Input() rideRequests : RideRequest[];
 
   constructor() {
   }

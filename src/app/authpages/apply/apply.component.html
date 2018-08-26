@@ -16,10 +16,32 @@
                  placeholder="Enter any extra information for the request here."
                  class="form-control" matInput>
         </mat-form-field>
+
+        <mat-form-field class="content">
+          <mat-select placeholder="pick up (see details)" [(ngModel)]="rideRequest.startLocation"
+                      name="startLoc" formControlName="startLoc">
+            <mat-option *ngFor="let location of ride.locations" [value]="location">
+              {{location.latitude}} -- {{location.longitude}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="content">
+          <mat-select placeholder="drop off (see details)" [(ngModel)]="rideRequest.endLocation"
+                      name="endLoc" formControlName="endLoc">
+            <mat-option *ngFor="let location of ride.locations" [value]="location">
+              {{location.latitude}} -- {{location.longitude}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
       </form>
-      <p class="content">
+      <div class="content">
+        <p>
+          {{validMessage}}
+          <mat-error>{{notValidMessage}}</mat-error>
+        </p>
         <button mat-raised-button color="primary" type="submit" (click)="clickApply()">Apply</button>
-      </p>
+      </div>
     </div>
     <p></p>
     <div fxFlex class="list-component-holder">
@@ -30,6 +52,7 @@
         <app-ridedetails [loggedIn]="loggedIn" [ride]="ride"></app-ridedetails>
       </div>
     </div>
+    <p></p>
   </mat-card-content>
   <p></p>
   <p></p>

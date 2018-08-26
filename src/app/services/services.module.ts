@@ -8,6 +8,7 @@ import {UserService} from './user.service';
 import {AuthGuardService} from './guards/auth-guard.service';
 import {RideService} from './ride.service';
 import {CarService} from './car.service';
+import {RideRequestService} from './ride-request.service';
 
 const SERVICES = [
   AppDataService,
@@ -16,7 +17,8 @@ const SERVICES = [
   UserService,
   AuthGuardService,
   RideService,
-  CarService
+  CarService,
+  RideRequestService
 ];
 
 @NgModule({

@@ -15,7 +15,7 @@
 
     <app-fullscreen></app-fullscreen>
 
-    <app-toolbar-notification [notifications]="messages" (click)="sidebar.toggle()"></app-toolbar-notification>
+    <app-toolbar-notification [notifications]="rideRequests" (click)="sidebar.toggle()"></app-toolbar-notification>
 
     <app-user-menu [currentUser]="user$" [imageSrc]="imageSrc" (loggingOut)="logout()"></app-user-menu>
     

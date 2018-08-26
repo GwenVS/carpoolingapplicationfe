@@ -16,7 +16,8 @@
       </mat-drawer>
       <mat-drawer-content style="overflow: hidden;">
         <app-toolbar [sidenav]="sidenav" [drawer]="drawer" [sidebar]="sidenav2" [matDrawerShow]="matDrawerShow"
-                     style="z-index: 500" [user$]="user$" [imageSrc]="imageSrc" (loggingOut)="logout()" [messages]="messages"></app-toolbar>
+                     style="z-index: 500" [user$]="user$" [imageSrc]="imageSrc" (loggingOut)="logout()"
+                     [rideRequests]="rideRequests"></app-toolbar>
         <perfect-scrollbar>
           <router-outlet (profilePictureChanged)="onProfilePictureChanged($event)"
                          (onUserChanged)="onUserChanged($event)"></router-outlet>
@@ -26,7 +27,7 @@
   </mat-sidenav-content>
 
   <mat-sidenav #sidenav2 position="end" mode="over">
-    <app-sidebar [messages]="messages"></app-sidebar>
+    <app-sidebar [rideRequests]="rideRequests"></app-sidebar>
   </mat-sidenav>
 
 </mat-sidenav-container>

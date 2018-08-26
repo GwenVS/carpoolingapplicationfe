@@ -1,5 +1,6 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { ToolbarHelpers } from './toolbar.helpers';
+import {RideRequest} from '../../models/RideRequest';
 
 @Component({
   selector: 'app-toolbar',
@@ -9,7 +10,7 @@ import { ToolbarHelpers } from './toolbar.helpers';
 export class ToolbarComponent implements OnInit {
   @Input() imageSrc;
 	@Input() user$;
-	@Input() messages;
+	@Input() rideRequests : RideRequest[];
   @Input() sidenav;
 	@Input() sidebar;
 	@Input() drawer;

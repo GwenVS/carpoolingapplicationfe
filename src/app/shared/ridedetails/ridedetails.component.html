@@ -1,9 +1,22 @@
-<p matLine>Departure Time Outward Journey: {{ride.departureTimeOutwardJourney |date:'dd/MM/yyyy @hh:mm'}}
+<p matLine *ngIf="ride.rideType ==='Single'">Departure Time: {{ride.departureTimeOutwardJourney|date:'dd/MM/yyyy @ hh:mm'}}
   <mat-divider></mat-divider>
 </p>
-<p matLine>Departure Time Return trip: {{ride.departureTimeReturnTrip |date:'dd/MM/yyyy @ hh:mm'}}
-  <mat-divider></mat-divider>
-</p>
+<div  *ngIf="ride.rideType ==='BackAndForth' && ride.departureTimeReturnTrip>ride.departureTimeOutwardJourney">
+  <p matLine>Departure Time: {{ride.departureTimeOutwardJourney |date:'dd/MM/yyyy @ hh:mm'}} (go)
+    <mat-divider></mat-divider>
+  </p>
+  <p matLine>Departure Time Return Trip: {{ride.departureTimeReturnTrip |date:'dd/MM/yyyy @ hh:mm'}}
+    <mat-divider></mat-divider>
+  </p>
+</div>
+<div *ngIf="ride.rideType ==='BackAndForth' && ride.departureTimeReturnTrip<ride.departureTimeOutwardJourney">
+  <p matLine>Departure Time: {{ride.departureTimeOutwardJourney |date:'dd/MM/yyyy @ hh:mm'}} (back)
+    <mat-divider></mat-divider>
+  </p>
+  <p matLine>Departure Time Going Trip: {{ride.departureTimeReturnTrip |date:'dd/MM/yyyy @ hh:mm'}}
+    <mat-divider></mat-divider>
+  </p>
+</div>
 <p matline>Car used: {{ride.chosenCar.type}} - {{ride.chosenCar.maxAmountPassengers}} places
   <mat-divider></mat-divider>
 </p>
@@ -15,13 +28,12 @@
   <a *ngFor="let uri of ride.userRideInfos"> {{uri.user.username}} </a>
   <mat-divider></mat-divider>
 </p>
-<p matline>rideRequests by:
-  <a *ngFor="let rideRequest of ride.rideRequests"> {{rideRequest.user.username}} </a>
-</p>
 <p matline *ngIf="!loggedIn; else elseBlock">
   <button mat-raised-button color="primary" type="submit" routerLink="/pages/login">Log in to Apply!</button>
 </p>
 <ng-template #elseBlock>
-  <button mat-raised-button color="primary" type="submit" routerLink="/auth/apply/{{ride.rideId}}" *ngIf="searchRides">Apply for this Ride!</button>
+  <button mat-raised-button color="primary" type="submit" routerLink="/auth/apply/{{ride.rideId}}" *ngIf="searchRides">
+    Apply for this Ride!
+  </button>
 </ng-template>
 <h1 matline></h1>

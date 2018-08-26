@@ -6,6 +6,8 @@ import {AppDataService} from '../../services/app-data.service';
 import {DomSanitizer} from '@angular/platform-browser';
 import {UserService} from '../../services/user.service';
 import {Router} from '@angular/router';
+import {RideRequest} from '../../models/RideRequest';
+import {RideRequestService} from '../../services/ride-request.service';
 
 @Component({
   selector: 'app-authpages',
@@ -22,16 +24,9 @@ export class AuthpagesComponent implements OnInit {
   user$: User;
   _imageSrc = "../../../assets/noavatar.png";
   imageSrc;
-  messages = [
-    {from: 'Catherin', subject: 'Shopping', content: 'hi there??'},
-    {from: 'Jack', subject: 'Function', content: 'yes'},
-    {from: 'Karina', subject: 'Get together', content: 'nice'},
-    {from: 'Micheal', subject: 'Trip', content: 'ya.. I will'},
-    {from: 'Ashik', subject: 'Meeting', content: 'Time??'},
-    {from: 'Joy', subject: 'Party', content: 'Lets enjoy'},
-  ];
+  rideRequests: RideRequest[]=[];
 
-  constructor(private media: ObservableMedia,private userService: UserService ,private appDataService: AppDataService,private domSanitizer: DomSanitizer, private router: Router) {
+  constructor(private media: ObservableMedia,private userService: UserService ,private appDataService: AppDataService,private domSanitizer: DomSanitizer, private router: Router, private rideRequestService: RideRequestService) {
   }
 
   ngOnInit() {
@@ -49,7 +44,7 @@ export class AuthpagesComponent implements OnInit {
         this.imageSrc = this.domSanitizer.bypassSecurityTrustUrl(this._imageSrc)
       }
     );
-
+    this.rideRequestService.getRideRequestsForMyRides().subscribe(rideRequests => this.rideRequests = rideRequests);
   }
 
   ngOnChanges() {

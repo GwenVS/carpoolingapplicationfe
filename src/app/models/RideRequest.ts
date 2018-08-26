@@ -1,5 +1,6 @@
 import {User} from './User';
 import {Ride} from './ride';
+import {Location} from './Location';
 
 export class RideRequest {
   rideRequestId: number;
