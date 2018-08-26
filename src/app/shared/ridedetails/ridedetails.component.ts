@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Ride} from '../../models/ride';
 import {RideService} from '../../services/ride.service';
-import {UserRideInfo} from '../../models/UserRideInfo';
 import {USERNAME} from '../../services/auth.constant';
 
 @Component({
@@ -23,7 +22,6 @@ export class RidedetailsComponent implements OnInit {
     if(this.ride.userRideInfos.findIndex(uri=>uri.user.username === sessionStorage.getItem(USERNAME) && uri.isDriver === true) !== -1) {
       this.isCreator = true;
     }
-    //this.ride.userRideInfos.find(uri=>uri.isDriver === true);
   }
 
   deleteRide() {

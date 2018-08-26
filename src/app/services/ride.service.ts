@@ -3,7 +3,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Ride} from '../models/ride';
 import {TOKEN_NAME, USERNAME} from './auth.constant';
 import {Observable} from '../../../node_modules/rxjs';
-import {RideRequest} from '../models/RideRequest';
 
 
 const httpOptions = {

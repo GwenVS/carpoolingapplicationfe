@@ -20,7 +20,7 @@ export class RideRequestService {
   }
 
   createRideRequest(rideRequest: RideRequest, rideId: number): Observable<RideRequest> {
-    return this.http.post<RideRequest>('/server/api/public/rides/' + rideId + '/user/' + sessionStorage.getItem(USERNAME), rideRequest, httpOptions);
+    return this.http.post<RideRequest>(this.rideRequestServiceUrl + '/ride/' + rideId + '/user/' + sessionStorage.getItem(USERNAME), rideRequest, httpOptions);
   }
 
   getRideRequestsForMyRides(): Observable<RideRequest[]> {
@@ -38,7 +38,7 @@ export class RideRequestService {
   deleteRideRequest(rideRequest: RideRequest): Observable<RideRequest> {
     const id = typeof rideRequest === 'number' ? rideRequest : rideRequest.rideRequestId;
     const url = `${this.rideRequestServiceUrl}/${id}`;
-    return this.http.delete<RideRequest>('/server/api/public/riderequests/' + id, httpOptions);
+    return this.http.delete<RideRequest>(this.rideRequestServiceUrl + '/' + id, httpOptions);
   }
 
 }
