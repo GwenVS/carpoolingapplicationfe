@@ -6,6 +6,13 @@ import {User} from '../models/User';
 import {Observable} from 'rxjs/Observable';
 import {RegisterUser} from '../models/RegisterUser';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
+  })
+};
+
 @Injectable()
 export class AppDataService {
   private springURL = '/server/api/private';
@@ -16,12 +23,7 @@ export class AppDataService {
   }
 
   getUser(username): Observable<User> {
-    const headers = new HttpHeaders({
-      'Content-type': 'application/json',
-      'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
-    });
-
-    return this.http.get(this.springURL + '/users/username/' + sessionStorage.getItem(USERNAME), {headers}).map((resp: Response) => new User().fromJSON(resp));
+    return this.http.get(this.springURL + '/users/username/' + sessionStorage.getItem(USERNAME), httpOptions).map((resp: Response) => new User().fromJSON(resp));
   }
 
   getProfilePicture() {
@@ -60,21 +62,11 @@ export class AppDataService {
   }
 
   updateUser(user: RegisterUser) {
-    const headers = new HttpHeaders({
-      'Content-type': 'application/json',
-      'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
-    });
-
-    return this.http.put(this.springURL + '/users/' + user.username, user, {headers: headers}).map((resp: Response) => new User().fromJSON(resp));
+    return this.http.put(this.springURL + '/users/' + user.username, user, httpOptions).map((resp: Response) => new User().fromJSON(resp));
   }
 
   updatePassword(user) {
-    const headers = new HttpHeaders({
-      'Content-type': 'application/json',
-      'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
-    });
-
-    return this.http.post(this.springURL + '/users/' + sessionStorage.getItem(USERNAME) + '/updatepassword', user, {headers: headers})
+    return this.http.post(this.springURL + '/users/' + sessionStorage.getItem(USERNAME) + '/updatepassword', user, httpOptions)
       .map((resp: Response) => resp);
   }
 }

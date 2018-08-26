@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import {Router} from '@angular/router';
-import {HttpLoginServiceService} from '../../services/http-login-service.service';
 import {RegisterUser} from '../../models/RegisterUser';
+import {AuthService} from '../../services/auth.service';
 
 
 @Component({
@@ -11,7 +11,6 @@ import {RegisterUser} from '../../models/RegisterUser';
   styleUrls: ['./signup-form.component.scss']
 })
 export class SignupFormComponent implements OnInit {
-  service: HttpLoginServiceService;
   registerUser: RegisterUser = new RegisterUser('', '', '', '', '', '', '', '',false,[],[]);
   public label;
   public _passwordsAreTheSame: boolean = false;
@@ -19,8 +18,7 @@ export class SignupFormComponent implements OnInit {
   form: FormGroup;
   genders = ['Male', 'Female'];
 
-  constructor(service: HttpLoginServiceService, private fb: FormBuilder, private router: Router) {
-    this.service = service;
+  constructor(private service: AuthService, private fb: FormBuilder, private router: Router) {
   }
 
   ngOnInit(): void {
