@@ -64,8 +64,6 @@ export class ApplyComponent implements OnInit {
             this.endIndex =0;
             this.startIndex=0;
             this.rideRequestForm.reset();
-            this.validMessage = '';
-            this.notValidMessage = '';
           },
           (error) => {
             console.log(error.status);

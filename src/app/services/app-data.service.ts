@@ -8,7 +8,7 @@ import {RegisterUser} from '../models/RegisterUser';
 
 @Injectable()
 export class AppDataService {
-  private springURL = '/server/api/private';
+  private appDataUrl = '/server/api/private';
   public http;
 
   constructor(http: HttpClient) {
@@ -21,7 +21,7 @@ export class AppDataService {
       'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
     });
 
-    return this.http.get(this.springURL + '/users/username/' + sessionStorage.getItem(USERNAME), {headers}).map((resp: Response) => new User().fromJSON(resp));
+    return this.http.get(this.appDataUrl + '/users/username/' + sessionStorage.getItem(USERNAME), {headers}).map((resp: Response) => new User().fromJSON(resp));
   }
 
   getProfilePicture() {
@@ -31,7 +31,7 @@ export class AppDataService {
       'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
     });
 
-    return this.http.get(this.springURL + '/users/' + sessionStorage.getItem(USERNAME) + '/picture', {
+    return this.http.get(this.appDataUrl + '/users/' + sessionStorage.getItem(USERNAME) + '/picture', {
       headers: headers,
       responseType: 'arraybuffer'
     }).map((resp) => {
@@ -48,7 +48,7 @@ export class AppDataService {
       'Content-Type': 'application/octet-stream',
       'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
     });
-    return this.http.get(this.springURL + '/users/' + username + '/picture', {
+    return this.http.get(this.appDataUrl + '/users/' + username + '/picture', {
       headers: headers,
       responseType: 'arraybuffer'
     }).map((resp) => {
@@ -65,7 +65,7 @@ export class AppDataService {
       'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
     });
 
-    return this.http.put(this.springURL + '/users/' + user.username, user, {headers: headers}).map((resp: Response) => new User().fromJSON(resp));
+    return this.http.put(this.appDataUrl + '/users/' + user.username, user, {headers: headers}).map((resp: Response) => new User().fromJSON(resp));
   }
 
   updatePassword(user) {
@@ -74,7 +74,7 @@ export class AppDataService {
       'Authorization': 'Bearer ' + sessionStorage.getItem(TOKEN_NAME)
     });
 
-    return this.http.post(this.springURL + '/users/' + sessionStorage.getItem(USERNAME) + '/updatepassword', user, {headers: headers})
+    return this.http.post(this.appDataUrl + '/users/' + sessionStorage.getItem(USERNAME) + '/updatepassword', user, {headers: headers})
       .map((resp: Response) => resp);
   }
 }

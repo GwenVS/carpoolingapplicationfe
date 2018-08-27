@@ -16,7 +16,7 @@ const httpOptions = {
 export class CarService {
 
 
-  private carserviceUrl = '/server/api/public/cars';
+  private carserviceUrl = '/server/api/private/cars';
 
   constructor(private http: HttpClient) {
   }

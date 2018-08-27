@@ -3,7 +3,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {TOKEN_NAME, USERNAME} from './auth.constant';
 import {RideRequest} from '../models/RideRequest';
 import {Observable} from '../../../node_modules/rxjs';
-import {Car} from '../models/Car';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -14,7 +13,7 @@ const httpOptions = {
 
 @Injectable()
 export class RideRequestService {
-  rideRequestServiceUrl = '/server/api/public/riderequests';
+  rideRequestServiceUrl = '/server/api/private/riderequests';
 
   constructor(private http: HttpClient) {
   }
